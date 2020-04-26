@@ -45,7 +45,7 @@
     "file-loader": "1.1.5",
     "generate-password-browser": "^1.0.1",
     "html-loader": "0.5.1",
-    "jquery": "3.2.1",
+    "jquery": "3.5.0",
     "json-loader": "0.5.7",
     "ng2-charts": "1.6.0",
     "ng2-toasty": "4.0.3",
