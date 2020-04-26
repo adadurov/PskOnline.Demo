@@ -1,0 +1,94 @@
+﻿<div>
+  <form *ngIf="formResetToggle" [attr.autocomplete]="isGeneralEditor ? NaN : null"
+        class="form-horizontal" name="branchOfficeInfoForm" #f="ngForm" novalidate
+        (ngSubmit)="onSubmit()">
+
+    <div class="row">
+      <div class="col-md-12">
+        <hr [class.separator-hr]="!isEditMode" [class.edit-separator-hr]="isEditMode" />
+      </div>
+    </div>
+
+    <div class="form-group has-feedback">
+      <label [class.col-md-3]="isViewOnly" [class.col-md-2]="!isViewOnly" class="control-label"
+             for="name-{{uniqueId}}">{{'branchOffices.editor.name' | translate}}</label>
+      <div *ngIf="!isEditMode" [class.col-md-9]="isViewOnly" [class.col-md-10]="!isViewOnly">
+        <p class="form-control-static">{{branchOffice.name}}</p>
+      </div>
+      <div *ngIf="isEditMode" [class.col-md-9]="isViewOnly" [class.col-md-10]="!isViewOnly"
+           [ngClass]="{'has-success': f.submitted && name.valid, 'has-error' : f.submitted && !name.valid}">
+        <input autofocus type="text" attr.id="name-{{uniqueId}}" name="name" [attr.autocomplete]="isGeneralEditor ? new-password : null"
+               placeholder="Enter name of branch office"
+               class="form-control" [(ngModel)]="branchOfficeEdit.name" #name="ngModel"
+               required minlength="2" maxlength="200" />
+        <span *ngIf="showValidationErrors && f.submitted" class="glyphicon form-control-feedback"
+              [ngClass]="{'glyphicon-ok ': name.valid, 'glyphicon-remove' : !name.valid}"></span>
+        <span *ngIf="showValidationErrors && f.submitted && !name.valid" class="errorMessage">
+          {{'branchOffices.editor.nameRequired' | translate}}
+        </span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <hr [class.separator-hr]="!isEditMode" [class.edit-separator-hr]="isEditMode" />
+      </div>
+    </div>
+
+    <div class="form-group has-feedback">
+      <label [class.col-md-3]="isViewOnly" [class.col-md-2]="!isViewOnly" class="control-label"
+             for="timeZone-{{uniqueId}}">{{'branchOffices.editor.timeZone' | translate}}</label>
+      <div *ngIf="!isEditMode" [class.col-md-9]="isViewOnly" [class.col-md-10]="!isViewOnly">
+        <p class="form-control-static">{{currentTimeZoneDisplayName}}</p>
+      </div>
+      <div *ngIf="isEditMode" [class.col-md-9]="isViewOnly" [class.col-md-10]="!isViewOnly"
+           [ngClass]="{'has-success': f.submitted && timeZone.valid, 'has-error' : f.submitted && !timeZone.valid}">
+        <select class="col-md-6 form-control"
+                required
+                id="timeZone-select-{{uniqueId}}"
+                name="timeZone"
+                [(ngModel)]="currentTimeZone"
+                [compareWith]="compareTimeZones"
+                #timeZone="ngModel"
+                title="Select time zone">
+          <option *ngFor="let zone of allTimeZones" [ngValue]="zone">
+            {{zone.displayName}}
+          </option>
+        </select>
+
+        <span *ngIf="showValidationErrors && f.submitted" class="glyphicon form-control-feedback"
+              [ngClass]="{'glyphicon-ok ': timeZone.valid, 'glyphicon-remove' : !timeZone.valid}"></span>
+        <span *ngIf="showValidationErrors && f.submitted && !timeZone.valid" class="errorMessage">
+          {{'branchOffices.editor.timeZoneRequired' | translate}}
+        </span>
+      </div>
+    </div>
+
+    <div *ngIf="!isViewOnly" class="row">
+      <div class="col-md-12">
+        <hr [class.last-separator-hr]="!isEditMode" [class.edit-last-separator-hr]="isEditMode" />
+      </div>
+    </div>
+
+    <div *ngIf="!isViewOnly" class="form-group">
+      <div class="col-sm-7">
+        <div class="pull-right">
+          <button *ngIf="!isEditMode && isGeneralEditor" type="button" (click)="close()" class="btn btn-default"><i class='fa fa-close'></i>
+            {{'defaultEntity.editor.Close' | translate}}
+          </button>
+          <button *ngIf="!isEditMode && !isGeneralEditor" type="button" (click)="edit()" class="btn btn-default"><i class='fa fa-edit'></i>
+            {{'defaultEntity.editor.Edit' | translate}}
+          </button>
+          <button *ngIf="isEditMode" type="button" (click)="cancel()" class="btn btn-danger" [disabled]="isSaving"><i class='fa fa-times'></i>
+            {{'defaultEntity.editor.Cancel' | translate}}
+          </button>
+          <button *ngIf="isEditMode" type="submit" class="btn btn-primary" [disabled]="isSaving">
+            <i *ngIf="!isSaving" class='fa fa-save'></i><i *ngIf="isSaving" class='fa fa-circle-o-notch fa-spin'></i>
+            {{isSaving ? ('defaultEntity.editor.Saving' | translate) : ('defaultEntity.editor.Save' | translate)}}
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </form>
+</div>

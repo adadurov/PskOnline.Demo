@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Conclusion_user_1_1" xml:space="preserve">
+    <value>Twój stan funkcjonalny jest niestety bardzo zły. Masz niski poziom możliwości funkcjonalnych systemu sercowo-naczyniowego. Poziom zmęczenia fizycznego oraz napięcia jest wysoki, w sytuacjach stresowych - bardzo wysoki. Tętno stabilne, przyspieszone.  Odnotowano maksymalne napięcie systemu sercowo-naczyniowego równocześnie z jego niską wydolnością i odpowiednio bardzo niskim poziomem zdolności do pracy fizycznej. Przebieg procesów fizjologicznych znacznie osłabia organizm. Zauważalne jest przyspieszenie procesów metabolicznych i energetycznych. Podwyższona drażliwość. Zauważono nieuzasadnioną aktywność psychiczna i behawioralną, organizm jest spięty. Zewnętrzne i wewnętrzne obciążenie organizmu znacząco przekracza jego możliwości funkcjonalne. Możliwe jest załamanie nerwowe. Istnieje zagrożenie w postaci podwyższenia poziomu adrenaliny oraz pojawienie się stanu paniki. 
+Niezbędnym jest natychmiastowe zaprzestanie działalności zawodowej, długi wypoczynek lub wyjazd na urlop. Jeżeli nie jesteś w stanie wyjść z zaistniałej sytuacji życiowej, należy wesprzeć organizm suplementami diety, witaminami, a także substancjami energetyzującymi oraz zawierającymi niezbędne witaminy. 
+Bardzo zalecane jest skonsultowanie się z psychoterapeutą i terapeutą oraz wszechstronne pogłębione badanie kliniczne w warunkach ambulatoryjnych.</value>
+  </data>
+  <data name="Conclusion_user_1_2" xml:space="preserve">
+    <value>Twój stan funkcjonalny jest niestety bardzo zły. Masz niski poziom możliwości funkcjonalnych systemu sercowo-naczyniowego. Zmęczenie fizyczne i napęcie jest na poziomie powyżej śedniego, natomiast w sytuacjach stresowych jest już bardzo zauważalne. System sercowo-naczyniowy ma bardzo niską wydolność i odpowiednio bardzo niski poziom zdolności do pracy. Przebieg procesów fizjologicznych znacznie osłabia organizm. Odnotowano przyspieszenie procesów metabolicznych oraz energetycznych, wysoki poziom drażliwości. Zauważono nieuzasadnioną aktywność psychiczna i behawioralną. Zewnętrzne i wewnętrzne obciążenie organizmu znacząco przekracza jego możliwości funkcjonalne. Możliwe jest załamanie nerwowe. Należy natychmiast przerwać aktywność i udać się na dłuższy wypoczynek lub wyjechać na urlop. Jeżeli nie jesteś w stanie wyjść z obecnej sytuacji życiowej, musisz wesprzeć organizm suplementami diety, witaminami oraz substancjami energetyzującymi lub  zawierającymi niezbędne minerały. Oprócz tego bardzo zalecane jest skonsultowanie się z psychoterapeutą i terapeutą, a także wszechstronne pogłębione badanie kliniczne w warunkach ambulatoryjnych. </value>
+  </data>
+  <data name="Conclusion_user_1_3" xml:space="preserve">
+    <value>3. Twój stan funkcjonalny jest niestety zły. Masz niski poziom możliwości funkcjonalnych systemu sercowo-naczyniowego. Poziom napięcia jest średni, nasilający się w sytuacjach stresowych, poziom zmęczenia fizycznego - średni, poziom zdolności do pracy - bardzo niski. Zauważalna jest niestabilność organizmu podczas wysiłku fizycznego. Przebieg procesów fizjologicznych znacznie osłabia organizm. Procesy metaboliczne i energetyczne są przyspieszone. Aktywność behawioralna jest bardzo podwyższona. Zauważono nieuzasadnioną aktywność psychiczną i behawioralną. Zewnętrzne i wewnętrzne obciążenie organizmu znacząco przekracza jego możliwości funkcjonalne.
+Należy niezwłocznie przerwać aktywność i skonsultować się z psychoterapeutą i terapeutą. Zaleca się wszechstronne pogłębione badanie kliniczne w warunkach ambulatoryjnych.</value>
+  </data>
+  <data name="Conclusion_user_1_4" xml:space="preserve">
+    <value>4. Twój stan funkcjonalny jest niestety bardzo zły. Masz niski poziom możliwości funkcjonalnych systemu sercowo-naczyniowego, napięcie oraz zmęczenie fizyczne poniżej poziomu średniego. W sytuacjach stresowych pojawiają się objawy wycieńczenia, zdolność do pracy fizycznej jest bardzo niska. Znaczące zwolnienie i osłabienie procesów metabolicznych i energetycznych. Przebieg procesów fizjologicznych znacznie osłabia organizm. Poziom aktywności behawioralnej jest bardzo niski, aktywność psychiczna, behawioralna oraz zdolności mobilizacyjne organizmu są na bardzo niskim poziomie. Zewnętrzne i wewnętrzne obciążenie organizmu znacząco przekracza jego możliwości funkcjonalne.
+Niezbędnym jest natychmiastowe zaprzestanie aktywności, długi wypoczynek lub wyjazd na urlop. Jeżeli nie jesteś w stanie wyjść z zaistniałej sytuacji życiowej, należy wesprzeć organizm suplementami diety, witaminami, a także substancjami energetyzującymi oraz zawierającymi niezbędne witaminy. Bardzo zalecane jest skonsultowanie się z psychoterapeutą i terapeutą. Zaleca się wszechstronne pogłębione badanie kliniczne w warunkach ambulatoryjnych</value>
+  </data>
+  <data name="Conclusion_user_1_5" xml:space="preserve">
+    <value>5. Twój stan funkcjonalny jest niestety zły. Masz niski poziom możliwości funkcjonalnych systemu sercowo-naczyniowego. Stan zmęczenia i napięcia jest bardzo wysoki, w razie sytuacji stresowej może nastąpić wycieńczenie. Zaobserwowano gwałtowny spadek zdolności do pracy fizycznej. Zauważono nagłe spowolnienie procesów metabolicznych i energetycznych naprzemiennie z ich nasileniem, co nie jest korzystne dla zdrowia. Przebieg procesów fizjologicznych znacznie osłabia organizm. Bardzo niski poziom aktywności behawioralnej, gwałtowne obniżenie aktywności psychicznej, behawioralnej oraz zdolności mobilizacyjnych  organizmu na tle bardzo silnego psychicznego i emocjonalnego pobudzenia. («Zespół dysregulacji»).
+Należy niezwłocznie przerwać aktywność i odpocząć bądź wyjechać na długi urlop. Jeżeli nie jesteś w stanie wyjść z obecnej sytuacji życiowej, musisz wesprzeć organizm  suplementami diety, witaminami lub substancjami energetyzującymi lub zawierającymi niezbędne minerały. Bardzo zalecane jest skonsultowanie się z psychoterapeutą i terapeutą, a także wszechstronne pogłębione badanie kliniczne w warunkach ambulatoryjnych.
+</value>
+  </data>
+  <data name="Conclusion_user_2_1" xml:space="preserve">
+    <value>6. Twój stan funkcjonalny niestety jest zły, poziom możliwości funkcjonalnych systemu sercowo-naczyniowego jest poniżej średniego. Odnotowano zauważalne napięcie nerwowe i zmęczenie fizyczne oraz opór względem powstającej sytuacji stresowej. Tętno jest przyspieszone. Procesy metaboliczne i energetyczne w Twoim organiźmie odbywają się w przyspieszonym tempie. Jesteś w stanie spięcia, podwyższonej aktywności psychicznej i behawioralnej, Twoja zdolność do pracy fizycznej jest obniżona.
+Zalecane jest skonsultowanie się z psychoterapeutą i terapeutą, a także wszechstronne pogłębione badanie kliniczne w warunkach ambulatoryjnych.</value>
+  </data>
+  <data name="Conclusion_user_2_2" xml:space="preserve">
+    <value>7. Twój stan funkcjonalny jest niestety zły. Poziom napięcia i zmęczenia systemu sercowo-naczyniowego jest powyżej średniego, poziom napięcia nerwowego - wysoki. Organizm stawia opór w sytuacjach stresowych. Procesy metaboliczne i energetyczne są przyspieszone. Jesteś w stanie spięcia, podwyższonej aktywności psychicznej i behawioralnej. Zdolność do pracy fizycznej jest obniżona.
+Zalecane jest skonsultowanie się z psychoterapeutą i terapeutą, a także wszechstronne pogłębione badanie kliniczne w warunkach ambulatoryjnych.</value>
+  </data>
+  <data name="Conclusion_user_2_3" xml:space="preserve">
+    <value>8. Twój stan funkcjonalny jest niestety niekorzystny. Chociaż napięcie systemu sercowo-naczyniowego jest optymalne, zmęczenia brak, a napięcie nerwowe jest minimalne, obniżona jest jednak wytrzymałość fizyczna i sportowa. Masz bardzo obniżony poziom zdolności do pracy fizycznej. W celu usprawnienia funkcjonowania organizmu zalecane jest podjęcie aktywności fizycznej oraz zwiększenie poziomu obciążenia.</value>
+  </data>
+  <data name="Conclusion_user_2_4" xml:space="preserve">
+    <value>9. Twój stan funkcjonalny jest, niestety, zły. Poziom możliwości systemu sercowo-naczyniowego jest poniżej średniego, wykazuje widoczne oznaki wycieńczenia wskutek stresu. Obciążenie organizmu znacząco przewyższa jego możliwości funkcjonalne.
+Należy przerwać działalność zawodową i wyjechać na dłuższy wypoczynek lub urlop oraz zmniejszyć obciążenie. Jeżeli nie możesz wyjść z zaistniałej sytuacji życiowej, musisz wesprzeć organizm suplementami diety, witaminami oraz substancjami energetyzującymi oraz zawierającymi minerały.  
+Bardzo zalecane jest skonsultowanie się z psychoterapeutą i terapeutą, a także zbadanie stanu organizmu w warunkach ambulatoryjnych</value>
+  </data>
+  <data name="Conclusion_user_2_5" xml:space="preserve">
+    <value>10. Twój stan funkcjonalny jest niestety zły. Napięcie systemu sercowo-naczyniowego jest niskie, wykazuje wyraźne objawy wycieńczenia wskutek stresu. Obciążenie organizmu znacząco przewyższa jego możliwości funkcjonalne.
+Należy niezwłocznie przerwać aktywność i wyjechać na dłuższy wypoczynek lub urlop. Jeżeli nie możesz wyjść z zaistniałej sytuacji życiowej, musisz wesprzeć organizm suplementami diety, witaminami oraz substancjami energetyzującymi oraz zawierającymi minerały.  
+Bardzo zalecane jest skonsultowanie się z psychoterapeutą i terapeutą, a także wszechstronne pogłębione badanie kliniczne w warunkach ambulatoryjnych.</value>
+  </data>
+  <data name="Conclusion_user_3_1" xml:space="preserve">
+    <value>11. Twój stan funkcjonalny jest ogólnie dobry, poziom możliwości funkcjonalnych natomiast jest średni. Mocne zmęczenie spowodowało zauważalne napięcie nerwowe oraz stres, odnotowano opór organizmu względem sytuacji stresowych. Obciążenie organizmu na razie odpowiada jego możliwościom funkcjonalnym. Masz optymalną aktywność i poprawną reakcję w warunkach zmieniającej się sytuacji. Procesy metaboliczne i energetyczne w Twoim organiźmie są zdecydowanie przyspieszone. Jesteś w stanie spięcia, podwyższonej aktywności psychicznej i behawioralnej, jesteś gotowy do walki; Twoja koncentracja jest bardzo wysoka, zdolności do zwalczania trudnych sytuacji życiowych na wysokim poziomie. 
+Niemniej nie jest korzystne przebywanie w takim stanie zbyt długo, ponieważ może on przekształcić się w stan ciągłego stresu. Jeżeli nie jesteś w stanie wyjść z zaistniałej sytuacji życiowej, musisz wesprzeć organizm suplementami diety, witaminami, substancjami energetyzującymi oraz zawierającymi niezbędne minerały. Bardzo zalecane jest skonsultowanie się z psychoterapeutą i terapeutą, badanie ambulatoryjne stanu organizmu (pomiar ciśnienia tętniczego, kliniczny elektrokardiogram, ogólne i biochemiczne badanie krwi, badanie moczu etc.).</value>
+  </data>
+  <data name="Conclusion_user_3_2" xml:space="preserve">
+    <value>12. Twój stan funkcjonalny jest ogólnie dobry i znajduje się na średnim poziomie możliwości funkcjonalnych systemu sercowo-naczyniowego. Twoje zmęczenie, będące na poziomie powyżej średniego, wywołało lekkie objawy napięcia nerwowego. Obciążenie organizmu odpowiada jego możliwościom funkcjonalnym. Masz optymalną aktywność oraz poprawną reakcję w warunkach zmieniającej się sytuacji. Procesy metaboliczne oraz energetyczne w Twoim organiźmie są nieco przyspieszone. Jesteś w stanie spięcia, Twoja aktywność psychiczna i behawioralna są ponad przeciętne. Zdolności do pokonywania trudności życiowych są wysokie. Stres jest praktycznie niezauważalny. W tej sytuacji nie są potrzebne jakiekolwiek dodatkowe czynności w zakresie poprawy zdrowia czy też profilaktyki.</value>
+  </data>
+  <data name="Conclusion_user_3_3" xml:space="preserve">
+    <value>13. Twój stan funkcjonalny jest optymalny pod względem zdrowotnym. Nie masz żadnych objawów napięcia nerwowego lub stresu. Wydolność Twojego systemu sercowo-naczyniowego jest idealna.
+W tej sytuacji nie są potrzebne jakiekolwiek dodatkowe czynności w zakresie poprawy stanu zdrowia i profilaktyki.</value>
+  </data>
+  <data name="Conclusion_user_3_4" xml:space="preserve">
+    <value>14. Twój stan funkcjonalny jest ogólnie dobry i odpowiada średniemu poziomowi możliwości funkcjonalnych. Lekkie zmęczenie spowodowało minimalne objawy wycieńczenia w zakresie funkcjonowania systemu sercowo-naczyniowego. Obciążenie organizmu generalnie odpowiada jego możliwościom funkcjonalnym, niemniej Twoja aktywność jest trochę obniżona. Procesy metaboliczne i energetyczne Twojego organizmu są nieznacznie spowolnione, a więc istnieje stan minimalnego  zahamowania pracy ośrodkowego systemu nerwowego. Zdolności do pokonywania trudności życiowych są obniżone. Podobny stan nie wymaga szczególnych czynności w zakresie profilaktyki i poprawy stanu zdrowia. Zaleca się wydłużenie czasu, przeznaczonego na wypoczynek oraz obniżenie poziomu obciążeń.</value>
+  </data>
+  <data name="Conclusion_user_3_5" xml:space="preserve">
+    <value>15. Twój stan funkcjonalny jest ogólnie dobry i odpowiada średniemu poziomowi możliwości funkcjonalnych systemu sercowo-naczyniowego. Niemniej w funkcjonowaniu systemu zauważalne są objawy wycieńczenia. Stwarza się sytuacja, kiedy obciążenie organizmu zaczyna przekraczać jego możliwości funkcjonalne. Procesy metaboliczne i energetyczne w Twoim organiźmie są wyraźnie spowolnione. Odnotowano stan znaczącego zahamowania pracy ośrodkowego systemu nerwowego. Zdolności do pokonywania trudności życiowych są bardzo obniżone. Zalecane jest wydłużenie czasu wypoczynku oraz zmniejszenie poziomu aktywności. Jeżeli nie jesteś w stanie wyjść z zaistniałej sytuacji życiowej, musisz wesprzeć organizm suplementami diety, witaminami, substancjami energetyzującymi oraz zawierającymi niezbędne minerały. Bardzo zalecane jest skonsultowanie się z psychoterapeutą i terapeutą, badanie ambulatoryjne stanu organizmu (pomiar ciśnienia tętniczego, kliniczny elektrokardiogram, ogólne i biochemiczne badanie krwi, badanie moczu etc.).</value>
+  </data>
+  <data name="Conclusion_user_4_1" xml:space="preserve">
+    <value>16. Twój stan funkcjonalny jest na poziomie powyżej średniego, lecz zauważalne zmęczenie wywołało pierwsze objawy napięcia nerwowego. Zaczyna pojawiać się niepokój, który może spowodować zmianę ustalonych zasad życiowych. Organizm zaczyna odczuwać nadmierne obciążenie.
+Nie ma potrzeby stosowania szczególnych czynności w zakresie poprawy stanu zdrowia i profilaktyki, natomiast bardzo zalecane jest przeprowadzenie analizy własnego zachowania i stanu celem ich skorygowania.</value>
+  </data>
+  <data name="Conclusion_user_4_2" xml:space="preserve">
+    <value>17. Twoje możliwości funkcjonalne są powyżej poziomu średniego. Niemniej zmęczenie, które się pojawiło, powoduje minimalne napięcie nerwowe. Powoli rodzi się niepokój, który może doprowadzić do zmiany ustalonych zasad życiowych. Organizm zaczyna odczuwać nadmierne obciążenie.
+Nie ma potrzeby stosowania szczególnych czynności w zakresie poprawy stanu zdrowia i profilaktyki, natomiast bardzo zalecane jest przeanalizowanie swojego trybu życia oraz analizy stanu funkcjonalnego celem ich skorygowania.</value>
+  </data>
+  <data name="Conclusion_user_4_3" xml:space="preserve">
+    <value>18.Twoje możliwości funkcjonalne są powyżej poziomu średniego. Brak objawów zmęczenia. Wytrzymałość fizyczna jest wystarczająca. W tej sytuacji nie są wymagane dodatkowe szczególne czynności w zakresie poprawy stanu zdrowia i profilaktyki. W celu usprawnienia funkcjonowania organizmu zalecane jest podjęcie aktywności fizycznej oraz zwiększenie poziomu  obciążenia fizycznego.</value>
+  </data>
+  <data name="Conclusion_user_4_4" xml:space="preserve">
+    <value>19. Twoje możliwości funkcjonalne są powyżej poziomu średniego. Brak objawów zmęczenia. Twoje predyspozycje do podjęcia wysiłku fizycznego są bardzo wysokie. 
+W tej sytuacji nie są wymagane dodatkowe szczególne czynności w zakresie poprawy stanu zdrowia i profilaktyki. W celu usprawnienia funkcjonowania organizmu zalecane jest podjęcie aktywności fizycznej oraz zwiększenie poziomu obciążenia fizycznego.</value>
+  </data>
+  <data name="Conclusion_user_4_5" xml:space="preserve">
+    <value>20. Twoje możliwości funkcjonalne są powyżej poziomu średniego. Organizm jest minimalnie przeciążony, natomiast jego wytrzymałość fizyczna jest wystarczająca. 
+W tej sytuacji nie są wymagane dodatkowe szczególne czynności w zakresie poprawy stanu zdrowia i profilaktyki. Zalecana jest optymalizacja wysiłku fizycznego oraz odnowa biologiczna.</value>
+  </data>
+  <data name="Conclusion_user_5_1" xml:space="preserve">
+    <value>21. Masz wysoki poziom możliwości funkcjonalnych. Niemniej zauważalne zmęczenie spowodowało początkowe stadium napięcia nerwowego i stresu. Postępujący stres powoduje stany niepokoju, które wywołują zachwianie równowagi wewnętrznej. To Cię zmusza do zmiany aktywności behawioralnej. Organizm odczuwa nadmierne obciążenie.
+Nie ma potrzeby stosowania szczególnych czynności w zakresie poprawy stanu zdrowia i profilaktyki, natomiast bardzo zalecane jest przeanalizowanie swojego trybu życia oraz analizy stanu funkcjonalnego celem ich skorygowania.</value>
+  </data>
+  <data name="Conclusion_user_5_2" xml:space="preserve">
+    <value>22. Masz wysoki poziom możliwości funkcjonalnych. Niemniej zmęczenie spowodowało napięcie nerwowe. Zaczyna pojawiać się niepokój, który może doprowadzić do zmiany ustalonych zasad życiowych. Organizm odczuwa nadmierne obciążenie.  
+Nie ma potrzeby stosowania szczególnych czynności w zakresie poprawy stanu zdrowia i profilaktyki, natomiast bardzo zalecane jest przeanalizowanie swojego trybu życia oraz analizy stanu funkcjonalnego.</value>
+  </data>
+  <data name="Conclusion_user_5_3" xml:space="preserve">
+    <value>23. Masz wysoki poziom możliwości funkcjonalnych. Brak objawów zmęczenia. Twój organizm jest dobrze przygotowany i ma predyspozycje do wysiłku fizycznego.
+W tej sytuacji nie są wymagane dodatkowe szczególne czynności w zakresie poprawy stanu zdrowia i profilaktyki. Zalecane jest utrzymanie obecnego stanu poprzez regularną aktywność fizyczną.</value>
+  </data>
+  <data name="Conclusion_user_5_4" xml:space="preserve">
+    <value>24. Masz wysoki poziom możliwości funkcjonalnych. Brak objawów zmęczenia. Bardzo dobrze znosisz obciążenie fizyczne. Niemniej pojawiają się pierwsze objawy wycieńczenia w zakresie funkcjonowania systemu sercowo-naczyniowego. Możliwy jest stan przetrenowania. 
+Nie są wymagane dodatkowe szczególne czynności w zakresie poprawy stanu zdrowia i profilaktyki,  lecz należy wydłużyć czas wypoczynku i obniżyć poziom aktywności. Zalecana jest optymalizacja wysiłku fizycznego oraz odnowa biologiczna.  </value>
+  </data>
+  <data name="Conclusion_user_5_5" xml:space="preserve">
+    <value>25. Masz wysoki poziom możliwości funkcjonalnych, niemniej Twój organizm jest zdecydowanie przemęczony. Poziom wytrzymałości fizycznej powoli się obniża, możliwe jest pojawienie się stanu przetrenowania i przemęczenia.
+W tej sytuacji należy przerwać jakikolwiek wysiłek fizyczny. Niezbędna jest przerwa w pracy, wypoczynek w SPA, urlop oraz zmiana aktywności. Należy zażywać witaminy, suplementy diety, zawierające zwiększoną ilość niezbędnych substancji mineralnych oraz preparatów, poprawiających energetykę organizmu. W razie kontynuowania dotychczasowego trybu życia i zachowania istniejącego poziomu obciążeń, możliwe jest załamanie nerwowe, przejawiające się w postaci utraty przytomności, gwałtownych bólów brzucha lub zaburzeń pracy żołądka.</value>
+  </data>
+</root>

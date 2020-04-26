@@ -1,0 +1,3 @@
+[submodule "src/Components/DotNetRtfWriter"]
+	path = src/Components/DotNetRtfWriter
+	url = https://github.com/adadurov/DotNetRtfWriter

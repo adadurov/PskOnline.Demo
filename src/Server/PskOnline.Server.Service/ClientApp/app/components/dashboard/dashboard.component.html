@@ -1,0 +1,32 @@
+﻿<div class="container" [@fadeInOut]>
+
+  <div class="row" style="padding-bottom: 1em;">
+
+    <p>&nbsp;</p>
+
+    <h3>Добро пожаловать!</h3>
+
+    <p>Вы находитесь на тестовой площадке сервиса предсменного самоконтроля оперативного персонала psk-online.ru</p>
+
+    <p>Доступные функции <a href="https://www.psk-online.ru/2018/10/23/available-features/">описаны здесь</a></p>
+
+    <p>Замечания, предложения и пожелания направляйте по адресу: <a href="mailto:psk-online@mail.ru">psk-online@mail.ru</a> </p>
+
+    <hr />
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-8">
+      <tenant-dashboard *ngIf="isTenantUser"></tenant-dashboard>
+
+      <div *ngIf="isHostUser">
+        <h3>Информация для администрации сервиса</h3>
+        <p>
+          Общая информация о работе сервиса пока недоступна. Мы работаем над этим.
+        </p>
+      </div>
+      <!--<host-dashboard *ngIf="isHostUser"></host-dashboard>-->
+    </div>
+  </div>
+</div>

@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Conclusion_user_1_1" xml:space="preserve">
+    <value>残念ながら、あなたの機能状態は極めて不十分である。あなたの心血管系には機能的な能力の低レベルを持っています。物理的な疲労と緊張のレベルが最大まで、高い - ストレスの開発インチ頻繁かつ安定したパルス。
+心臓血管系の張力に応じて、仕事のため、システムの低容量と物理的な仕事のためのあなたの体の能力の極めて低いレベルと一緒に最大になります。あなたの体の生理的なプロセスは、コスト増を進める。エネルギーや代謝プロセスの加速をマーク。ハイ過敏。不当な精神と行動の活動の激化、あなたの生物の動員。内部および外部の需要は非常に身体の機能的な能力を上回っています。中断が可能です。アドレナリンレベルとパニック発作の突然の増加の脅威。
+仕事と長いレクリエーションや欠員で破るが緊急に必要です。あなたは現在の状況を解決できない場合は、特別な力とビタミンのサプリメントとし、重要なミネラルを含む薬とのあなたの体をサポートする必要があります。それはあなたが心理療法とセラピストと相談して病院に深く徹底した診察を持っていることが極めて望ましい。</value>
+  </data>
+  <data name="Conclusion_user_1_2" xml:space="preserve">
+    <value>残念ながら、あなたの機能状態は極めて不十分である。あなたの心血管系には機能的な能力の低レベルを持っています。物理的な疲労と緊張のレベルがアップ目に見えるレベルまで、平均よりも高くなっている - ストレスの開発インチ
+仕事のため、システムの低容量と物理的な仕事のためのあなたの体の能力は、それに応じて極めて低いレベルと一緒に心血管系のマーク緊張。あなたの体の生理的なプロセスは、コスト増を進める。エネルギーや代謝プロセスの加速をマーク。ハイ過敏。不当な精神と行動の活動の激化、あなたの生物の動員。内部および外部の需要が大幅に身体の機能的な能力を上回っています。中断が可能です。
+仕事と長いレクリエーションや欠員で破るが緊急に必要です。あなたは現在の状況を解決できない場合は、特別な力とビタミンのサプリメントとし、重要なミネラルを含む薬とのあなたの体をサポートする必要があります。それはあなたが心理療法とセラピストと相談し、総合病院に深く徹底した診察を持っていることが極めて望ましい</value>
+  </data>
+  <data name="Conclusion_user_1_3" xml:space="preserve">
+    <value>残念ながら、あなたの機能状態は不満足なものである。あなたの心血管系には機能的な能力の低レベルを持っています。
+緊張のレベルはストレスの発展とともに増加し、平均して、物理的な疲労のレベルも平均値です。仕事のための能力の極めて低い水準。スポーツの負荷に不寛容をマーク。あなたの体の生理的なプロセスは、コスト増を進める。エネルギーや代謝プロセスの加速。高い行動の活動。あなたの生物の不当な精神的活動、動員の増加となりました。内部および外部の需要が大幅に身体の機能的な能力を上回っています。
+仕事やレクリエーションで破るが緊急に必要です。それはあなたが心理療法とセラピストと相談し、総合病院に深く徹底した診察を持っていることが極めて望ましい。</value>
+  </data>
+  <data name="Conclusion_user_1_4" xml:space="preserve">
+    <value>残念ながら、あなたの機能状態は不満足なものである。あなたの心血管系には機能的な能力の低レベルを持っています。緊張や肉体疲労は平均以下です。ストレスの開発における疲労の兆候が現れています。仕事のための能力は極めて低い。スローダウンマークとパワーと代謝過程の弱体化。あなたの体の生理的なプロセスは、コスト増を進める。行動の活動が極めて低いレベルは、精神と動機活動や生物の動員の減少。内部および外部の需要が大幅にあなたの体の機能的な能力を上回っています。
+仕事と長いレクリエーションや欠員で破るが緊急に必要です。あなたは現在の状況を解決できない場合は、特別な力とビタミンのサプリメントとし、重要なミネラルを含む薬とのあなたの体をサポートする必要があります。それはあなたが心理療法とセラピストと相談し、総合病院に深く徹底した診察を持っていることが極めて望ましい。</value>
+  </data>
+  <data name="Conclusion_user_1_5" xml:space="preserve">
+    <value>残念ながら、あなたの機能状態は不満足なものである。あなたの心血管系には機能的な能力の低レベルを持っています。高い物理的疲労と緊張 - 最大までストレスの開発で、物理的な仕事のためのあなたの能力の大幅な減少となりました。劇的な減速して、身体に沿って同じプロセスの強力な活性化を内代謝と発電プロセスの弱体化。あなたの体の生理的なプロセスは、コスト増を進める。行動の活動の非常に低レベル、精神と活動の動機と激しい感情や精神的な興奮の背景を持つ生物の動員は激減。 （ '不全症候群'）。
+仕事と長いレクリエーションや欠員で破るが緊急に必要です。あなたは現在の状況を解決できない場合は、特別な力とビタミンのサプリメントとし、重要なミネラルを含む薬とのあなたの体をサポートする必要があります。それはあなたが心理療法とセラピストと相談して病院に深く徹底した診察を持っていることが極めて望ましい。
+</value>
+  </data>
+  <data name="Conclusion_user_2_1" xml:space="preserve">
+    <value>残念ながら、あなたの機能状態は不満足なものである。あなたの心血管系の機能的な能力は平均以下です。あなたは、神経の緊張や肉体疲労をマークしている。ストレスの発展に明らかな抵抗が。頻脈。あなたの体のパワーと代謝プロセスが加速されます。あなたは、動員の状態にある精神や行動の活動を増加させたが、物理的な仕事のためのあなたの能力が低下する。
+それは、心理療法とセラピストと相談する必要があると総合病院の深い徹底した診察を持っています。
+</value>
+  </data>
+  <data name="Conclusion_user_2_2" xml:space="preserve">
+    <value>残念ながら、あなたの機能状態は不満足なものである。心臓血管系の緊張や疲れが平均以上であり、神経の緊張の高レベル。あなたの体はストレスの開発に抵抗している。あなたの体のパワーと代謝プロセスが加速されます。あなたは、動員の状態にある精神および行動の活性を増加させた。物理的な仕事のための能力が低下する。
+それは、心理療法とセラピストと相談する必要があると総合病院の深い徹底した診察を持っています。
+</value>
+  </data>
+  <data name="Conclusion_user_2_3" xml:space="preserve">
+    <value>残念ながら、あなたの機能状態は不満足なものである。あなたの心血管系のテンションが最適であるが、全く疲れが観測されていないと神経の緊張はneglegibleであり、物理的な仕事やスポーツの耐久性が強く低下させる。物理的な仕事のためのあなたの能力が大幅に減少している。
+あなたはむしろ良い体力を達成するために、あなたの物理的負荷の量を増やすと思います。</value>
+  </data>
+  <data name="Conclusion_user_2_4" xml:space="preserve">
+    <value>残念ながら、あなたの機能状態は不満足なものである。あなたの心血管系の機能的な能力は平均以下であり、ストレスの発達により疲労の明らかな兆候。内部および外部の需要が大幅にあなたの体の機能的な能力を上回っています。
+仕事やレクリエーションで破るが緊急に必要です。あなたは現在の状況を解決できない場合は、特別な力とビタミンのサプリメントとし、重要なミネラルを含む薬とのあなたの体をサポートする必要があります。それはあなたが心理療法とセラピストと相談外来で医師の検診を受けることが非常に望ましい。
+</value>
+  </data>
+  <data name="Conclusion_user_2_5" xml:space="preserve">
+    <value>残念ながら、あなたの機能状態は不満足なものである。心臓血管系のテンションが低くなっています。ストレスの発達により疲労の兆候が明らかになってきています。内部および外部の需要が大幅にあなたの体の機能的な能力を上回っています。
+仕事やレクリエーションで破るが緊急に必要です。あなたは現在の状況を解決できない場合は、特別な力とビタミンのサプリメントとし、重要なミネラルを含む薬とのあなたの体をサポートする必要があります。それはあなたが心理療法とセラピストと相談し、総合病院に深く徹底した診察を持っていることが極めて望ましい。</value>
+  </data>
+  <data name="Conclusion_user_3_1" xml:space="preserve">
+    <value>全体では、機能状態が良好であり、あなたは機能的な能力の平均レベルを持っています。強い疲労が明らかに神経の緊張やストレスを引き起こし、ストレスの開発への抵抗が観測される。これまでのところ、内部および外部の要求はあなたの体の機能的な能力に対応しています。この状況を変えることで最適な活性や反応を持っています。あなたの体のパワーと代謝過程を強く加速される。あなたは、動員の状態になっているが精神および行動の活性を増加させた。あなたが苦労する準備ができている、あなたの注意を熱望している、あなたは人生の困難を克服するための高い能力を持っています。
+しかし、望ましくないで長い間このような状態で滞在して、それは慢性的なストレスの状態となる可能性があるためです。あなたは現在の状況を解決できない場合は、特別な力とビタミンのサプリメントとし、重要なミネラルを含む薬とのあなたの体をサポートする必要があります。それは、心理療法とセラピストに相談することが極めて望ましい。通院医療試験（血圧コントロール、臨床心電図、完全な血球数および生化学的血液検査、尿検査など）。</value>
+  </data>
+  <data name="Conclusion_user_3_2" xml:space="preserve">
+    <value>全体では、機能的な状態は良好で、あなたの心血管系の機能的な能力の平均レベルに相当します。あなたはわずかな緊張を引き起こし、平均以上の疲労感を持っています。内部および外部の需要はあなたの体の機能的な能力に対応しています。この状況を変えることで最適な活性や反応を持っています。あなたの体のパワーと代謝過程が若干加速される。あなたは、動員の状態になっているが精神および行動の活性を増加させた。あなたは人生の困難を克服するための高い能力を持っています。ストレスレベルは最小である。
+回復と予防治療のための特別な措置は、このような状態では必要ありません。</value>
+  </data>
+  <data name="Conclusion_user_3_3" xml:space="preserve">
+    <value>あなたの機能状態は、健康維持に最適です。あなたは、神経の緊張とストレスの兆候を示していない。あなたの心血管系は、仕事のために理想的な機能を示します。
+回復と予防治療のための特別な措置は、このような状態では必要ありません。</value>
+  </data>
+  <data name="Conclusion_user_3_4" xml:space="preserve">
+    <value>全体では、機能状態が良好であり、あなたは機能的な能力の平均レベルを持っています。マイナーな疲労は心血管系の仕事に疲労困憊のわずかな兆候が発生していました。一般的には、内部および外部の要求はあなたの体の機能的な能力に対応しています。しかし、あなたの活動はわずかに減少している。あなたの体のパワーと代謝過程が若干減速され、僅かな休眠状態が観察される。人生の困難を克服する能力が低下する。
+回復と予防治療のための特別な措置は、このような状態では必要ありません。それはあなたのレクリエーションの時間を増やし、あなたの負担を軽減することが望ましい。</value>
+  </data>
+  <data name="Conclusion_user_3_5" xml:space="preserve">
+    <value>全体では、機能的な状態は良好で、あなたの心血管系の機能的な能力の平均レベルに相当します。Howerverは、疲労の明らかな兆候は、その仕事に観察される。あなたの体の機能的な能力を超え始めて、内部および外部の要求を持つ国は、開発しています。あなたは、活性を実質的に減少している。パワーと代謝プロセスが減速される。顕著な休眠状態が観察される。人生の困難を克服する能力が低下する。
+それはあなたのレクリエーションの時間を増やし、あなたの負担を軽減することが望ましい。あなたは現在の状況を解決できない場合は、特別な力とビタミンのサプリメントとし、重要なミネラルを含む薬とのあなたの体をサポートする必要があります。それは、心理療法とセラピストに相談することが極めて望ましい。通院医療試験（血圧コントロール、臨床心電図、完全な血球数および生化学的血液検査、尿検査など）。</value>
+  </data>
+  <data name="Conclusion_user_4_1" xml:space="preserve">
+    <value>あなたの機能的な能力は平均以上です。しかし、顕著な疲労は神経の緊張の最初の兆候が発生していました。あなたは生活の中であなたの現在の優先順位を変更することができ不安が現れ始めている。あなたの体は過剰な負担を我慢し始めている。
+それはあなたの条件およびその後続の補正のための行動の分析を行うことが非常に望ましいですが、回復と予防治療のための特別な措置は必要ありません。
+</value>
+  </data>
+  <data name="Conclusion_user_4_2" xml:space="preserve">
+    <value>あなたの機能的な能力は平均以上です。しかし、最近では疲労の形を少しずつ緊張が浮上。あなたは生活の中であなたの現在の優先順位を変更することができ不安が現れ始めている。あなたの体は過剰な負担を我慢し始めている。
+それはあなたの条件およびその後続の補正のための行動の分析を行うことが非常に望ましいですが、回復と予防治療のための特別な措置は必要ありません。</value>
+  </data>
+  <data name="Conclusion_user_4_3" xml:space="preserve">
+    <value>あなたの機能的な能力は平均以上です。疲労の兆候はありません。あなたは、物理的およびスポーツの仕事の十分な耐久性を持っています。回復と予防治療のための特別な措置は必要ありません。あなたはむしろ良い体力を達成するために、あなたの物理的負荷の量を増やすと思います。</value>
+  </data>
+  <data name="Conclusion_user_4_4" xml:space="preserve">
+    <value>あなたの機能的な能力は平均以上です。疲労の兆候はありません。あなたは、物理的およびスポーツの仕事の高い耐久性を持っています。回復と予防治療のための特別な措置は必要ありません。</value>
+  </data>
+  <data name="Conclusion_user_4_5" xml:space="preserve">
+    <value>あなたの機能的な能力は平均以上です。あなたの体にかかる負荷は低い。あなたは、物理的およびスポーツの仕事の十分な耐久性を持っています。回復と予防治療のための特別な措置は必要ありません。</value>
+  </data>
+  <data name="Conclusion_user_5_1" xml:space="preserve">
+    <value>あなたは、機能的な能力の高いレベルを持っています。しかし、神経の緊張とストレスの初期段階で疲労結果をマーク。ストレスを開発することは目に見えて内部のバランスの状態を変更する明らかな不安を形成している。これは、あなたの行動の活性を変化させる。あなたの体は過剰な負担を我慢し始めている。
+それは彼らのその後の補正のためにあなたの行動や条件の詳細な分析を行うために非常に望ましいのですが回復と予防治療のための特別な措置は必要ありません。</value>
+  </data>
+  <data name="Conclusion_user_5_2" xml:space="preserve">
+    <value>あなたは、機能的な能力の高いレベルを持っています。しかし、疲労は神経の緊張を引き起こした。あなたは生活の中であなたの優先順位を変更する可能性があり不安が現れ始めている。あなたの体は過剰な負担を我慢し始めている。
+それはあなたの行動や条件の解析を行うことが非常に望ましいですが、回復と予防治療のための特別な措置は必要ありません。
+</value>
+  </data>
+  <data name="Conclusion_user_5_3" xml:space="preserve">
+    <value>あなたは、機能的な能力の高いレベルを持っています。疲労の兆候はありません。あなたは、物理的およびスポーツの仕事の良い耐久性を持っています。
+回復と予防治療のための特別な措置は、このような状態では必要ありません.</value>
+  </data>
+  <data name="Conclusion_user_5_4" xml:space="preserve">
+    <value>あなたは、機能的な能力の高いレベルを持っています。疲労の兆候はありません。あなたは、物理的およびスポーツの仕事の非常に高い耐久性を持っています。しかし、心臓血管系の仕事で疲労困憊の最初の徴候が観察される。オーバートレーニングの可能な状態
+回復と予防治療のための特別な措置は必要ありません。ただし、レクリエーションの時間を増やし、あなたの負担を減らす必要があります。
+</value>
+  </data>
+  <data name="Conclusion_user_5_5" xml:space="preserve">
+    <value>あなたは、機能的な能力の高いレベルを持っています。しかし、明らかに疲労の兆候が観察される。物理的およびスポーツの負荷のためのあなたの持久力は減少している。条件をオーバートレーニングの可能な開発。
+あなたは、すべての物理的な活動を停止する必要があります。仕事の休憩、活性変化と回復期センター、または休暇のレクリエーションが望ましい。あなたは特別なパワーとビタミンのサプリメントとし、重要なミネラルを含む薬とのあなたの体をサポートする必要があります。
+あなたが身体活動と同じレベルの生活の前の道を続ける場合には、混乱が失神、腹痛または無秩序胃の形で可能である。
+</value>
+  </data>
+</root>

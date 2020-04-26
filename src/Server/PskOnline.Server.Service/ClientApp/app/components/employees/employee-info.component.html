@@ -1,0 +1,231 @@
+﻿<div>
+  <form *ngIf="formResetToggle" [attr.autocomplete]="isGeneralEditor ? NaN : null"
+        class="form-horizontal" name="employeeInfoForm" #f="ngForm" novalidate
+        (ngSubmit)="f.form.valid ? save() :
+
+          (!firstName.valid && showErrorAlert('Employee name is required', 'Please enter a first and a last name (minimum of 1 and maximum of 200 characters)'));
+          ">
+
+    <div class="row">
+      <div class="col-md-12">
+        <hr [class.separator-hr]="!isEditMode" [class.edit-separator-hr]="isEditMode" />
+      </div>
+    </div>
+
+    <div class="form-group has-feedback">
+      <label class="col-md-3 control-label"
+             for="lastName-{{uniqueId}}">{{'employees.editor.lastName' | translate}}</label>
+      <div *ngIf="!isEditMode" class="col-md-9">
+        <p class="form-control-static">{{employee.lastName}}</p>
+      </div>
+      <div *ngIf="isEditMode" class="col-md-9"
+           [ngClass]="{'has-success': f.submitted && lastName.valid, 'has-error' : f.submitted && !lastName.valid}">
+        <input autofocus type="text" attr.id="lastName-{{uniqueId}}" name="lastName" [attr.autocomplete]="isGeneralEditor ? new-password : null"
+               placeholder="{{'employees.editor.lastNamePrompt' | translate}}"
+               class="form-control" [(ngModel)]="employeeEdit.lastName" #lastName="ngModel"
+               required minlength="2" maxlength="200" />
+        <span *ngIf="showValidationErrors && f.submitted" class="glyphicon form-control-feedback"
+              [ngClass]="{'glyphicon-ok ': lastName.valid, 'glyphicon-remove' : !lastName.valid}"></span>
+        <span *ngIf="showValidationErrors && f.submitted && !lastName.valid" class="errorMessage">
+          {{'employees.editor.LastNameRequired' | translate}}
+        </span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <hr [class.separator-hr]="!isEditMode" [class.edit-separator-hr]="isEditMode" />
+      </div>
+    </div>
+
+    <div class="form-group has-feedback">
+      <label class="col-md-3 control-label"
+             for="firstName-{{uniqueId}}">{{'employees.editor.firstName' | translate}}</label>
+      <div *ngIf="!isEditMode" class="col-md-9">
+        <p class="form-control-static">{{employee.firstName}}</p>
+      </div>
+      <div *ngIf="isEditMode" class="col-md-9"
+           [ngClass]="{'has-success': f.submitted && firstName.valid, 'has-error' : f.submitted && !firstName.valid}">
+        <input type="text" attr.id="firstName-{{uniqueId}}" name="firstName" [attr.autocomplete]="isGeneralEditor ? new-password : null"
+               placeholder="{{'employees.editor.firstNamePrompt' | translate}}"
+               class="form-control" [(ngModel)]="employeeEdit.firstName" #firstName="ngModel"
+               required minlength="2" maxlength="200" />
+        <span *ngIf="showValidationErrors && f.submitted" class="glyphicon form-control-feedback"
+              [ngClass]="{'glyphicon-ok ': firstName.valid, 'glyphicon-remove' : !firstName.valid}"></span>
+        <span *ngIf="showValidationErrors && f.submitted && !firstName.valid" class="errorMessage">
+          {{'employees.editor.FirstNameRequired' | translate}}
+        </span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <hr [class.separator-hr]="!isEditMode" [class.edit-separator-hr]="isEditMode" />
+      </div>
+    </div>
+
+    <div class="form-group has-feedback">
+      <label class="col-md-3 control-label"
+             for="patronymic-{{uniqueId}}">{{'employees.editor.patronymic' | translate}}</label>
+      <div *ngIf="!isEditMode" [class.col-md-9]="isViewOnly" [class.col-md-10]="!isViewOnly">
+        <p class="form-control-static">{{employee.patronymic}}</p>
+      </div>
+      <div *ngIf="isEditMode" class="col-md-9"
+           [ngClass]="{'has-success': f.submitted && patronymic.valid, 'has-error' : f.submitted && !patronymic.valid}">
+        <input type="text" attr.id="patronymic-{{uniqueId}}" name="patronymic" [attr.autocomplete]="isGeneralEditor ? new-password : null"
+               placeholder="{{'employees.editor.patronymicPrompt' | translate}}"
+               class="form-control" [(ngModel)]="employeeEdit.patronymic" #patronymic="ngModel"
+               required minlength="2" maxlength="200" />
+        <span *ngIf="showValidationErrors && f.submitted" class="glyphicon form-control-feedback"
+              [ngClass]="{'glyphicon-ok ': patronymic.valid, 'glyphicon-remove' : !patronymic.valid}"></span>
+        <span *ngIf="showValidationErrors && f.submitted && !patronymic.valid" class="errorMessage">
+          {{'employees.editor.PatronymicRequired' | translate}}
+        </span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <hr [class.separator-hr]="!isEditMode" [class.edit-separator-hr]="isEditMode" />
+      </div>
+    </div>
+
+    <div class="form-group has-feedback">
+      <label class="col-md-3 control-label"
+             for="externalId-{{uniqueId}}">{{'employees.editor.externalId' | translate}}</label>
+      <div *ngIf="!isEditMode" class="col-md-9">
+        <p class="form-control-static">{{employee.externalId}}</p>
+      </div>
+      <div *ngIf="isEditMode" class="col-md-9"
+           [ngClass]="{'has-success': f.submitted && externalId.valid, 'has-error' : f.submitted && !externalId.valid}">
+        <input type="text" attr.id="externalId-{{uniqueId}}" name="externalId" [attr.autocomplete]="isGeneralEditor ? new-password : null"
+               placeholder="{{'employees.editor.externalIdPrompt' | translate}}"
+               class="form-control" [(ngModel)]="employeeEdit.externalId" #externalId="ngModel"
+               required minlength="2" maxlength="200" />
+        <span *ngIf="showValidationErrors && f.submitted" class="glyphicon form-control-feedback"
+              [ngClass]="{'glyphicon-ok ': externalId.valid, 'glyphicon-remove' : !externalId.valid}"></span>
+        <span *ngIf="showValidationErrors && f.submitted && !externalId.valid" class="errorMessage">
+          {{'employees.editor.FirstNameRequired' | translate}}
+        </span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <hr [class.separator-hr]="!isEditMode" [class.edit-separator-hr]="isEditMode" />
+      </div>
+    </div>
+
+    <div class="form-group has-feedback">
+      <label class="col-md-3 control-label" for="employee-position-info">{{'employees.editor.position' | translate}}</label>
+      <div *ngIf="!isEditMode" [class.col-md-9]="isViewOnly" [class.col-md-10]="!isViewOnly">
+        <p class="form-control-static">
+          <span *ngIf="currentPosition">
+            <span title='{{currentPosition.name}}' class="badge">{{currentPosition.name}}</span>
+          </span>
+        </p>
+      </div>
+      <div *ngIf="isEditMode" class="col-md-9"
+           [ngClass]="{'has-success': f.submitted && position.valid, 'has-error' : f.submitted && !position.valid}">
+
+        <select class="col-md-6 form-control" 
+                required id="employee-position-info" name="position" [(ngModel)]="currentPosition"
+                [compareWith]="comparePositions"
+                #position="ngModel"
+                title="Select Position">
+          <option *ngFor="let pos of allPositions" [ngValue]="pos">
+            {{pos.name}}
+          </option>
+        </select>
+        <span *ngIf="showValidationErrors && f.submitted" class="glyphicon form-control-feedback"
+              [ngClass]="{'glyphicon-ok ': position.valid, 'glyphicon-remove' : !position.valid}"></span>
+        <span *ngIf="showValidationErrors && f.submitted && !position.valid" class="errorMessage">
+          {{'employees.editor.PositionRequired' | translate}}
+        </span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <hr [class.separator-hr]="!isEditMode" [class.edit-separator-hr]="isEditMode" />
+      </div>
+    </div>
+
+    <div class="form-group has-feedback">
+      <label class="col-md-3 control-label" for="employee-gender-info">{{'employees.editor.gender' | translate}}</label>
+      <div *ngIf="!isEditMode" class="col-md-9">
+        <p class="form-control-static">
+          <span *ngIf="currentGender">
+            <span title='{{currentGender.name}}' class="badge">{{currentGender.name}}</span>
+          </span>
+        </p>
+      </div>
+      <div *ngIf="isEditMode" class="col-md-9"
+           [ngClass]="{'has-success': f.submitted && gender.valid, 'has-error' : f.submitted && !gender.valid}">
+
+        <select class="col-md-6 form-control"
+                required 
+                id="employee-gender-info" name="gender" [(ngModel)]="currentGender"
+                [compareWith]="compareGenders"
+                #gender="ngModel"
+                title="Select gender">
+          <option *ngFor="let gender of allGenders" [ngValue]="gender">
+            {{gender.name}}
+          </option>
+        </select>
+        <span *ngIf="showValidationErrors && f.submitted" class="glyphicon form-control-feedback" 
+              [ngClass]="{'glyphicon-ok ': gender.valid, 'glyphicon-remove' : !gender.valid}"></span>
+        <span *ngIf="showValidationErrors && f.submitted && !gender.valid" class="errorMessage">
+          {{'employees.editor.genderRequired' | translate}}
+        </span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <hr [class.separator-hr]="!isEditMode" [class.edit-separator-hr]="isEditMode" />
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-md-3"
+             for="employeeBirthDate-{{uniqueId}}">{{'employees.editor.birthDate' | translate}}</label>
+      <div class="col-md-9">
+        <input type="date" attr.id="employeeBirthDate-{{uniqueId}}" name="ServiceExpireDate"
+               placeholder="" class="form-control"
+               [ngModel]="employeeEdit.birthDate | date:'yyyy-MM-dd'"
+               (ngModelChange)="employeeEdit.birthDate = $event" />
+      </div>
+    </div>
+
+    <div *ngIf="!isViewOnly" class="row">
+      <div class="col-md-12">
+        <hr [class.last-separator-hr]="!isEditMode" [class.edit-last-separator-hr]="isEditMode" />
+      </div>
+    </div>
+
+    <div *ngIf="!isViewOnly" class="form-group">
+      <div class="col-sm-7">
+        <div class="pull-right">
+          <button *ngIf="!isEditMode && isGeneralEditor" type="button" (click)="close()" class="btn btn-default">
+            <i class='fa fa-close'></i>
+            {{'defaultEntity.editor.Close' | translate}}
+          </button>
+          <button *ngIf="!isEditMode && !isGeneralEditor" type="button" (click)="edit()" class="btn btn-default">
+            <i class='fa fa-edit'></i>
+            {{'defaultEntity.editor.Edit' | translate}}
+          </button>
+          <button *ngIf="isEditMode" type="button" (click)="cancel()" class="btn btn-danger" [disabled]="isSaving">
+            <i class='fa fa-times'></i>
+            {{'defaultEntity.editor.Cancel' | translate}}
+          </button>
+          <button *ngIf="isEditMode" type="submit" class="btn btn-primary" [disabled]="isSaving">
+            <i *ngIf="!isSaving" class='fa fa-save'></i>
+            <i *ngIf="isSaving" class='fa fa-circle-o-notch fa-spin'></i>
+            {{isSaving ? ('defaultEntity.editor.Saving' | translate) : ('defaultEntity.editor.Save' | translate)}}
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </form>
+</div>

@@ -1,0 +1,93 @@
+<div class="container">
+
+  <div [@fadeInOut] class="row">
+    <div class="col-12">
+      <ul bootstrapTab #tab="bootstrap-tab" class="nav nav-tabs" (showBSTab)="onShowTab($event)">
+        <li [hidden]="!canViewTenants">
+          <a id="tenantsTab" [routerLink]="[]" fragment="tenants" href="#tenants" data-toggle="tab">
+            <i class="fa fa-users fa-fw" aria-hidden="true"></i> {{'configuration.tab.Tenants' | translate}}
+          </a>
+        </li>
+        <li [hidden]="!canViewEmployees">
+          <a id="employeesTab" [routerLink]="[]" fragment="employees" href="#employees" data-toggle="tab">
+            <i class="fas fa-user-astronaut fa-fw" aria-hidden="true" style="margin-right:-5px"></i>
+            <i class="fas fa-user-astronaut fa-fw" aria-hidden="true" style="margin-left:-5px"></i>
+            {{'configuration.tab.Employees' | translate}}
+          </a>
+        </li>
+        <li [hidden]="!canViewOrgStructure">
+          <a id="orgstructureTab" [routerLink]="[]" fragment="orgstructure" href="#orgstructure" data-toggle="tab">
+            <i class="fa fa-sitemap fa-fw" aria-hidden="true"></i> {{'configuration.tab.OrgStructure' | translate}}
+          </a>
+        </li>
+        <li [hidden]="!canViewPositions">
+          <a id="positionsTab" [routerLink]="[]" fragment="positions" href="#positions" data-toggle="tab">
+            <i class="fa fa-user-tie fa-fw" aria-hidden="true"></i> {{'configuration.tab.Positions' | translate}}
+          </a>
+        </li>
+        <li [hidden]="!canViewUsers">
+          <a id="usersTab" [routerLink]="[]" fragment="users" href="#users" data-toggle="tab">
+            <i class="fa fa-users fa-fw" aria-hidden="true"></i> {{'configuration.tab.Users' | translate}}
+          </a>
+        </li>
+        <li [hidden]="!canViewRoles">
+          <a id="rolesTab" [routerLink]="[]" fragment="roles" href="#roles" data-toggle="tab">
+            <i class="fas fa-theater-masks fa-fw" aria-hidden="true"></i> {{'configuration.tab.Roles' | translate}}
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-12">
+      <div class="tab-content">
+
+        <div class="tab-pane" id="tenants">
+          <h4>{{'configuration.header.TenantManagement' | translate}}</h4>
+          <hr class="separator-hr" />
+          <div [@fadeInOut] *ngIf="canViewTenants && isTenantsActivated" class="content-container">
+            <tenants-management></tenants-management>
+          </div>
+        </div>
+
+        <div class="tab-pane" id="employees">
+          <h4>{{'configuration.header.EmployeeManagement' | translate}}</h4>
+          <hr class="separator-hr" />
+          <div [@fadeInOut] *ngIf="canViewEmployees && isEmployeesActivated" class="content-container">
+            <employees-management></employees-management>
+          </div>
+        </div>
+
+        <div class="tab-pane" id="orgstructure">
+          <h4>{{'configuration.header.OrgStructureManagement' | translate}}</h4>
+          <hr class="separator-hr" />
+          <div [@fadeInOut] *ngIf="canViewOrgStructure && isOrgStructureActivated" class="content-container">
+            <orgstructure-management></orgstructure-management>
+          </div>
+        </div>
+
+        <div class="tab-pane" id="positions">
+          <h4>{{'configuration.header.PositionManagement' | translate}}</h4>
+          <hr class="separator-hr" />
+          <div [@fadeInOut] *ngIf="canViewPositions && isPositionsActivated" class="content-container">
+            <positions-management></positions-management>
+          </div>
+        </div>
+
+        <div class="tab-pane" id="users">
+          <h4>{{'configuration.header.UsersManagements' | translate}}</h4>
+          <hr class="separator-hr" />
+          <div [@fadeInOut] *ngIf="canViewUsers && isUsersActivated" class="content-container">
+            <users-management></users-management>
+          </div>
+        </div>
+
+        <div class="tab-pane" id="roles">
+          <h4>{{'configuration.header.RolesManagement' | translate}}</h4>
+          <hr class="separator-hr" />
+          <div [@fadeInOut] *ngIf="canViewRoles && isRolesActivated" class="content-container">
+            <roles-management></roles-management>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

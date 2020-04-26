@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="NeuroLab.BioMouse.methods.physio.cardio.processing.DataProcessor.SignalTypeName" xml:space="preserve">
+    <value>ソースsignalyタイプ</value>
+  </data>
+  <data name="NeuroLab.BioMouse.methods.physio.cardio.processing.Statistics.IN" xml:space="preserve">
+    <value>テンションインデックス</value>
+  </data>
+  <data name="NeuroLab.BioMouse.methods.physio.cardio.processing.Statistics.VPR" xml:space="preserve">
+    <value>リズムの栄養指数（VIR）</value>
+  </data>
+  <data name="NeuroLab.BioMouse.methods.physio.cardio.processing.Statistics.PAPR" xml:space="preserve">
+    <value>規制プロセスの活動の指標（IRPA）</value>
+  </data>
+  <data name="NeuroLab.BioMouse.methods.physio.cardio.processing.Statistics.IVR" xml:space="preserve">
+    <value>栄養バランスの指標（IVB）</value>
+  </data>
+  <data name="NeuroLab.BioMouse.methods.physio.cardio.processing.Statistics.SpectrumLF" xml:space="preserve">
+    <value>カーディオ·インターバルシリーズのスペクトルのLF部分の割合</value>
+  </data>
+  <data name="NeuroLab.BioMouse.methods.physio.cardio.processing.Statistics.SpectrumVLF" xml:space="preserve">
+    <value>カーディオ·インターバルシリーズのスペクトルのVLF部分の割合</value>
+  </data>
+  <data name="NeuroLab.BioMouse.methods.physio.cardio.processing.Statistics.SpectrumHF" xml:space="preserve">
+    <value>カーディオ·インターバルシリーズのスペクトルのHF部分の割合</value>
+  </data>
+  <data name="NeuroLab.BioMouse.methods.physio.cardio.processing.Statistics.URV_SSS" xml:space="preserve">
+    <value>心血管系の調節機能のレベル</value>
+  </data>
+  <data name="NeuroLab.BioMouse.methods.physio.cardio.processing.Statistics.UNRM_SSS" xml:space="preserve">
+    <value>心臓血管系の調節機構の張力のレベル</value>
+  </data>
+  <data name="NeuroLab.BioMouse.methods.physio.cardio.processing.Statistics.SpectrumULF" xml:space="preserve">
+    <value>カーディオ·インターバルシリーズのスペクトルのULF部分の割合</value>
+  </data>
+  <data name="NeuroLab.BioMouse.methods.physio.cardio.processing.Statistics.TestModeDescription" xml:space="preserve">
+    <value>モード</value>
+  </data>
+  <data name="NeuroLab.BioMouse.methods.physio.cardio.processing.RESULTS_RELIABILITY_ESTIMATION.hc_marks_0_int" xml:space="preserve">
+    <value>0パーセント信頼多方面</value>
+  </data>
+  <data name="NeuroLab.BioMouse.methods.physio.cardio.processing.RESULTS_RELIABILITY_ESTIMATION.hc_marks_1_int" xml:space="preserve">
+    <value>50パーセント信頼多方面</value>
+  </data>
+  <data name="NeuroLab.BioMouse.methods.physio.cardio.processing.RESULTS_RELIABILITY_ESTIMATION.hc_marks_2_int" xml:space="preserve">
+    <value>100％の信頼性の面数</value>
+  </data>
+  <data name="NeuroLab.BioMouse.methods.physio.cardio.processing.RESULTS_RELIABILITY_ESTIMATION.hc_marks_total" xml:space="preserve">
+    <value>検出された前線の総数</value>
+  </data>
+  <data name="NeuroLab.BioMouse.methods.physio.cardio.processing.RESULTS_RELIABILITY_ESTIMATION.reject_min_max_enabled" xml:space="preserve">
+    <value>間隔の持続時間によって拒絶は有効になっていますか？</value>
+  </data>
+  <data name="NeuroLab.BioMouse.methods.physio.cardio.processing.RESULTS_RELIABILITY_ESTIMATION.reject_nn_max" xml:space="preserve">
+    <value>マックス。間隔、msの許容期間</value>
+  </data>
+  <data name="NeuroLab.BioMouse.methods.physio.cardio.processing.RESULTS_RELIABILITY_ESTIMATION.reject_nn_min" xml:space="preserve">
+    <value>分。間隔、msの許容期間</value>
+  </data>
+  <data name="NeuroLab.BioMouse.methods.physio.cardio.processing.RESULTS_RELIABILITY_ESTIMATION.reject_nn_relative" xml:space="preserve">
+    <value>マックス。許可された相対的な変化は、％％</value>
+  </data>
+  <data name="NeuroLab.BioMouse.methods.physio.cardio.processing.RESULTS_RELIABILITY_ESTIMATION.reject_relative_enabled" xml:space="preserve">
+    <value>相対的な変化による拒絶反応が有効になっていますか？</value>
+  </data>
+  <data name="NeuroLab.BioMouse.methods.physio.cardio.processing.Statistics.HRV_Triangular_Index" xml:space="preserve">
+    <value>HRVの三角形のインデックス</value>
+  </data>
+  <data name="NeuroLab.BioMouse.methods.physio.cardio.processing.Statistics.PPPA" xml:space="preserve">
+    <value>適応の精神生理学価格</value>
+  </data>
+  <data name="NeuroLab.BioMouse.methods.physio.cardio.processing.Statistics.RMSSD" xml:space="preserve">
+    <value>ルートは、連続差の二乗の平均。</value>
+  </data>
+</root>

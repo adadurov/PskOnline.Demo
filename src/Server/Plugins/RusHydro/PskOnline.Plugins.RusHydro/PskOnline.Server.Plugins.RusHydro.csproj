@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="log4net" Version="2.0.8" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="4.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Components\DotNetRtfWriter\DotNetRtfWriter.Std\DotNetRtfWriter.Std.csproj" />
+    <ProjectReference Include="..\..\..\..\Methods\Hrv\PskOnline.Methods.Hrv.ObjectModel\PskOnline.Methods.Hrv.ObjectModel.csproj" />
+    <ProjectReference Include="..\..\..\..\Methods\Hrv\PskOnline.Methods.Hrv.Processing\PskOnline.Methods.Hrv.Processing.csproj" />
+    <ProjectReference Include="..\..\..\..\Methods\PskOnline.Methods.Processing\PskOnline.Methods.Processing.csproj" />
+    <ProjectReference Include="..\..\..\..\Methods\Svmr\PskOnline.Methods.Svmr.ObjectModel\PskOnline.Methods.Svmr.ObjectModel.csproj" />
+    <ProjectReference Include="..\..\..\..\Methods\Svmr\PskOnline.Methods.Svmr.Processing\PskOnline.Methods.Svmr.Processing.csproj" />
+    <ProjectReference Include="..\..\..\PskOnline.Server.ObjectModel\PskOnline.Server.ObjectModel.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Logic\status_strings.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>status_strings.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Logic\strings.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>strings.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Logic\status_strings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>status_strings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Logic\strings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>strings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

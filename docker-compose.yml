@@ -1,0 +1,16 @@
+version: '3.4'
+
+services:
+  pskonline.server.service:
+    image: ${DOCKER_REGISTRY}pskonlineserverservice
+    build:
+      context: .
+      dockerfile: src/Server/PskOnline.Server.Service/Dockerfile
+    environment:
+      PSKONLINE_ENV: TeamcityLinux
+
+  mssql-test:
+    image: microsoft/mssql-server-linux
+    environment:
+      ACCEPT_EULA: 'Y'
+      SA_PASSWORD: 'Qwerty12#'

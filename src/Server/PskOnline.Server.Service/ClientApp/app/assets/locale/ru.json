@@ -1,0 +1,357 @@
+﻿{
+  "app": {
+    "Welcome": "Добро пожаловать,",
+    "New": "Новые"
+  },
+  "mainMenu": {
+    "TenantDashboard": "Общие сведения",
+    "Configuration": "Конфигурация",
+    "Settings": "Мой профиль",
+    "About": "О ПСК-Онлайн",
+    "Logout": "Выход"
+  },
+  "pageHeader": {
+    "TenantSummary": "Общие сведения",
+    "Tenants": "Клиенты",
+    "Configuration": "Конфигурация",
+    "OrgStructure": "Организационная структура",
+    "EmployeesManagement": "Сотрудники",
+    "Positions": "Должности",
+    "NotFound": "Не найдено",
+    "About": "О ПСК-Онлайн",
+    "Settings": "Настройки"
+  },
+  "login": {
+    "login": "Вход в систему",
+    "loginFailed": "Не удалось войти в систему",
+    "errorDescription": "Произошла ошибка, попробуйте войти в систему позже.\nОшибка: ",
+    "attemptingLogin": "Вход в систему...",
+    "welcomeUserName": "Добро пожаловать, {{userName}}!",
+    "welcomeBackUserName": "Рады снова вас видеть, {{userName}}!",
+    "sessionRestored": "Доступ восстановлен после истечения сеанса авторизации.",
+    "sessionRestoredForUserName": "Доступ для {{userName}} восстановлен после истечения сеанса авторизации!",
+    "repeatLastOperation": "Если вы выполняли изменение (создание, изменение или удаление объектов), выполните его повторно.",
+    "enterEmailOrUsername": "Имя пользователя или email",
+    "enterPassword": "Пароль",
+    "usernameOrEmailRequired": "Введите имя пользователя или email",
+    "passwordRequired": "Введите пароль",
+    "rememberMe": "Запомнить меня на этом компьютере",
+    "logMeIn": "Вход",
+    "loggingIn": "Проверка...",
+    "loginCaption": "Логин",
+    "passwordCaption": "Пароль",
+    "loggedOut": "Вы завершили сеанс работы",
+    "sessionExpired": "Сеанс работы завершен по таймауту",
+    "sessionExpiredLoginAgain": "Сеанс работы завершен по таймауту. Войдите в систему повторно.",
+    "sessionExpiredLoginAgainRenewSession": "Сеанс работы завершен по таймауту. Войдите в систему повторно."
+  },
+  "forgotPassword": {
+    "requestingResetLink": "Запрос выполняется...",
+    "requestingReset": "Обращение к серверу для сброса пароля...",
+    "requestResetLink": "Запросить сброс пароля"
+  },
+  "pwdReset": {
+    "enterNewPassword": "Введите ваш новый пароль",
+    "repeatNewPassword": "Повторите ваш новый пароль",
+    "passwordTooShort": "Слишком короткий пароль",
+    "passwordsDontMatch": "Пароли должны совпадать",
+    "settingPassword": "Сохранение...",
+    "doSetPassword": "Сохранить"
+  },
+  "ngxDatatable": {
+    "empty": "Данные отсутствуют",
+    "total": "элементов"
+  },
+  "home": {
+    "NoWidgets1": "Нет элементов управления. Перейти к",
+    "NoWidgets2": "чтобы настроить доступные элементы управления",
+    "StatisticsTitle": "Очень Важные Метрики"
+  },
+  "notFound": {
+    "404": "404",
+    "pageNotFound": "Запрошенная страница не существует",
+    "backToHome": "Домой"
+  },
+  "alerts": {
+    "cancelled": "Действие отменено",
+    "cancelledByUserNoChangesMade": "Данные на сервере не были изменены.",
+    "loading": "Загрузка данных...",
+    "saving": "Сохранение изменения...",
+    "pleaseWait": "Пожалуйста, подождите...",
+    "deletionWarning": "Вы действительно хотите удалить {{entity}} \"{{name}}\"?"
+  },
+  "settings": {
+    "tab": {
+      "Profile": "Профиль",
+      "Preferences": "Настройки",
+      "Tenants": "Клиенты",
+      "Users": "Пользователи",
+      "Roles": "Роли"
+    },
+    "header": {
+      "UserProfile": "Профиль пользователя",
+      "UserPreferences": "Предпочтения пользователя",
+      "TenantManagement": "Управление клиентами",
+      "UsersManagements": "Управление пользователями",
+      "RolesManagement": "Управление ролями"
+    }
+  },
+  "configuration": {
+    "tab": {
+      "Tenants": "Клиенты",
+      "Employees": "Сотрудники",
+      "OrgStructure": "Оргструктура",
+      "Positions": "Должности",
+      "Users": "Пользователи",
+      "Roles": "Роли"
+    },
+    "header": {
+      "EmployeeManagement": "Управление сотрудниками",
+      "OrgStructureManagement": "Управление организационной структурой",
+      "TenantManagement": "Управление клиентами",
+      "PositionManagement": "Управление должностями",
+      "UsersManagements": "Управление пользователями",
+      "RolesManagement": "Управление ролями"
+    }
+  },
+  "preferences": {
+    "ReloadPreferences": "Перезагрузить настройки:",
+    "ReloadPreferencesHint": "Загрузить настройки по умолчанию (сбросить изменения)",
+    "Language": "Язык:",
+    "English": "English",
+    "French": "Français",
+    "German": "Deutsch",
+    "Portuguese": "Português",
+    "Arabic": "العربية",
+    "Korean": "한국어",
+    "Russian": "Русский",
+    "LanguageHint": "Выберите язык",
+    "HomePage": "Домашняя страница:",
+    "Dashboard": "Панель приборов",
+    "Tenants": "Клиенты",
+    "Products": "Продукты",
+    "Orders": "Заказы",
+    "About": "О ПСК-Онлайн",
+    "Configuration": "Конфигурация",
+    "Settings": "Настройки",
+    "HomePageHint": "После входа в систему открывать выбранную страницу",
+    "Theme": "Оформление:",
+    "DefaultColor": "<span class='default-theme-option'>Стандартная</span>",
+    "RedColor": "<span class='red-theme-option'>Красная</span>",
+    "OrangeColor": "<span class='orange-theme-option'>Оранжевая</span>",
+    "GreenColor": "<span class='green-theme-option'>Зеленая</span>",
+    "GrayColor": "<span class='gray-theme-option'>Серая</span>",
+    "BlackColor": "<span class='black-theme-option'>Черная</span>",
+    "ThemeHint": "Выберите цветовое оформление",
+    "ResetDefault": "Сбросить",
+    "SetDefault": "Сделать параметрами по умолчанию"
+  },
+  "tenants": {
+    "mgmt": {
+      "tenantAccusative": "клиента",
+      "Name": "Наименование клиента",
+      "Slug": "Поддомен",
+      "ExpDate": "Дата окончания подписки",
+      "MaxUsers": "Лимит пользователей",
+      "MaxEmployees": "Лимит сотрудников",
+      "MaxMbytes": "Лимит хранилища, МБ",
+      "PrimaryContactEmail": "Email",
+      "PrimaryContactFullName": "Контакт (ФИО)",
+      "PrimaryContactMobilePhone": "Моб. телефон",
+      "PrimaryContactOfficePhone": "Раб. телефон",
+      "Edit": "Изменить",
+      "EditTenant": "Изменение данных клиента",
+      "Delete": "Удалить",
+      "NewTenant": "Создать",
+      "Search": "Поиск клиента"
+    },
+    "editor": {
+      "NameRequired": "Необходимо указать наименование",
+      "PrimaryContactNameRequired": "Укажите имя основного контактного лица",
+      "PrimaryContactEmailRequired": "Укажите email основного контактного лица",
+      "SlugRequired": "Необходимо указать название поддомена для url",
+      "Cancel": "Отмена",
+      "Save": "Сохранить"
+    },
+    "creator": {
+      "tenantAdminGroup": "Учетные данные администратора",
+      "tenantInfoGroup": "Сведения о клиенте",
+      "AdminUserName": "Имя пользователя",
+      "AdminUserNameRequired": "Необходимо ввести имя пользователя",
+      "AdminEmail": "Email администратора клиента",
+      "AdminEmailRequired": "Необходимо ввести email администратора клиента",
+      "AdminEmailInvalid": "Email администратора клиента имеет неверный формат",
+      "AdminPhone": "Мобильный телефон",
+      "AdminPhoneRequired": "Необходимо указать номер мобильного телефона",
+      "AdminPassword": "Пароль администратора",
+      "AdminPasswordRequired": "Необходимо указать пароль администратора (допускаются латинские буквы, цифры, спецсимволы)",
+      "AdminLastName": "Фамилия",
+      "AdminLastNameRequired": "Требуется указать фамилию",
+      "AdminFirstName": "Имя",
+      "AdminFirstNameRequired": "Требуется указать имя",
+      "AdminPatronymic": "Отчество",
+      "AdminPatronymicRequired": "Требуется указать отчество"
+    }
+  },
+
+  "employees": {
+    "mgmt": {
+      "employeeAccusative": "сотрудника",
+      "NewEmployee": "Новый сотрудник",
+      "EditEmployee": "Изменить данные сотрудника '{{name}}'",
+      "Edit": "Изменить",
+      "Delete": "Удалить",
+      "Name": "Имя",
+      "Search": "Поиск сотрудника",
+      "fullName": "ФИО",
+      "positionName": "Должность"
+    },
+    "editor": {
+      "lastName": "Фамилия",
+      "lastNamePrompt": "Введите фамилию сотрудника",
+      "firstName": "Имя",
+      "firstNamePrompt": "Введите имя сотрудника",
+      "patronymic": "Отчество",
+      "patronymicPrompt": "Введите отчество сотрудника",
+      "position": "Должность",
+      "birthDate": "Дата рождения",
+      "externalId": "Табельный номер",
+      "externalIdPrompt": "Введите табельный номер или иной код",
+      "gender": "Пол",
+      "genderNone": "Не указан",
+      "genderMale": "Мужской",
+      "genderFemale": "Женский"
+    }
+  },
+  "branchOffices": {
+    "editor": {
+      "name": "Название филиала",
+      "timeZone": "Часовой пояс"
+    }
+  },
+  "orgstructure": {
+    "mgmt": {
+      "BranchesAndDepartments": "Филиалы и отделы",
+      "branchOfficeAccusative": "филиал",
+      "departmentAccusative": "отдел",
+      "Branch": "Филиал",
+      "Branch_HeaderWithName": "Филиал \"{{name}}\"",
+      "DeleteBranchOffice": "Удалить филиал",
+      "EditBranch_WithName": "Изменить филиал \"{{name}}\"",
+      "NewBranch": "Новый филиал",
+      "ChooseBranchOffice": "Выберите филиал",
+
+      "Department": "Отдел",
+      "Department_HeaderWithName": "Отдел \"{{name}}\"",
+      "DeleteDepartment": "Удалить отдел",
+      "EditDepartment": "Изменить отдел \"{{name}}\"",
+      "NewDepartment": "Новый отдел",
+      "ChooseDepartment": "Выберите отдел"
+    }
+  },
+  "departments": {
+    "mgmt": {
+      "name": "Название отдела"
+    },
+    "editor": {
+      "branchOfficeName": "Филиал",
+      "enterDepartmentName": "Введите название отдела"
+    }
+  },
+
+  "positions": {
+    "mgmt": {
+      "positionAccusative": "должность",
+      "Search": "Поиск должности...",
+      "NewPosition": "Новая должность",
+      "Edit": "Изменить",
+      "Delete": "Удалить",
+      "EditPosition": "Изменить должность \"{{name}}\"",
+      "Name": "Название должности"
+    },
+    "editor": {
+      "Name": "Название должности"
+    }
+  },
+  "users": {
+    "mgmt": {
+      "userAccusativeCase": "пользователя",
+      "Search": "Поиск пользователя...",
+      "NewUser": "Новый пользователь",
+      "Edit": "Изменить",
+      "Delete": "Удалить",
+      "EditUser": "Изменить пользователя \"{{name}}\"",
+      "JobTitle": "Должность",
+      "UserName": "Логин",
+      "FullName": "Полное имя",
+      "Email": "Email",
+      "Roles": "Роли",
+      "PhoneNumber": "Телефон"
+    },
+    "editor": {
+      "lastName": "Фамилия",
+      "lastNamePrompt": "Введите фамилию",
+      "firstName": "Имя",
+      "firstNamePrompt": "Введите имя",
+      "patronymic": "Отчество",
+      "patronymicPrompt": "Введите отчество",
+      "JobTitle": "Должность: ",
+      "UserName": "Логин:",
+      "UserNameRequired": "Необходимо ввести имя пользователя (не менее 2 и не более 200 символов)",
+      "Password": "Пароль:",
+      "PasswordHint": "Для изменения имени пользователя необходимо ввести пароль",
+      "CurrentPasswordRequired": "Необходимо ввести пароль",
+      "Email": "Email:",
+      "EmailRequired": "Необходимо ввести адрес Email (не более 200 символов)",
+      "InvalidEmail": "Указанный email не соответствует стандартному формату email",
+      "ChangePassword": "Изменить пароль",
+      "CurrentPassword": "Текущий пароль:",
+      "NewPassword": "Новый пароль:",
+      "NewPasswordRequired": "Необходимо ввести новый пароль (не менее 6 символов)",
+      "ConfirmPassword": "Подтвердить пароль:",
+      "ConfirmationPasswordRequired": "Необходимо повторно вввести новый пароль",
+      "PasswordMismatch": "Введенные значения пароля не совпадают",
+      "Roles": "Роли:",
+      "FullName": " Полное имя:",
+      "RoleRequired": " Необходимо указать роль",
+      "PhoneNumber": "Телефон#:",
+      "Enabled": "Активен",
+      "Unblock": "Разблокировать"
+    }
+  },
+  "roles": {
+    "mgmt": {
+      "roleAccusativeCase": "роль",
+      "Search": "Поиск роли...",
+      "NewRole": "Новая роль",
+      "Edit": "Изменить",
+      "Details": "Подробно...",
+      "Delete": "Удалить",
+      "RoleDetails": "Подробно о роли \"{{name}}\"",
+      "EditRole": "Изменить роль\"{{name}}\"",
+      "Name": "Название",
+      "Description": "Описание",
+      "Users": "Пользователи"
+    },
+    "editor": {
+      "Name": "Название:",
+      "Description": "Описание:",
+      "RoleNameRequired": "Необходимо ввести название роли (не менее 2 и не более 200 characters)",
+      "SelectAll": "Выбрать все",
+      "SelectNone": "Очистить выбор"
+    }
+  },
+  "defaultEntity": {
+    "view": "Просмотреть",
+    "delete": "Удалить",
+    "edit": "Изменить",
+    "editor": {
+      "CopyToClipboard": "Копировать в буфер обмена",
+      "Edit": "Изменить",
+      "Close": "Закрыть",
+      "Cancel": "Отмена",
+      "Save": "Сохранить",
+      "Saving": "Сохранение..."
+    }
+  }
+}

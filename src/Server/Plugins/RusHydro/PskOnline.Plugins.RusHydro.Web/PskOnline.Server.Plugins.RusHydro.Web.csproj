@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <ApplicationIcon />
+    <OutputType>Library</OutputType>
+    <StartupObject />
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\netcoreapp2.1\PskOnline.Server.Plugins.RusHydro.Web.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" Version="2.1.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="1.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\PskOnline.Server.Shared\PskOnline.Server.Shared.csproj" />
+    <ProjectReference Include="..\PskOnline.Plugins.RusHydro\PskOnline.Server.Plugins.RusHydro.csproj" />
+    <ProjectReference Include="..\PskOnline.Server.Plugins.Rushydro.DAL\PskOnline.Server.Plugins.RusHydro.DAL.csproj" />
+  </ItemGroup>
+
+</Project>

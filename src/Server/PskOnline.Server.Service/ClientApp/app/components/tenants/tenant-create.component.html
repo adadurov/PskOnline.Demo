@@ -1,0 +1,362 @@
+﻿<div>
+  <form *ngIf="formResetToggle" [attr.autocomplete]="isGeneralEditor ? NaN : null"
+        class="form-horizontal" name="tenantCreateForm" #f="ngForm" novalidate
+        (ngSubmit)="f.form.valid ? save() :
+
+          (!name.valid && showErrorAlert('Tenant name is required', 'Please enter a tenant name (minimum of 2 and maximum of 200 characters)'));
+          ">
+    <p>{{'tenants.creator.tenantInfoGroup' | translate | uppercase}}</p>
+    <div class="row">
+      <div class="col-md-12">
+        <hr class="edit-separator-hr" />
+      </div>
+    </div>
+
+    <div class="form-group has-feedback">
+      <label class="control-label col-md-3"
+             for="name-{{uniqueId}}">{{'tenants.mgmt.Name' | translate}}</label>
+      <div class="col-md-9"
+           [ngClass]="{'has-success': f.submitted && name.valid, 'has-error' : f.submitted && !name.valid}">
+        <input autofocus type="text" attr.id="name-{{uniqueId}}" name="name" [attr.autocomplete]="isGeneralEditor ? new-password : null"
+               placeholder="Enter tenant name"
+               class="form-control" [(ngModel)]="tenantNew.tenantDetails.name"
+               #name="ngModel"
+               required minlength="2" maxlength="200" />
+        <span *ngIf="showValidationErrors && f.submitted" class="glyphicon form-control-feedback"
+              [ngClass]="{'glyphicon-ok ': name.valid, 'glyphicon-remove' : !name.valid}"></span>
+        <span *ngIf="showValidationErrors && f.submitted && !name.valid" class="errorMessage">
+          {{'tenants.editor.NameRequired' | translate}}
+        </span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <hr class="edit-separator-hr" />
+      </div>
+    </div>
+
+    <div class="form-group has-feedback">
+      <label class="control-label col-md-3"
+             for="slug-{{uniqueId}}">{{'tenants.mgmt.Slug' | translate}}</label>
+      <div class="col-md-9"
+           [ngClass]="{'has-success': f.submitted && slug.valid, 'has-error' : f.submitted && !slug.valid}">
+        <input autofocus type="text" attr.id="slug-{{uniqueId}}" name="slug" [attr.autocomplete]="isGeneralEditor ? new-password : null"
+               placeholder="Enter tenant slug"
+               class="form-control" [(ngModel)]="tenantNew.tenantDetails.slug"
+               #slug="ngModel"
+               required minlength="2" maxlength="200" />
+        <span *ngIf="showValidationErrors && f.submitted" class="glyphicon form-control-feedback"
+              [ngClass]="{'glyphicon-ok ': slug.valid, 'glyphicon-remove' : !slug.valid}"></span>
+        <span *ngIf="showValidationErrors && f.submitted && !slug.valid" class="errorMessage">
+          {{'tenants.editor.SlugRequired' | translate}}
+        </span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <hr class="edit-separator-hr" />
+      </div>
+    </div>
+
+    <div class="form-group has-feedback">
+      <label class="control-label col-md-3"
+             for="primaryContactName-{{uniqueId}}">{{'tenants.mgmt.PrimaryContactFullName' | translate}}</label>
+      <div class="col-md-9"
+           [ngClass]="{'has-success': f.submitted && primaryContactName.valid, 'has-error' : f.submitted && !primaryContactName.valid}">
+        <input type="text" attr.id="primaryContactName-{{uniqueId}}" name="primaryContactName"
+               placeholder="Enter primary contact name" class="form-control"
+               [(ngModel)]="tenantNew.tenantDetails.primaryContact.fullName"
+               #primaryContactName="ngModel"
+               required maxlength="200" />
+        <span *ngIf="showValidationErrors && f.submitted" class="glyphicon form-control-feedback"
+              [ngClass]="{'glyphicon-ok ': primaryContactName.valid, 'glyphicon-remove' : !primaryContactName.valid}">
+        </span>
+        <span *ngIf="showValidationErrors && f.submitted && primaryContactName.errors?.required" class="errorMessage">
+          {{'tenants.editor.PrimaryContactNameRequired' | translate}}
+        </span>
+        <span *ngIf="showValidationErrors && f.submitted && primaryContactName.errors?.pattern" class="errorMessage">
+          {{'tenants.editor.InvalidContactName' | translate}}
+        </span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <hr class="edit-separator-hr" />
+      </div>
+    </div>
+
+    <div class="form-group has-feedback">
+      <label class="control-label col-md-3"
+             for="primaryContactEmail-{{uniqueId}}">{{'tenants.mgmt.PrimaryContactEmail' | translate}}</label>
+      <div class="col-md-9"
+           [ngClass]="{'has-success': f.submitted && primaryContactEmail.valid, 'has-error' : f.submitted && !primaryContactEmail.valid}">
+        <input type="text" attr.id="primaryContactEmail-{{uniqueId}}" name="primaryContactEmail"
+               placeholder="Enter primary contact email" class="form-control"
+               [(ngModel)]="tenantNew.tenantDetails.primaryContact.email"
+               #primaryContactEmail="ngModel"
+               required maxlength="200" pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" />
+        <span *ngIf="showValidationErrors && f.submitted" class="glyphicon form-control-feedback"
+              [ngClass]="{'glyphicon-ok ': primaryContactEmail.valid, 'glyphicon-remove' : !primaryContactEmail.valid}"></span>
+        <span *ngIf="showValidationErrors && f.submitted && primaryContactEmail.errors?.required" class="errorMessage">
+          {{'tenants.editor.PrimaryContactEmailRequired' | translate}}
+        </span>
+        <span *ngIf="showValidationErrors && f.submitted && primaryContactEmail.errors?.pattern" class="errorMessage">
+          {{'tenants.editor.InvalidContactEmail' | translate}}
+        </span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <hr class="edit-separator-hr" />
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-md-3"
+             for="PrimaryContactPhoneNumber-{{uniqueId}}">{{'tenants.mgmt.PrimaryContactMobilePhone' | translate}}</label>
+      <div class="col-md-9">
+        <input type="text" attr.id="PrimaryContactPhoneNumber-{{uniqueId}}" name="primaryContactPhoneNumber"
+               placeholder="+7 123 456-78-90" class="form-control"
+               [(ngModel)]="tenantNew.tenantDetails.primaryContact.mobilePhoneNumber" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <hr class="edit-separator-hr" />
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-md-3"
+             for="ServiceExpireDate-{{uniqueId}}">{{'tenants.mgmt.ExpDate' | translate}}</label>
+      <div class="col-md-9">
+        <input type="date" attr.id="ServiceExpireDate-{{uniqueId}}" name="ServiceExpireDate"
+               placeholder="" class="form-control"
+               [ngModel]="tenantNew.tenantDetails.serviceDetails.serviceExpireDate | date:'yyyy-MM-dd'"
+               (ngModelChange)="tenantNew.tenantDetails.serviceDetails.serviceExpireDate = $event" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <hr class="edit-separator-hr" />
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-md-3"
+             for="maxUsers-{{uniqueId}}">{{'tenants.mgmt.MaxUsers' | translate}}</label>
+      <div class="col-md-9">
+        <input type="text" attr.id="maxUsers-{{uniqueId}}" name="maxUsers"
+               placeholder="Maximum users" class="form-control"
+               pattern="^[0-9]+$"
+               [(ngModel)]="tenantNew.tenantDetails.serviceDetails.serviceMaxUsers" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <hr class="edit-separator-hr" />
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-md-3"
+             for="maxEmployees-{{uniqueId}}">{{'tenants.mgmt.MaxEmployees' | translate}}</label>
+      <div class="col-md-9">
+        <input type="text" attr.id="maxEmployees-{{uniqueId}}" name="maxEmployees"
+               placeholder="Maximum employees" class="form-control"
+               pattern="^[0-9]+$"
+               [(ngModel)]="tenantNew.tenantDetails.serviceDetails.serviceMaxEmployees" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <hr class="group-separator-hr" />
+      </div>
+    </div>
+
+    <p>{{'tenants.creator.tenantAdminGroup' | translate | uppercase}}</p>
+
+    <div class="form-group has-feedback">
+      <label class="control-label col-md-3"
+             for="adminUserName-{{uniqueId}}">{{'tenants.creator.AdminUserName' | translate}}</label>
+      <div class="col-md-9"
+           [ngClass]="{'has-success': f.submitted && adminUsername.valid, 'has-error' : f.submitted && !adminUsername.valid}">
+        <input type="text" attr.id="adminUserName-{{uniqueId}}" name="adminUserName" [attr.autocomplete]="isGeneralEditor ? new-password : null"
+               placeholder="Enter admin username"
+               class="form-control"
+               [(ngModel)]="tenantNew.adminUserDetails.username"
+               #adminUsername="ngModel"
+               required minlength="2" maxlength="200" />
+        <span *ngIf="showValidationErrors && f.submitted" class="glyphicon form-control-feedback"
+              [ngClass]="{'glyphicon-ok ': adminUsername.valid, 'glyphicon-remove' : !name.valid}"></span>
+        <span *ngIf="showValidationErrors && f.submitted && !adminUsername.valid" class="errorMessage">
+          {{'tenants.creator.AdminUserNameRequired' | translate}}
+        </span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <hr class="edit-separator-hr" />
+      </div>
+    </div>
+
+    <div class="form-group has-feedback">
+      <label class="control-label col-md-3"
+             for="tenantAdminEmail-{{uniqueId}}">{{'tenants.creator.AdminEmail' | translate}}</label>
+      <div class="col-md-9"
+           [ngClass]="{'has-success': f.submitted && tenantAdminEmail.valid, 'has-error' : f.submitted && !tenantAdminEmail.valid}">
+        <input type="text" attr.id="tenantAdminEmail-{{uniqueId}}" name="tenantAdminEmail"
+               placeholder="Enter email for tenant admin" class="form-control"
+               [(ngModel)]="tenantNew.adminUserDetails.email"
+               #tenantAdminEmail="ngModel"
+               required maxlength="200" pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" />
+        <span *ngIf="showValidationErrors && f.submitted" class="glyphicon form-control-feedback"
+              [ngClass]="{'glyphicon-ok ': tenantAdminEmail.valid, 'glyphicon-remove' : !tenantAdminEmail.valid}"></span>
+        <span *ngIf="showValidationErrors && f.submitted && tenantAdminEmail.errors?.required" class="errorMessage">
+          {{'tenants.creator.AdminEmailRequired' | translate}}
+        </span>
+        <span *ngIf="showValidationErrors && f.submitted && tenantAdminEmail.errors?.pattern" class="errorMessage">
+          {{'tenants.creator.AdminEmailInvalid' | translate}}
+        </span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <hr class="edit-separator-hr" />
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-md-3"
+             for="tenantAdminPhone-{{uniqueId}}">{{'tenants.creator.AdminPhone' | translate}}</label>
+      <div class="col-md-9">
+        <input type="text" attr.id="tenantAdminPhone-{{uniqueId}}"
+               name="tenantAdminPhone"
+               placeholder="+7 123 456 78 90" class="form-control"
+               required maxlength="32" pattern="\+[0-9]+[. 0-9-]+"
+               #tenantAdminPhone="ngModel"
+               [(ngModel)]="tenantNew.adminUserDetails.phoneNumber" />
+        <span *ngIf="showValidationErrors && f.submitted" class="glyphicon form-control-feedback"
+              [ngClass]="{'glyphicon-ok ': tenantAdminPhone.valid, 'glyphicon-remove' : !tenantAdminPhone.valid}"></span>
+        <span *ngIf="showValidationErrors && f.submitted && tenantAdminPhone.errors?.required" class="errorMessage">
+          {{'tenants.creator.AdminPhoneRequired' | translate}}
+        </span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <hr class="edit-separator-hr" />
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-md-3"
+             for="tenantAdminPassword-{{uniqueId}}">{{'tenants.creator.AdminPassword' | translate}}</label>
+      <div class="col-md-9">
+        <input type="text" attr.id="tenantAdminPassword-{{uniqueId}}" name="tenantAdminPassword"
+               placeholder="qWma1dgc& or similar strong password" class="form-control"
+               required
+               #tenantAdminPassword="ngModel"
+               [(ngModel)]="tenantNew.adminUserDetails.newPassword" />
+        <span *ngIf="showValidationErrors && f.submitted && tenantAdminPassword.errors?.required" class="errorMessage">
+          {{'tenants.creator.AdminPasswordRequired' | translate}}
+        </span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <hr class="edit-separator-hr" />
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-md-3"
+             for="tenantAdminLastName-{{uniqueId}}">{{'tenants.creator.AdminLastName' | translate}}</label>
+      <div class="col-md-9">
+        <input type="text" attr.id="tenantAdminLastName-{{uniqueId}}" name="tenantAdminLastName"
+               placeholder="Фамилия, например 'Петров'" class="form-control"
+               required
+               #tenantAdminLastName="ngModel"
+               [(ngModel)]="tenantNew.adminUserDetails.lastName" />
+        <span *ngIf="showValidationErrors && f.submitted && tenantAdminLastName.errors?.required" class="errorMessage">
+          {{'tenants.creator.AdminLastNameRequired' | translate}}
+        </span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <hr class="edit-separator-hr" />
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-md-3"
+             for="tenantAdminFirstName-{{uniqueId}}">{{'tenants.creator.AdminFirstName' | translate}}</label>
+      <div class="col-md-9">
+        <input type="text" attr.id="tenantAdminFirstName-{{uniqueId}}" name="tenantAdminFirstName"
+               placeholder="Имя, например 'Петр'" class="form-control"
+               required
+               #tenantAdminFirstName="ngModel"
+               [(ngModel)]="tenantNew.adminUserDetails.firstName" />
+        <span *ngIf="showValidationErrors && f.submitted && tenantAdminFirstName.errors?.required" class="errorMessage">
+          {{'tenants.creator.AdminFirstNameRequired' | translate}}
+        </span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <hr class="edit-separator-hr" />
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-md-3"
+             for="tenantAdminPatronymic-{{uniqueId}}">{{'tenants.creator.AdminPatronymic' | translate}}</label>
+      <div class="col-md-9">
+        <input type="text" attr.id="tenantAdminPatronymic-{{uniqueId}}" name="tenantAdminPatronymic"
+               placeholder="Отчество, например 'Петрович'" class="form-control"
+               #tenantAdminPatronymic="ngModel"
+               [(ngModel)]="tenantNew.adminUserDetails.patronymic" />
+        <span *ngIf="showValidationErrors && f.submitted && tenantAdminPatronymic.errors?.required" class="errorMessage">
+          {{'tenants.creator.AdminPatronymicRequired' | translate}}
+        </span>
+      </div>
+    </div>
+
+    <div *ngIf="!isViewOnly" class="row">
+      <div class="col-md-12">
+        <hr class="edit-last-separator-hr" />
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-sm-7">
+        <div class="pull-right">
+          <button type="button" (click)="cancel()" class="btn btn-danger" [disabled]="isSaving">
+            <i class='fa fa-times'></i> {{'tenants.editor.Cancel' | translate}}
+          </button>
+          <button type="submit" class="btn btn-primary" [disabled]="isSaving">
+            <i *ngIf="!isSaving" class='fa fa-save'></i>
+            <i *ngIf="isSaving" class='fa fa-circle-o-notch fa-spin'></i>
+            {{isSaving ? ('tenants.editor.Saving' | translate) : ('tenants.editor.Save' | translate)}}
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </form>
+</div>

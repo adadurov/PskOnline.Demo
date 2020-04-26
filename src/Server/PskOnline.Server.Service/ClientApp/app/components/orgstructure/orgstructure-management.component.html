@@ -1,0 +1,213 @@
+﻿<div class="container">
+
+  <div [@fadeInOut]>
+    <div class="row">
+      <div class="col-sm-4">
+        <h4>{{'orgstructure.mgmt.BranchesAndDepartments' | translate}}</h4>
+
+        <p>
+          <a href="javascript:;" (click)="newBranchOffice()">
+            <i class="fa fa-plus-circle"></i> {{'orgstructure.mgmt.NewBranch' | translate}}
+          </a>
+          &nbsp;&nbsp;
+          <a href="javascript:;" (click)="newDepartment()" *ngIf="currentBranchOffice">
+            <i class="fa fa-plus-circle"></i> {{'orgstructure.mgmt.NewDepartment' | translate}}
+          </a>
+        </p>
+
+        <div style="border-style: dotted; border-width: thin; height: 50vh">
+          <tree-root #orgStructureTree
+                     [nodes]="nodes"
+                     [options]="options"
+                     (focus)="onTreeFocus($event)">
+          </tree-root>
+        </div>
+      </div>
+
+      <div class="col-sm-8">
+
+        <div>
+          <div class="row">
+            <h4>
+              <!-- if a branch office is selected, display section header as 'Branch <branch-name>'. Otherwise just use 'Branch' as a header -->
+              {{currentBranchOffice ? ('orgstructure.mgmt.Branch_HeaderWithName' | translate:currentBranchOffice) : ('orgstructure.mgmt.Branch' | translate)}}
+            </h4>
+
+            <div *ngIf="!currentBranchOffice">
+              <i>{{'orgstructure.mgmt.ChooseBranchOffice' | translate}}</i>
+            </div>
+            <div *ngIf="currentBranchOffice">
+              <button class="btn btn-primary" (click)="viewBranchOffice()">{{'defaultEntity.view' | translate}}</button>
+              <button class="btn btn-primary" (click)="editBranchOffice()">{{'defaultEntity.edit' | translate}}</button>
+              <button class="btn btn-danger" (click)="deleteBranchOffice()">{{'defaultEntity.delete' | translate}}</button>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="row">
+            <h4>
+              {{currentDepartment ? ('orgstructure.mgmt.Department_HeaderWithName' | translate:currentDepartment) : ('orgstructure.mgmt.Department' | translate)}}
+            </h4>
+          </div>
+
+          <div class="row" *ngIf="!(currentBranchOffice && currentDepartment)">
+            <i>{{'orgstructure.mgmt.ChooseDepartment' | translate}}</i>
+          </div>
+
+          <div class="row" *ngIf="currentBranchOffice && currentDepartment">
+            <button class="btn btn-primary" (click)="viewDepartment()">{{'defaultEntity.view' | translate}}</button>
+            <button class="btn btn-primary" (click)="editDepartment()">{{'defaultEntity.edit' | translate}}</button>
+            <button class="btn btn-danger" (click)="deleteDepartment()">{{'defaultEntity.delete' | translate}}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" bsModal #departmentCreatorModal="bs-modal" (onHidden)="onDepartmentCreatorModalHidden()" [config]="{backdrop: 'static'}" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title pull-left">
+            <i class="fa fa-user-circle-o"></i>
+            {{'orgstructure.mgmt.NewDepartment' | translate}}
+          </h4>
+          <button type="button" class="close pull-right" title="Close" (click)="departmentCreatorModal.hide()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <department-create #departmentCreatorComponent></department-create>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" bsModal #newDepartmentSummaryModal="bs-modal" [config]="{backdrop: 'static'}" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title pull-left">
+            <i class="fa fa-user-circle-o"></i>
+            Учетные данные отдела '{{lastCreatedDepartment.name}}'
+          </h4>
+          <button type="button" class="close pull-right" title="Close" (click)="hideNewDepartmentSummaryModal()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+          <div class="row">
+            <div class="col-md-12">
+              <p>
+                Пожалуйста, скопируйте учетные данные для постов предсменного контроля и передайте их ответственному сотруднику отдела.
+                <br><br>
+              </p>
+            </div>
+          </div>
+          <div id="details_for_clipboard" #detailsForClipboard>
+            <div class="row">
+              <h4>
+                <div class="col-md-3">
+                  Филиал:
+                </div>
+                <div class="col-md-9">
+                  {{currentBranchOffice ? currentBranchOffice.name : ""}}
+                </div>
+              </h4>
+            </div>
+            <div class="row">
+              <h4>
+                <div class="col-md-3">
+                  Отдел:
+                </div>
+                <div class="col-md-9">
+                  {{lastCreatedDepartment.name}}
+                </div>
+              </h4>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <hr class="edit-separator-hr" />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-3">
+                <h4>Рабочее место оператора</h4>
+              </div>
+              <div class="col-md-9 dont-break-out">
+                <p><strong>Ключ доступа:</strong> {{lastCreatedDepartmentCredentials.opAccessKey}}</p>
+                <p><strong>Онлайн ссылка:</strong> {{lastCreatedDepartmentCredentials.opUrl}}</p>
+                <p><strong>client_id:</strong> {{lastCreatedDepartmentCredentials.opClientId}}</p>
+                <p><strong>client_secret:</strong> {{lastCreatedDepartmentCredentials.opClientSecret}}</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <hr class="edit-separator-hr" />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-3">
+                <h4>Рабочее место руководителя (НСС, НСЦ)</h4>
+              </div>
+              <div class="col-md-9 dont-break-out">
+                <p><strong>Ключ доступа:</strong> {{lastCreatedDepartmentCredentials.audAccessKey}}</p>
+                <p><strong>Онлайн ссылка:</strong> {{lastCreatedDepartmentCredentials.audUrl}}</p>
+                <p><strong>client_id:</strong> {{lastCreatedDepartmentCredentials.audClientId}}</p>
+                <p><strong>client_secret:</strong> {{lastCreatedDepartmentCredentials.audClientSecret}}</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <hr class="edit-separator-hr" />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4">
+              <button type="button" (click)="copyDetailsOfDepartment()" class="btn btn-default">
+                <i class='fas fa-clipboard'></i>
+                {{'defaultEntity.editor.CopyToClipboard' | translate}}
+              </button>
+            </div>
+            <div class="col-md-8">
+              <div class="pull-right">
+                <button type="button" (click)="hideNewDepartmentSummaryModal()" class="btn btn-primary">
+                  <i class='fa fa-times'></i>
+                  {{'defaultEntity.editor.Close' | translate}}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade" bsModal #branchEditorModal="bs-modal" (onHidden)="onBranchOfficeEditorModalHidden()" [config]="{backdrop: 'static'}" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title pull-left">
+            <i class="fa fa-user-circle-o"></i>
+            {{editingBranchName ? ('orgstructure.mgmt.EditBranch' | translate:{name:editingBranchName} ) : ('orgstructure.mgmt.NewBranch' | translate)}}
+          </h4>
+          <button type="button" class="close pull-right" title="Close" (click)="branchEditorModal.hide()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <branch-office-info #branchEditor></branch-office-info>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

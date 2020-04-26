@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="signals_fragments_not_aquired" xml:space="preserve">
+    <value>Nie udało się wyodrębnić fragmentów sygnałów fizjoligicznych, odpowiadających bodźcom, Jest wykorzystywany sygnał w całości.</value>
+  </data>
+  <data name="too_few_valid_intervals_detected_in_signal" xml:space="preserve">
+    <value>W wyjściowym sygale jest zbyt mało {0}) normalnych NN-interwałów do oblicenia statystyki.
+Należy sprawdzić wybrakowania NN-interwałów!</value>
+  </data>
+  <data name="too_few_intervals_detected_in_signal" xml:space="preserve">
+    <value>W sygnale wyjściowym mieści sie zbyt  mało ({0}) NN-interwałów do obliczenia statystyki.</value>
+  </data>
+  <data name="assigned_test_duration" xml:space="preserve">
+    <value>Zadana długość testu, s: {0}</value>
+  </data>
+  <data name="AnalyzedSignal" xml:space="preserve">
+    <value>Sygnał wyjściowy </value>
+  </data>
+  <data name="Conclusion" xml:space="preserve">
+    <value>Wniosek </value>
+  </data>
+  <data name="CrvStatistics" xml:space="preserve">
+    <value>Statystyka ZRS (dla ciągu interwałów w milisekundach)</value>
+  </data>
+  <data name="InspectionModeDescription" xml:space="preserve">
+    <value>Opis trybu badania </value>
+  </data>
+  <data name="IntervalsArray" xml:space="preserve">
+    <value>Kolejność kardio-interwałów </value>
+  </data>
+  <data name="PulseMarks" xml:space="preserve">
+    <value>Kreska tętna </value>
+  </data>
+  <data name="AverageCycleParameters" xml:space="preserve">
+    <value>Parametry uśrednionego kardio-cyklu </value>
+  </data>
+  <data name="PPPA" xml:space="preserve">
+    <value>Psychofizjologiczny koszt adaptacji (PKA)</value>
+  </data>
+  <data name="ScatterParams" xml:space="preserve">
+    <value>Parametry skatterogramu </value>
+  </data>
+  <data name="CycleParams_A0" xml:space="preserve">
+    <value>A0, mВ</value>
+  </data>
+  <data name="CycleParams_A1" xml:space="preserve">
+    <value>A1, mВ</value>
+  </data>
+  <data name="CycleParams_T" xml:space="preserve">
+    <value>T, ms</value>
+  </data>
+  <data name="CycleParams_T0" xml:space="preserve">
+    <value>T0, ms</value>
+  </data>
+  <data name="CycleParams_T1" xml:space="preserve">
+    <value>T1, ms</value>
+  </data>
+  <data name="ScatterParams_Alpha" xml:space="preserve">
+    <value>Alfa, ms </value>
+  </data>
+  <data name="ScatterParams_AlphaByBeta" xml:space="preserve">
+    <value>Alfa / Beta</value>
+  </data>
+  <data name="ScatterParams_Beta" xml:space="preserve">
+    <value>Beta, ms</value>
+  </data>
+  <data name="ScatterParams_dNN" xml:space="preserve">
+    <value>dN-N, ms</value>
+  </data>
+  <data name="ScatterParams_FSI" xml:space="preserve">
+    <value>Indeks stanu funkcjonalnego (ISF), jedn. umowna </value>
+  </data>
+  <data name="CardioIntervalsSpectrum" xml:space="preserve">
+    <value>Spektrum kardio-interwałów  </value>
+  </data>
+  <data name="CardioIntervalsSpectrum_HiLimit" xml:space="preserve">
+    <value>Górna granica spektrum kardio-interwałów </value>
+  </data>
+  <data name="CardioIntervalsSpectrum_LowLimit" xml:space="preserve">
+    <value>DDolna granica spektrum kardio-interwałów </value>
+  </data>
+  <data name="HF" xml:space="preserve">
+    <value>HF</value>
+  </data>
+  <data name="IN" xml:space="preserve">
+    <value>Indeks naprężenia (IN)</value>
+  </data>
+  <data name="IVR" xml:space="preserve">
+    <value>IRW</value>
+  </data>
+  <data name="LF" xml:space="preserve">
+    <value>LF</value>
+  </data>
+  <data name="PAPR" xml:space="preserve">
+    <value>Wskaźnik aktywności procesów regulacji (WAPR) </value>
+  </data>
+  <data name="pNN50" xml:space="preserve">
+    <value>pNN50</value>
+  </data>
+  <data name="RMSSD" xml:space="preserve">
+    <value>RMSSD</value>
+  </data>
+  <data name="S0" xml:space="preserve">
+    <value>S0</value>
+  </data>
+  <data name="Sd" xml:space="preserve">
+    <value>Sd</value>
+  </data>
+  <data name="Sm" xml:space="preserve">
+    <value>Sm</value>
+  </data>
+  <data name="TP" xml:space="preserve">
+    <value>TP</value>
+  </data>
+  <data name="TwoDimConclusionDatabase" xml:space="preserve">
+    <value>Baza wniosków dla matrycy stanów 5x5</value>
+  </data>
+  <data name="ULF" xml:space="preserve">
+    <value>ULF</value>
+  </data>
+  <data name="VLF" xml:space="preserve">
+    <value>VLF</value>
+  </data>
+  <data name="VPR" xml:space="preserve">
+    <value>WWR</value>
+  </data>
+  <data name="PulseMarksWithReliabilityEstimation" xml:space="preserve">
+    <value>Kreski tętna z oceną wiarygodności </value>
+  </data>
+  <data name="too_few_heart_contractions_detected_in_signal" xml:space="preserve">
+    <value>W wyjściowym sygnale wykryto zbyt mało skurczy serca! </value>
+  </data>
+  <data name="NoSignalInSourceData" xml:space="preserve">
+    <value>W wyjściowych danych nie wykryto niezbędnych sygnałów fizjologicznych. </value>
+  </data>
+  <data name="HRV_Triangular_Index" xml:space="preserve">
+    <value>Triangularny indeks ZRS </value>
+  </data>
+  <data name="SignalFromADC" xml:space="preserve">
+    <value>Sygnał pochodzący z urządzenia </value>
+  </data>
+</root>

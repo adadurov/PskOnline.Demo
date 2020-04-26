@@ -1,0 +1,64 @@
+﻿<div>
+  <h4>Информация о вашей организации</h4>
+
+  <table class="table table-striped">
+    <tbody>
+      <tr>
+        <td>
+          Название организации
+        </td>
+        <td>
+          {{tenantOperationsSummary.name}}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Количество сотрудников / лимит сотрудников
+        </td>
+        <td>
+          <a [routerLink]="['/configuration']" fragment="employees">{{tenantOperationsSummary.serviceActualEmployees}} / {{tenantOperationsSummary.serviceMaxEmployees}}</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Количество пользователей / лимит пользователей
+        </td>
+        <td>
+          <a [routerLink]="['/configuration']" fragment="users">{{tenantOperationsSummary.serviceActualUsers}} / {{tenantOperationsSummary.serviceMaxUsers}}</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Количество филиалов
+        </td>
+        <td>
+          <a [routerLink]="['/configuration']" fragment="orgstructure">{{tenantOperationsSummary.branchOfficesCount}}</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Количество отделов
+        </td>
+        <td>
+          <a [routerLink]="['/configuration']" fragment="orgstructure">{{tenantOperationsSummary.departmentsCount}}</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Новых обследований за последние 24 часа
+        </td>
+        <td>
+          {{tenantOperationsSummary.newInspectionsLast24Hours}}
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Новых обследований за последнюю неделю
+        </td>
+        <td>
+          {{tenantOperationsSummary.newInspectionsLastWeek}}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

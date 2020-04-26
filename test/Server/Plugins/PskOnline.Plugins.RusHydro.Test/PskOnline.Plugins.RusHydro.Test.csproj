@@ -1,0 +1,61 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="log4net" Version="2.0.8" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.8.0" />
+    <PackageReference Include="NUnit" Version="3.10.1" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.10.0" />
+    <PackageReference Include="Shouldly" Version="3.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\src\Components\PskOnline.Components.Log\PskOnline.Components.Log.csproj" />
+    <ProjectReference Include="..\..\..\..\src\Components\PskOnline.Components.Util\PskOnline.Components.Util.csproj" />
+    <ProjectReference Include="..\..\..\..\src\Methods\Hrv\PskOnline.Methods.Hrv.ObjectModel\PskOnline.Methods.Hrv.ObjectModel.csproj" />
+    <ProjectReference Include="..\..\..\..\src\Methods\PskOnline.Methods.ObjectModel\PskOnline.Methods.ObjectModel.csproj" />
+    <ProjectReference Include="..\..\..\..\src\Methods\Svmr\PskOnline.Methods.Svmr.ObjectModel\PskOnline.Methods.Svmr.ObjectModel.csproj" />
+    <ProjectReference Include="..\..\..\..\src\Server\Plugins\RusHydro\PskOnline.Plugins.RusHydro\PskOnline.Server.Plugins.RusHydro.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="test_data\PskOnline.Methods.Hrv_1000.psk.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="test_data\PskOnline.Methods.Hrv_995.psk.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="test_data\PskOnline.Methods.Hrv_996.psk.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="test_data\PskOnline.Methods.Hrv_998.psk.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="test_data\PskOnline.Methods.Hrv_999.psk.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="test_data\PskOnline.Methods.SVMR_1000.psk.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="test_data\PskOnline.Methods.SVMR_995.psk.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="test_data\PskOnline.Methods.SVMR_996.psk.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="test_data\PskOnline.Methods.SVMR_998.psk.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="test_data\PskOnline.Methods.SVMR_999.psk.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="PskOnline\" />
+  </ItemGroup>
+
+</Project>

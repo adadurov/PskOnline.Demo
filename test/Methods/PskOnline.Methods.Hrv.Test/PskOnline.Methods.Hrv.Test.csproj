@@ -1,0 +1,87 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\test_data\Hrv\failing_rejection_when_rejection_is_off_10-Nov-2009_5.47_.psk.json" Link="unit_test_data\failing_rejection_when_rejection_is_off_10-Nov-2009_5.47_.psk.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\..\test_data\Hrv\HRV_2957_.psk.json" Link="unit_test_data\HRV_2957_.psk.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\..\test_data\Hrv\HRV_545_.psk.json" Link="unit_test_data\HRV_545_.psk.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\..\test_data\Hrv\inspect_1_NeuroLab.BioMouse.methods.physio.cardio_2008-01-18_15-49.psk.json" Link="unit_test_data\inspect_1_NeuroLab.BioMouse.methods.physio.cardio_2008-01-18_15-49.psk.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="..\..\..\test_data\Hrv\LowQualityStart\burges_lq_start_10_2017-06-16_7.14.psk.json" Link="unit_test_data\LowQualityStart\burges_lq_start_10_2017-06-16_7.14.psk.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\test_data\Hrv\LowQualityStart\burges_lq_start_11_2017-06-15_8.03.psk.json" Link="unit_test_data\LowQualityStart\burges_lq_start_11_2017-06-15_8.03.psk.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\test_data\Hrv\LowQualityStart\burges_lq_start_12_2017-06-16_2.42.psk.json" Link="unit_test_data\LowQualityStart\burges_lq_start_12_2017-06-16_2.42.psk.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\test_data\Hrv\LowQualityStart\burges_lq_start_16_2017-06-14_13.08.psk.json" Link="unit_test_data\LowQualityStart\burges_lq_start_16_2017-06-14_13.08.psk.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\test_data\Hrv\LowQualityStart\burges_lq_start_17_2017-06-16_2.55.psk.json" Link="unit_test_data\LowQualityStart\burges_lq_start_17_2017-06-16_2.55.psk.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\test_data\Hrv\LowQualityStart\burges_lq_start_22_2017-06-15_8.28.psk.json" Link="unit_test_data\LowQualityStart\burges_lq_start_22_2017-06-15_8.28.psk.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\test_data\Hrv\LowQualityStart\burges_lq_start_23_2017-06-14_14.29.psk.json" Link="unit_test_data\LowQualityStart\burges_lq_start_23_2017-06-14_14.29.psk.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\test_data\Hrv\LowQualityStart\burges_lq_start_36_2017-06-15_3.53.psk.json" Link="unit_test_data\LowQualityStart\burges_lq_start_36_2017-06-15_3.53.psk.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\test_data\Hrv\LowQualityStart\burges_lq_start_41_2017-06-15_15.20.psk.json" Link="unit_test_data\LowQualityStart\burges_lq_start_41_2017-06-15_15.20.psk.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\test_data\Hrv\LowQualityStart\burges_lq_start_44_2017-06-16_3.01.psk.json" Link="unit_test_data\LowQualityStart\burges_lq_start_44_2017-06-16_3.01.psk.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\test_data\Hrv\LowQualityStart\burges_lq_start_46_2017-06-15_3.42.psk.json" Link="unit_test_data\LowQualityStart\burges_lq_start_46_2017-06-15_3.42.psk.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\test_data\Hrv\LowQualityStart\zeyges_lq_start_17_2017-06-19_5.33.psk.json" Link="unit_test_data\LowQualityStart\zeyges_lq_start_17_2017-06-19_5.33.psk.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\test_data\Hrv\LowQualityStart\zeyges_lq_start_19_2017-06-20_3.49.psk.json" Link="unit_test_data\LowQualityStart\zeyges_lq_start_19_2017-06-20_3.49.psk.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\test_data\Hrv\LowQualityStart\zeyges_lq_start_20_2017-06-21_3.52.psk.json" Link="unit_test_data\LowQualityStart\zeyges_lq_start_20_2017-06-21_3.52.psk.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\..\test_data\Hrv\LowQualityStart\zeyges_lq_start_46_2017-06-19_6.23.psk.json" Link="unit_test_data\LowQualityStart\zeyges_lq_start_46_2017-06-19_6.23.psk.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="..\..\..\test_data\Hrv\NeuroLab.BioMouse.methods.physio.cardio_75_bt_sensor.psk.json" Link="unit_test_data\NeuroLab.BioMouse.methods.physio.cardio_75_bt_sensor.psk.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.8.0" />
+    <PackageReference Include="NUnit" Version="3.10.1" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.10.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\src\Components\PskOnline.Components.Log\PskOnline.Components.Log.csproj" />
+    <ProjectReference Include="..\..\..\src\Components\PskOnline.Components.Util\PskOnline.Components.Util.csproj" />
+    <ProjectReference Include="..\..\..\src\Methods\Hrv\PskOnline.Methods.Hrv.ObjectModel\PskOnline.Methods.Hrv.ObjectModel.csproj" />
+    <ProjectReference Include="..\..\..\src\Methods\Hrv\PskOnline.Methods.Hrv.Processing\PskOnline.Methods.Hrv.Processing.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="unit_test_data\LowQualityStart\" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,562 @@
+﻿<?xml version="1.0" encoding="UNICODE-1-1-UTF-8"?>
+
+<?xml-stylesheet type="text/xsl" href="two_dim_conclusions.xsl"?>
+
+<vcr_two_dim>
+
+  <xsd:schema id="vcr_two_dim" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+
+    <xsd:simpleType name="rowKey">
+      <xsd:restriction base="xsd:string">
+        <xsd:pattern value="[1-5]{1}"/>
+      </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="colKey">
+      <xsd:restriction base="xsd:string">
+        <xsd:pattern value="[1-5]{1}"/>
+      </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="languageId">
+      <xsd:restriction base="xsd:string">
+        <xsd:enumeration value="ru"/>
+        <xsd:enumeration value="en"/>
+        <!-- add more language codes when you need them -->
+      </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="stateColor">
+      <xsd:restriction base="xsd:string">
+        <xsd:enumeration value="red"/>
+        <xsd:enumeration value="yellow"/>
+        <xsd:enumeration value="green"/>
+        <!-- add more color codes when you need them -->
+      </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:complexType name="ConclusionText">
+      <xsd:sequence>
+        <xsd:element name="para" type="xsd:string" minOccurs="0" maxOccurs="unbounded" />
+      </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="singleLanguageConclusion">
+      <xsd:all>
+        <xsd:element name="prof" minOccurs="0" type="ConclusionText"/>
+        <xsd:element name="user" type="ConclusionText"/>
+      </xsd:all>
+      <xsd:attribute name="langid" type="languageId" use="required" />
+    </xsd:complexType>
+
+    <xsd:complexType name="StateMatrixCell">
+      <xsd:choice minOccurs="1" maxOccurs="unbounded">
+        <xsd:element name="lang" minOccurs="1" maxOccurs="unbounded" type="singleLanguageConclusion"/>
+      </xsd:choice>
+      <xsd:attribute name="key" type="colKey" use="required" />
+      <xsd:attribute name="state_color" type="stateColor" use="required" />
+    </xsd:complexType>
+
+    <xsd:complexType name="StateMatrixRow">
+      <xsd:sequence minOccurs="5" maxOccurs="5">
+        <xsd:element name="entry" type="StateMatrixCell" />
+      </xsd:sequence>
+      <xsd:attribute name="key" type="rowKey" use="required" />
+    </xsd:complexType>
+
+    <xsd:element name="vcr_two_dim">
+      <xsd:complexType>
+        <xsd:choice minOccurs="5" maxOccurs="5">
+          <xsd:element name="row" type="StateMatrixRow"/>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+    
+  </xsd:schema>
+
+  <row key="1">
+    
+    <entry key="1" state_color="red">
+
+      <lang langid="ru">
+        <prof>
+          <para>Цена адаптации высокая. Низкий уровень функциональных возможностей регуляторных механизмов сердечно-сосудистой системы. Высокие уровни напряжения и утомления. Выраженное преобладание симпатического отдела вегетативной нервной системы. Максимальное напряжение в развитии стресса. Максимальный уровень эрготропной регуляции. Максимальное напряжение вегетативных механизмов сердечно-сосудистой системы. Частый стабильный пульс. Состояние максимального напряжения регуляторных функций. Резкая активация центрального коркового контура регуляции сердечного ритма. Резкая активация адренэргических механизмов. Максимальное повышение физиологической "цены" адаптации. Резкое усиление активности эрготропной системы с максимальной стабилизацией ритма и резкой интенсивностью сердечного ритма. Выраженное усиление катаболических процессов. Высокая недифференцированная поведенческая активность. Повышение психической активности, моторной готовности, вегетативной мобилизации. Низкий уровень физической работоспособности. Резкое превышение уровня внешних и внутренних требований над функциональными возможностями организма. Возможен срыв. Угроза симпатоадреналового криза.</para>
+        </prof>
+        <user>
+          <para>Ваше функциональное состояние, к сожалению, крайне неудовлетворительно. У Вас низкий уровень функциональный возможностей сердечно-сосудистой системы. Высокие уровни физического утомления и напряжения, до максимальных при развитии стресса, частый стабильный пульс. Максимальное напряжение сердечно-сосудистой системы при ее низкой работоспособности и соответственно крайне низком уровне физической работоспособности. Прохождение физиологических процессов при повышенных затратах организма. Заметное ускорение обменных и энергетических процессов. Высокая раздражительность. Повышение неоправданной психической и поведенческой активности, мобилизации организма. Внешняя и внутренняя нагрузка на организм резко превышает его функциональные возможности. Возможен срыв. Угроза резкого превышения нормы адреналина, развитие состояния панической атаки.</para>
+          <para>Требуется срочное прекращение деятельности и длительный отдых или отпуск. Если Вы не можете выйти из сложившейся жизненной ситуации, требуется поддержка организма специальными энергетическими, витаминными добавками и средствами, содержащими жизненно необходимые минеральные вещества. Крайне желательна консультация психотерапевта и терапевта, а также всестороннее углубленное клиническое обследование в условиях стационара.</para>
+        </user>
+      </lang>
+      
+      <lang langid="en">
+        <user>
+          <para>Unfortunately, your functional state is extremely unsatisfactory. Your cardiovascular system has low level of functional capabilities. Levels of physical tiredness and tension are high, up to the maximum — in development of stress. Frequent and stable pulse.</para>
+          <para>Tension of cardiovascular system is at its maximum along with the system’s low capacity for work and with extremely low level of your body’s capacity for physical work, accordingly. Physiological processes in your body proceed with increased costs. Marked acceleration of energy and metabolic processes. High irritability. Intensification of unjustified psychical and behavioral activity, mobilization of your organism. Internal and external demands extremely surpass the body's functional capabilities. Disruptions are possible. Threat of sudden increase of adrenaline level and panic attack.</para>
+          <para>Break in work and long recreation or vacancy is urgently required. If you can’t solve the current situation, you should support your body with special power and vitamin supplements and with medicines containing vital minerals. It is exceedingly desirable that you consult with psychotherapist and therapist and have deep thorough medical examination in a hospital.</para>
+        </user>
+      </lang>
+     
+    </entry>
+    
+    <entry key="2" state_color="yellow">
+
+      <lang langid="ru">
+        <prof>
+          <para>Цена адаптации высокая. Низкий уровень функциональных возможностей регуляторных механизмов сердечно-сосудистой системы. Уровни напряжения  и утомления выше среднего. Выраженная стадия сопротивления в развитии стресса. Выраженная эрготропная регуляция. Частый умеренно стабильный пульс.. Активизация центрального коркового контура регуляции сердечного ритма. Активация адренэргических механизмов. Повышение активности подкорковых нервных центров. Активация эрготропной системы со стабилизацией ритма. Выраженные катаболические процессы. Повышение психической активности, моторной готовности, вегетативной мобилизации. Низкий уровень физической работоспособности. Превышение уровня внешних и внутренних требований над функциональными возможностями организма.</para>
+        </prof>
+        <user>
+          <para>Ваше функциональное состояние, к сожалению, неудовлетворительное. У Вас низкий уровень функциональный возможностей сердечно-сосудистой системы. Выше среднего уровни физического утомления и напряжения, до заметного — при развитии стресса. Заметное напряжение сердечно-сосудистой системы при ее низкой работоспособности и соответственно крайне низком уровне физической работоспособности. Прохождение физиологических процессов при повышенных затратах организма. Усиление обменных и энергетических процессов. Высокая раздражительность. Повышение неоправданной психической и поведенческой активности, мобилизации организма. Внешняя и внутренняя нагрузка на организм существенно превышает его функциональные возможности. Возможен срыв.</para>
+          <para>Требуется срочное прекращение деятельности и длительный отдых или отпуск. Если Вы не можете выйти из сложившейся жизненной ситуации, требуется поддержка организма специальными энергетическими, витаминными добавками и средствами, содержащими жизненно необходимые минеральные вещества. Крайне желательна консультация психотерапевта и терапевта, а также всестороннее углубленное клиническое обследование в условиях поликлиники.</para>
+        </user>
+      </lang>
+
+      <lang langid="en">
+        <user>
+          <para>Unfortunately, your functional state is extremely unsatisfactory. Your cardiovascular system has low level of functional capabilities. Levels of physical tiredness and tension are higher than average, up to the visible level — in development of stress.</para>
+          <para>Marked tension of cardiovascular system along with the system’s low capacity for work and with extremely low level of your body’s capacity for physical work, accordingly. Physiological processes in your body proceed with increased costs. Marked acceleration of energy and metabolic processes. High irritability. Intensification of unjustified psychical and behavioral activity, mobilization of your organism. Internal and external demands substantially surpass the body's functional capabilities. Disruptions are possible.</para>
+          <para>Break in work and long recreation or vacancy is urgently required. If you can’t solve the current situation, you should support your body with special power and vitamin supplements and with medicines containing vital minerals. It is exceedingly desirable that you consult with psychotherapist and therapist and have deep thorough medical examination in polyclinic.</para>
+        </user>
+
+      </lang>
+    </entry>
+
+    <entry key="3" state_color="yellow">
+
+      <lang langid="ru">
+        <prof>
+          <para>Цена адаптации высокая. Низкий уровень функциональных возможностей регуляторных механизмов сердечно-сосудистой системы. Нарушение устойчивости к действию физических стрессоров. Напряжение оптимальное. Эрготропная регуляция. Частый пульс. Резкое преобладание центрального контура регуляции. Стадия напряжения физиологических систем в развитии стресса. Повышенный  уровень поведенческой и психической активности. Физическая работоспособность снижена. Повышение мышечного тонуса. Активация катоболитических процессов. Хорошее состояние моторной готовности и вегетативной мобилизации. Готовность к борьбе. Обострение внимания.</para>
+        </prof>
+        <user>
+          <para>Ваше функциональное состояние к сожалению неудовлетворительное. У Вас низкий уровень функциональный возможностей сердечно-сосудистой системы. Средний уровень напряжения, усиливающийся при развитии стресса, средний уровень физического утомления, крайне низкий уровень физической работоспособности. Заметная неустойчивость к действию спортивных нагрузок. Прохождение физиологических процессов при повышении затрат организма. Усиление обменных и энергетических процессов. Высокая поведенческая активность. Повышение неоправданной психической активности, мобилизации организма Внешняя и внутренняя нагрузка на организм существенно превышает его функциональные возможности.</para>
+          <para>Требуется срочное прекращение деятельности и отдых. Требуется консультация психотерапевта и терапевта. Всестороннее углубленное клиническое обследование в условиях поликлиники.</para>
+        </user>
+      </lang>
+
+      <lang langid="en">
+        <user>
+          <para>Unfortunately, your functional state is unsatisfactory. Your cardiovascular system has low level of functional capabilities.</para>
+          <para>Level of tension is average, increasing with development of stress, level of physical tiredness is also average. Extremely low level of capacity for work. Marked intolerance to sports loads. Physiological processes in your body proceed with increased costs. Acceleration of energy and metabolic processes. High behavioral activity. Increase of unjustified psychical activity, mobilization of your organism. Internal and external demands substantially surpass the body's functional capabilities.</para>
+          <para>Break in work and recreation is urgently required. It is exceedingly desirable that you consult with psychotherapist and therapist and have deep thorough medical examination in polyclinic.</para>
+        </user>
+      </lang>
+      
+    </entry>
+
+    <entry key="4" state_color="yellow">
+      <lang langid="ru">
+        <prof>
+          <para>Цена адаптации высокая. Низкий уровень функциональных возможностей регуляторных механизмов сердечно-сосудистой системы. Напряжение ниже среднего, появление выраженных явлений истощения в развития стресса. Умеренная активация трофотропной регуляции. Частый умеренно нестабильный пульс.  Низкий уровень работоспособности. Превышение уровня внешних и внутренних требований над функциональными возможностями организма. Проявления анаболитических процессов.</para>
+        </prof>
+        <user>
+          <para>Ваше функциональное состояние к сожалению неудовлетворительное. У Вас низкий уровень функциональный возможностей сердечно-сосудистой системы, напряжение и физическое утомление ниже среднего уровня. Появляются заметные признаки истощения при развитии стресса, крайне низкая физическая работоспособность. Заметное замедление и ослабление обменных и энергетических процессов. Прохождение физиологических процессов при повышенных затратах организма. Крайне низкий уровень поведенческой активности, снижение психической и поведенческой активности, мобилизации организма. Внешняя и внутренняя нагрузка на организм существенно превышает его функциональные возможности.</para>
+          <para>Требуется срочное прекращение деятельности и длительный отдых или отпуск. Если Вы не можете выйти из сложившейся жизненной ситуации, требуется поддержка организма специальными энергетическими, витаминными добавками и средствами, содержащими жизненно необходимые минеральные вещества. Крайне желательна консультация психотерапевта и терапевта, а также всестороннее углубленное клиническое обследование в условиях поликлиники.</para>
+        </user>
+      </lang>
+      <lang langid="en">
+        <user>
+          <para>Unfortunately, your functional state is unsatisfactory. Your cardiovascular system has low level of functional capabilities; tension and physical tiredness is below average. Visible signs of exhaustion in development of stress are appearing. Capacity for work is extremely low. Marked slow-down and weakening of power and metabolic processes. Physiological processes in your body proceed with increased costs. Extremely low level of behavioral activity, decrease in psychical and motive activity and in mobilization of organism. Internal and external demands substantially surpass your body's functional capabilities.</para>
+          <para>Break in work and long recreation or vacancy is urgently required. If you can’t solve the current situation, you should support your body with special power and vitamin supplements and with medicines containing vital minerals. It is exceedingly desirable that you consult with psychotherapist and therapist and have deep thorough medical examination in polyclinic.</para>
+        </user>
+      </lang>
+    </entry>
+
+    <entry key="5" state_color="red">
+      <lang langid="ru">
+        <prof >
+          <para>Цена адаптации высокая. Низкий уровень функциональных возможностей регуляторных механизмов сердечно-сосудистой системы. Напряжение низкое, стадия  максимального истощения в развитии стресса.</para>
+          <para>Частый нестабильный пульс. Дизрегуляция гуморальных и нервных влияний со снижением чувствительности симпатического отдела вегетативной нервной системы. Низкий уровень регуляторных возможностей сердечно-сосудистой системы. Резкая активизация центрального коркового контура регуляции на фоне явлений дестабилизации сердечного ритма. Дисрегуляторный синдром.</para>
+        </prof>
+        <user>
+          <para>Ваше функциональное состояние к сожалению неудовлетворительное. У Вас низкий уровень функциональный возможностей сердечно-сосудистой системы, Высокое физическое утомления и напряжение — до максимального истощения при развитии стресса, резкое снижение физической работоспособности. Резкое замедление и ослабление обменных и энергетических процессов с их одновременной активацией. Прохождение физиологических процессов при повышении затрат организма. Крайне низкий уровень поведенческой активности, резкое снижение психической и поведенческой активности, мобилизации организма на фоне сильного эмоционального, психического возбуждения. («Дисрегуляторный синдром»)</para>
+          <para>Требуется срочное прекращение деятельности и длительный отдых или отпуск. Если Вы не можете выйти из сложившейся жизненной ситуации, требуется поддержка организма специальными энергетическими, витаминными добавками и средствами, содержащими жизненно необходимые минеральные вещества. Крайне желательна консультация психотерапевта и терапевта, а также всестороннее углубленное клиническое обследование в условиях стационара.</para>
+        </user>
+
+      </lang>
+      <lang langid="en">
+        <user>
+          <para>Unfortunately, your functional state is unsatisfactory. Your cardiovascular system has low level of functional capabilities; high physical tiredness and tension — up to maximum in development of stress; drastic decrease of your capacity for physical work. Dramatic deceleration and weakening of metabolic and power-generating processes in you body along with strong activation of same processes. Physiological processes in your body proceed with increased costs. Extremely low level of behavioral activity, drastic decrease in psychical and motive activity and in mobilization of organism with background of intense emotional and psychic excitement. (‘Disregulation syndrome’).</para>
+          <para>Break in work and long recreation or vacancy is urgently required. If you can’t solve the current situation, you should support your body with special power and vitamin supplements and with medicines containing vital minerals. It is exceedingly desirable that you consult with psychotherapist and therapist and have deep thorough medical examination in a hospital.</para>
+        </user>
+      </lang>
+    </entry>
+
+  </row>
+
+  <row key="2">
+    
+    <entry key="1" state_color="yellow">
+      <lang langid="ru">
+        <prof>
+          <para>Цена адаптации неудовлетворительная. Ниже среднего уровень функциональных возможностей регуляторных механизмов сердечно-сосудистой системы. Высокие уровни напряжения и утомления. Выраженные явления сопротивления в развитии стресса.  Выраженная эрготропная регуляция. Учащенный пульс. Активизация центрального коркового контура регуляции сердечного ритма. Активация адренэргических механизмов. Повышение активности подкорковых нервных центров. Активация эрготропной системы со стабилизацией ритма. Выраженные катаболические процессы. Выраженное повышение психической активности, моторной готовности, вегетативной мобилизации. Сниженный уровень физической работоспособности.</para>
+        </prof>
+        <user>
+          <para>Ваше функциональное состояние, к сожалению, неудовлетворительное, уровень функциональных возможностей сердечно-сосудистой системы ниже среднего. У Вас заметное нервное напряжение и физическое утомление. Наблюдается явное сопротивление развитию стресса. Учащенный пульс. Энергетические и обменные процессы в Вашем организме ускорены. Вы находитесь в состоянии мобилизации, повышенной психической и поведенческой активности, но физическая работоспособность снижена.</para>
+          <para>Требуется консультация психотерапевта и терапевта, а также всестороннее углубленное клиническое обследование в условиях поликлиники.</para>
+        </user>
+      </lang>
+      
+      <lang langid="en">
+        <user>
+          <para>Unfortunately, your functional state is unsatisfactory. Functional capabilities of your cardiovascular system are below average. You have marked nervous tension and physical tiredness. Obvious resistance to development of stress. Rapid pulse. Power and metabolic processes in your body are accelerated. You are in the state of mobilization, increased psychical and behavioral activity, but your capacity for physical work is decreased.</para>
+          <para>It is necessary to consult with psychotherapist and therapist and have deep thorough medical examination in polyclinic.</para>
+        </user>
+      </lang>
+    </entry>
+
+    <entry key="2" state_color="yellow">
+      <lang langid="ru">
+        <prof>
+          <para>Цена адаптации неудовлетворительная. Ниже среднего уровень функциональных возможностей регуляторных  механизмов сердечно-сосудистой системы. Уровни напряжения  и утомления выше среднего. Преобладание симпатического отдела вегетативной нервной системы. Явления сопротивления в развитии стресса.Учащенный умеренно стабильный пульс. Выраженный уровень поведенческой активности и состояния адаптации к изменяющейся среде. Повышение мышечного тонуса. Активация катоболитических процессов. Повышенное состояние моторной готовности и вегетативной мобилизации. Готовность к борьбе. Обострение внимания.</para>
+        </prof>
+        <user>
+          <para>Ваше функциональное состояние, к сожалению, неудовлетворительное. Уровни напряжения и утомления сердечно-сосудистой системы выше среднего, высокий уровень нервного напряжения. Организм сопротивляется развитию стресса. Энергетические и обменные процессы ускорены. Вы находитесь в состоянии мобилизации, повышенной психической и поведенческой активности. Физическая работоспособность снижена.</para>
+          <para>Требуется консультация психотерапевта и терапевта, а также всестороннее углубленное клиническое обследование в условиях поликлиники.</para>
+        </user>
+
+      </lang>      
+      <lang langid="en">
+        <user>
+          <para>Unfortunately, your functional state is unsatisfactory. Tension and tiredness of cardiovascular system are above average; high level of nervous tension. Your body is resisting development of stress. Power and metabolic processes in your body are accelerated. You are in the state of mobilization, increased psychical and behavioral activity. Capacity for physical work is decreased.</para>
+          <para>It is necessary to consult with psychotherapist and therapist and have deep thorough medical examination in polyclinic.</para>
+        </user>
+      </lang>
+    </entry>
+
+    <entry key="3" state_color="green">
+      <lang langid="ru">
+        <prof>
+          <para>Цена адаптации неудовлетворительная. Ниже среднего уровень функциональных возможностей регуляторных механизмов сердечно-сосудистой системы. Напряжение оптимальное, утомление отсутствует. Пульс несколько чаще средних значений, с оптимальным напряжением регуляторных механизмов. Начальные проявления катоболитических процессов.</para>
+        </prof>
+        <user>
+          <para>Ваше функциональное состояние к сожалению неудовлетворительное. Хотя напряжение сердечно-сосудистой системы оптимально, утомление отсутствует, а нервное напряжение незначительно, но переносимость физической и спортивной нагрузок снижена. У вас резко снижен уровень физической работоспособности.</para>
+          <para>Для тренировки организма можно повысить уровень своей физической нагрузки.</para>
+        </user>
+      </lang>
+      <lang langid="en">
+        <user>
+          <para>Unfortunately, your functional state is unsatisfactory. Although tension of your cardiovascular system is optimal, no tiredness is observed and nervous tension is neglegible, endurance of physical and sporting work is strongly decreased. Your capacity for physical work is substantially decreased.</para>
+          <para>You'd rather increase amount of your physical load to achieve better physical fitness.</para>
+        </user>
+      </lang>
+    </entry>
+
+    <entry key="4" state_color="yellow">
+      <lang langid="ru">
+        <prof>
+          <para>Цена адаптации неудовлетворительная. Ниже среднего уровень функциональных возможностей регуляторных механизмов сердечно-сосудистой системы. Напряжение ниже среднего, появление явлений истощения в развитии стресса. Нарастание процессов трофотропной регуляции. Учащенный умеренно нестабильный пульс. Умеренная активизация центрального коркового контура регуляции сердечного ритма. Превышение уровня внешних и внутренних требований над функциональными возможностями организма.</para>
+        </prof>
+        <user>
+          <para>Ваше функциональное состояние, к сожалению, неудовлетворительное. Уровень функциональных возможностей сердечно-сосудистой системы ниже среднего, наблюдаются явления истощения вследствие развития стресса. Нагрузка на организм существенно выше его функциональных возможностей.</para>
+          <para>Требуется прекращение деятельности и длительный отдых или отпуск, а также уменьшение уровня своих нагрузок. Если Вы не можете выйти из сложившейся жизненной ситуации, требуется поддержка организма специальными энергетическими, витаминными добавками и средствами, содержащими жизненно необходимые минеральные вещества. Крайне желательна консультация психотерапевта и терапевта, а также амбулаторное обследование состояния организма.</para>
+        </user>
+      </lang>
+      <lang langid="en">
+        <user>
+          <para>Unfortunately, your functional state is unsatisfactory. Functional capabilities of your cardiovascular system are below average; obvious signs of exhaustion due to development of stress. Internal and external demands substantially surpass your body's functional capabilities.</para>
+          <para>Break in work and recreation is urgently required. If you can’t solve the current situation, you should support your body with special power and vitamin supplements and with medicines containing vital minerals. It is exceedingly desirable that you consult with psychotherapist and therapist and have medical examination on an outpatient basis.</para>
+        </user>
+      </lang>
+    </entry>
+
+    <entry key="5" state_color="yellow">
+      <lang langid="ru">
+        <prof>
+          <para>Цена адаптации неудовлетворительная. Ниже среднего уровень функциональных возможностей регуляторных механизмов сердечно-сосудистой системы. Напряжение низкое, появление выраженных явлений истощения в развитии стресса.</para>
+          <para>Активация трофотропной регуляции. Учащенный нестабильный пульс.  Мобилизация ваго-инсулярного аппарата. Преобладание анаболических процессов, нутритивных функций процессов восстановления. Активизация систем поддержания гомеостатического равновесия. Сниженный уровень работоспособности.</para>
+        </prof>
+        <user>
+          <para>Ваше функциональное состояние к сожалению неудовлетворительное. Напряжение сердечно-сосудистой системы низкое, проявляются заметные явления истощения вследствие развития стресса. Нагрузка на организм резко превышает его функциональные возможности.</para>
+          <para>Требуется срочное прекращение деятельности и длительный отдых или отпуск. Если Вы не можете выйти из сложившейся жизненной ситуации, требуется поддержка организма специальными энергетическими, витаминными добавками и средствами, содержащими жизненно необходимые минеральные вещества. Крайне желательна консультация психотерапевта и терапевта, а также всестороннее углубленное клиническое обследование в условиях поликлиники.</para>
+        </user>
+      </lang>
+      <lang langid="en">
+        <user>
+          <para>Unfortunately, your functional state is unsatisfactory. Tension of cardiovascular system is low. Signs of exhaustion due to development of stress are becoming apparent. Internal and external demands substantially surpass your body's functional capabilities.</para>
+          <para>Break in work and recreation is urgently required. If you can’t solve the current situation, you should support your body with special power and vitamin supplements and with medicines containing vital minerals. It is exceedingly desirable that you consult with psychotherapist and therapist and have deep thorough medical examination in polyclinic.</para>
+        </user>
+      </lang>
+    </entry>
+
+  </row>
+
+  <row key="3">
+
+    <entry key="1" state_color="yellow">
+      <lang langid="ru">
+        <prof>
+          <para>Цена адаптации удовлетворительная. Средний уровень функциональных возможностей регуляторных механизмов сердечно-сосудистой системы. Высокое уровни напряжения и утомления. Явления сопротивления в развитии стресса. Эрготропная регуляция. Оптимальный уровень поведенческой активности и состояния адаптации к изменяющейся среде. Повышение мышечного тонуса. Активация катоболитических процессов. Хорошее состояние моторной готовности и вегетативной мобилизации. Готовность к борьбе. Обострение внимания.</para>
+        </prof>
+        <user>
+          <para>Ваше функциональное состояние в целом удовлетворительное, у Ваc средний уровень функциональных возможностей. Сильное утомление вызвало заметное нервное напряжение и стресс, наблюдается сопротивление развитию стресса. Нагрузка на организм пока соответствует его функциональным возможностям. У Вас оптимальная активность и реакция в условиях меняющейся ситуации. Энергетические и обменные процессы в Вашем организме резко ускорены. Вы находитесь в состоянии мобилизации, повышенной психической и поведенческой активности, готовы к борьбе, внимание обостренно, способность преодолевать жизненные трудности высокая.</para>
+          <para>Тем не менее, длительное нахождение в таком состоянии нежелательно, т.к. оно может перейти в состояние хронического стресса. Если Вы не можете выйти из сложившейся жизненной ситуации, требуется поддержка организма специальными энергетическими, витаминными добавками и средствами, содержащими жизненно необходимые минеральные вещества. Крайне желательна консультация психотерапевта и терапевта, амбулаторное обследование состояния организма (измерение артериального давления, клиническая электрокардиография, общий и биохимический анализ крови, анализы мочи и т.д.).</para>
+        </user>
+      </lang>
+      <lang langid="en">
+        <user>
+          <para>On the whole, you functional state is satisfactory; you have average level of functional capabilities. Strong fatigue caused evident nervous tension and stress; resistance to development of stress is observed. So far internal and external demands correspond to your body's functional capabilities. You have optimal activity and reaction in changing situation. Power and metabolic processes in your body are strongly accelerated. You are in state of mobilization, increased psychical and behavioral activity. You are ready to struggle, your attention is keen, you have high ability to overcome difficulties of life.</para>
+          <para>However, staying in such a state for long time in undesirable because it may turn to the state of chronic stress. If you can’t solve the current situation, you should support your body with special power and vitamin supplements and with medicines containing vital minerals. It is exceedingly desirable to consult with a psychotherapist and a therapist. Ambulant medical exam (blood pressure control, clinical electrocardiography, complete blood cell count and biochemical blood test, urinalysis, etc.).</para>
+        </user>
+      </lang>
+    </entry>
+
+    <entry key="2" state_color="green">
+      <lang langid="ru">
+        <prof>
+          <para>Цена адаптации удовлетворительная. Средний уровень функциональных возможностей регуляторных механизмов сердечно-сосудистой системы. Уровни напряжения  и утомления выше среднего. Умеренная активация эрготропной регуляции. Частота пульса оптимальная с высоким напряжением регуляторных механизмов. Явления стабилизации сердечного ритма с умеренным повышением психической и поведенческой активности, моторной готовности и вегетативной мобилизации. Эффективные механизмы регуляции сердечной деятельности. Начальные проявления катоболитических процессов.</para>
+        </prof>
+        <user>
+          <para>Ваше функциональное состояние в целом удовлетворительное и соответствует среднему уровню функциональных возможностей сердечно-сосудистой системы. У Вас выше среднего уровня утомление, которое вызвало легкие явления нервного напряжения. Нагрузка на организм соответствует его функциональным возможностям. У Вас оптимальная активность и реакция в условиях меняющейся ситуации. Энергетические и обменные процессы в Вашем организме слегка ускорены. Вы находитесь в состоянии мобилизации, повышенной психической и поведенческой активности. Способность преодолеть жизненные трудности высокая. Стресс практически незаметен.</para>
+          <para>В таком состоянии специальных дополнительных мероприятий по оздоровлению и профилактике не требуется.</para>
+        </user>
+      </lang>
+      <lang langid="en">
+        <user>
+          <para>On the whole, you functional state is satisfactory and corresponds to average level of functional capabilities of your cardiovascular system. You have above-average tiredness that caused slight nervous tension. Internal and external demands correspond to your body's functional capabilities. You have optimal activity and reaction in changing situation. Power and metabolic processes in your body are slightly accelerated. You are in state of mobilization, increased psychical and behavioral activity. You have high ability to overcome difficulties of life. Stress level is at minimum.</para>
+          <para>Special measures for recovery and preventive treatments are not necessary in such condition.</para>
+        </user>
+      </lang>
+    </entry>
+
+    <entry key="3" state_color="green">
+      <lang langid="ru">
+        <prof>
+          <para>Цена адаптации удовлетворительная. Средний уровень функциональных возможностей регуляторных механизмов сердечно-сосудистой системы Напряжение оптимальное, утомление отсутствует.</para>
+          <para>Взаимоуравновешенность симпатического и парасимпатического отдела вегетативной  нервной системы. Взаимоуравновешенность  эрготропных и трофотропных процессов. Оптимальное функциональное состояние сердечно-сосудистой системы. Эффективные механизмы регуляции сердечной деятельности. Оптимальное сочетание автономного и центрального контуров регуляции сердечного ритма. Оптимальная психофизиологическая "цена" адаптации. Свобода от стрессов.</para>
+        </prof>
+        <user>
+          <para>Ваше функциональное состояние оптимально для сохранения своего здоровья. У Вас полностью отсутствует состояние нервного напряжения и стресс. Идеальная работоспособность сердечно-сосудистой системы.</para>
+          <para>В таком состоянии специальных дополнительных мероприятий по оздоровлению и профилактике не требуется.</para>
+        </user>
+      </lang>
+      <lang langid="en">
+        <user>
+          <para>Your functional state is optimal for health maintenance. You show no signs of nervous tension and stress. Your cardiovascular system demonstrates ideal capability for work.</para>
+          <para>Special measures for recovery and preventive treatments are not necessary in such condition.</para>
+        </user>
+      </lang>
+    </entry>
+
+    <entry key="4" state_color="green">
+      <lang langid="ru">
+        <prof>
+          <para>Цена адаптации удовлетворительная. Средний уровень функциональных возможностей регуляторных механизмов сердечно-сосудистой системы. Умеренная активация трофотропной регуляции. Эффективные механизмы регуляции сердечной деятельности.  Мобилизация ваго-инсулярного аппарата. Нарастание процессов восстановления жизненных сил. Напряжение ниже среднего, появление явлений истощения.</para>
+        </prof>
+        <user>
+          <para>Ваше функциональное состояние в целом удовлетворительное и соответствует среднему уровню функциональных возможностей. Незначительное утомление вызвало легкие явления истощения в функционировании сердечно-сосудистой системы. Нагрузка на организм в целом соответствует его функциональным возможностям, однако Ваша активность слегка снижена. Энергетические и обменные процессы в Вашем организме немного замедлены, наблюдается состояние легкой заторможенности. Способность преодолевать жизненные трудности снижена.</para>
+          <para>В таком состоянии специальных дополнительных мероприятий по оздоровлению и профилактике не требуется. Желательно увеличение времени отдыха и уменьшение уровня своих нагрузок.</para>
+        </user>
+      </lang>
+      <lang langid="en">
+        <user>
+          <para>On the whole, you functional state is satisfactory; you have average level of functional capabilities. Minor fatigue caused slight signs of exhaustion in cardiovascular system’s work. In general, internal and external demands correspond to your body's functional capabilities. However, your activity is slightly decreased. Power and metabolic processes in your body are slightly decelerated and state of slight dormancy is observed. Ability to overcome difficulties of life is decreased.</para>
+          <para>Special measures for recovery and preventive treatments are not necessary in such condition. It is desirable that you increase recreation time and reduce your burden.</para>
+        </user>
+      </lang>
+    </entry>
+
+    <entry key="5" state_color="yellow">
+      <lang langid="ru">
+        <prof>
+          <para>Цена адаптации удовлетворительная. Средний уровень функциональных возможностей регуляторных механизмов сердечно-сосудистой системы. Трофотропная регуляция. Напряжение низкое, явление истощения регуляторных возможностей. Мобилизация ваго-инсулярного аппарата. Преобладание процессов покоя, поддержание гомеостаза, психической релаксации, снижения мышечного тонуса.</para>
+        </prof>
+        <user>
+          <para>Ваше функциональное состояние в целом удовлетворительное и соответствует среднему уровню функциональных возможностей сердечно-сосудистой системы. Однако, в ее работе наблюдается заметные проявления истощения. Формируется состояние, когда нагрузка на организм превышает его функциональные возможности. У Вас существенно снижена активность, энергетические и обменные процессы в организме замедлены. Наблюдается состояние заметной заторможенности. Способность преодолевать жизненные трудности снижена.</para>
+          <para>Желательно увеличение времени отдыха и уменьшение уровня своих нагрузок. Если Вы не можете выйти из сложившейся жизненной ситуации, требуется поддержка организма специальными энергетическими, витаминными добавками и средствами, содержащими жизненно необходимые минеральные вещества. Крайне желательна консультация психотерапевта и терапевта, а также амбулаторное обследование состояния организма (измерение артериального давления, клиническая электрокардиография, общий и биохимический анализ крови, анализы мочи и т.д.).</para>
+        </user>
+      </lang>
+      <lang langid="en">
+        <user>
+          <para>On the whole, you functional state is satisfactory and corresponds to average level of functional capabilities of your cardiovascular system. Howerver, obvious signs of exhaustion are observed in its work. State with internal and external demands beginning to exceed your body's functional capabilities is developing. You have substantially decreased activity. Power and metabolic processes are decelerated. State of remarkable dormancy is observed. Ability to overcome difficulties of life is decreased.</para>
+          <para>It is desirable that you increase recreation time and reduce your burden. If you can’t solve the current situation, you should support your body with special power and vitamin supplements and with medicines containing vital minerals. It is exceedingly desirable to consult with a psychotherapist and a therapist. Ambulant medical exam (blood pressure control, clinical electrocardiography, complete blood cell count and biochemical blood test, urinalysis, etc.).</para>
+        </user>
+      </lang>
+    </entry>
+
+  </row>
+
+  <row key="4">
+    <entry key="1" state_color="yellow">
+      <lang langid="ru">
+        <prof>
+          <para>Цена адаптации низкая. Выше среднего уровень функциональных возможностей регуляторных механизмов сердечно-сосудистой системы. Высокие уровни напряжения и утомления. Нарастание явлений тревоги в развития стресса. Пульс реже оптимального с высоким напряжением регуляторных механизмов. Явления стабилизации сердечного ритма с умеренным повышением психической и поведенческой активности, моторной готовности и вегетативной мобилизации. Эффективные механизмы регуляции сердечной деятельности. Начальные проявления катоболитических процессов.</para>
+        </prof>
+        <user>
+          <para>Ваши функциональные возможности выше среднего уровня, однако, заметное утомление вызвало первые проявления нервного напряжения. Начинает появляться тревога, которая может заставить Вас изменить сложившиеся жизненные установки. Организм начинает испытывать излишнюю нагрузку.</para>
+          <para>Специальных мероприятий по оздоровлению и профилактике не требуется, но крайне желательно провести анализ своего поведения и состояния для их последующей коррекции.</para>
+        </user>
+      </lang>
+      <lang langid="en">
+        <user>
+          <para>Your functional capabilities are above average. However, marked tiredness caused first signs of nervous tension. Anxiety that could make you change your current priorities in life is starting to appear. Your body is beginning to endure excessive burden.</para>
+          <para>Special measures for recovery and preventive treatments are not necessary, though it is exceedingly desirable to perform analysis of your conditions and behavior for their subsequent correction.</para>
+        </user>
+      </lang>
+    </entry>
+
+    <entry key="2" state_color="yellow">
+      <lang langid="ru">
+        <prof>
+          <para>Цена адаптации низкая. Выше среднего уровень функциональных возможностей регуляторных механизмов сердечно-сосудистой системы. Уровни напряжения  и утомления выше среднего. Уровни напряжения  и утомления выше среднего. Появление явлений тревоги в развития стресса. Пульс реже оптимального, напряжение регуляторных механизмов выше среднего.</para>
+        </prof>
+        <user>
+          <para>Ваши функциональные возможности выше среднего уровня. Однако появившееся утомление формирует легкое нервное напряжение. Начинает появляться тревога, которая может заставить Вас изменить сложившиеся жизненные установки. Организм начинает испытывать излишнюю нагрузку.</para>
+          <para>Специальных мероприятий по оздоровлению и профилактике не требуется, но крайне желательно проведение анализа своего поведения и состояния для его последующей коррекции.</para>
+        </user>
+      </lang>
+      <lang langid="en">
+        <user>
+          <para>Your functional capabilities are above average. However, recently emerged fatigue forms slight nervous tension. Anxiety that could make you change your current priorities in life is starting to appear. Your body is beginning to endure excessive burden.</para>
+          <para>Special measures for recovery and preventive treatments are not necessary, though it is exceedingly desirable to perform analysis of your conditions and behavior for their subsequent correction.</para>
+        </user>
+      </lang>
+    </entry>
+
+    <entry key="3" state_color="green">
+      <lang langid="ru">
+        <prof>
+          <para>Цена адаптации низкая. Выше среднего уровень функциональных возможностей регуляторных механизмов сердечно-сосудистой системы. Напряжение оптимальное, утомление отсутствует. Пульс несколько реже средних значений, с оптимальным напряжением регуляторных механизмов.</para>
+        </prof>
+        <user>
+          <para>Ваши функциональные возможности выше среднего уровня. Утомление отсутствует. У Вас достаточная переносимость физической и спортивной нагрузки.</para>
+          <para>В таком состоянии специальных дополнительных мероприятий по оздоровлению и профилактике не требуется. Для тренировки организма можно повысить уровень своей физической нагрузки.</para>
+        </user>
+      </lang>
+      <lang langid="en">
+        <user>
+          <para>Your functional capabilities are above average. There are no signs of fatigue. Your have sufficient endurance of physical and sporting work. Special measures for recovery and preventive treatments are not necessary. You'd rather increase amount of your physical load to achieve better physical fitness.</para>
+        </user>
+      </lang>
+    </entry>
+    
+    <entry key="4" state_color="yellow">
+      <lang langid="ru">
+        <prof>
+          <para>Цена адаптации низкая. Выше среднего уровень функциональных возможностей регуляторных механизмов сердечно-сосудистой системы. Напряжение ниже среднего, появление явлений устойчивости к действию физических стрессоров. Трофотропная регуляция. Пульс реже оптимального, умеренно нестабильный. Мобилизация вагоинсулярного аппарата. Преобладание процессов покоя, поддержание гомеостаза, психической релаксации, снижения мышечного тонуса. Выраженное торможение моторной соматической системы.</para>
+        </prof>
+        <user>
+          <para>Ваши функциональные возможности выше среднего уровня. Явления утомления отсутствуют. У Вас высокая переносимость физической и спортивной нагрузки.</para>
+          <para>В таком состоянии специальных дополнительных мероприятий по оздоровлению и профилактике не требуется.</para>
+        </user>
+      </lang>
+      <lang langid="en">
+        <user>
+          <para>Your functional capabilities are above average. There are no signs of fatigue. Your have high endurance of physical and sporting work. Special measures for recovery and preventive treatments are not necessary.</para>
+        </user>
+      </lang>
+    </entry>
+    
+    <entry key="5" state_color="yellow">
+      <lang langid="ru">
+        <prof>
+          <para>Цена адаптации низкая. Выше среднего уровень функциональных возможностей регуляторных механизмов сердечно-сосудистой системы. Напряжение низкое, выраженные явления  устойчивости к действию физических стрессоров. Выраженная  активация трофотропной регуляции. Пульс реже оптимального, нестабильный. Невысокий уровень напряжения функционирования регуляторных систем. Сниженный уровень артериального давления. Выраженные анаболитические процессы. Активизация систем поддержания гомеостатического равновесия.</para>
+        </prof>
+        <user>
+          <para>Ваши функциональные возможности выше среднего уровня. У Вас невысокая нагрузка на организм и достаточная переносимость физической и спортивной нагрузки.</para>
+          <para>В таком состоянии специальных дополнительных мероприятий по оздоровлению и профилактике не требуется.</para>
+        </user>
+      </lang>
+      <lang langid="en">
+        <user>
+          <para>Your functional capabilities are above average. Load imposed on your body is low. You have sufficient endurance of physical and sporting work. Special measures for recovery and preventive treatments are not necessary.</para>
+        </user>
+      </lang>
+    </entry>
+    
+  </row>
+
+  <row key="5">
+    <entry key="1" state_color="red">
+
+      <lang langid="ru">
+        <prof>
+          <para>Цена адаптации очень низкая. Высокий уровень функциональных возможностей регуляторных механизмов сердечно-сосудистой системы. Высокое реактивное напряжение и  состояние утомления. Дизрегуляция эрготропных и трофотропных механизмов регуляции. Стадия максимальной выраженности аларм - реакции в развитие стресса. Редкий стабильный пульс. Дисрегуляторный синдром.</para>
+        </prof>
+        <user>
+          <para>У Вас высокий уровень функциональных возможностей. Однако заметное утомление вызвало начальную стадию нервного напряжения и стресса. Развивающийся стресс формирует явную тревогу, которая заметно изменяет состояние внутреннего равновесия. Это заставляет Вас менять поведенческую активность. Организм испытывает излишнюю нагрузку.</para>
+          <para>Специальных мероприятий по оздоровлению и профилактике не требуется, но крайне желательно провести тщательный анализ своего поведения и состояния для его коррекции.</para>
+        </user>
+      </lang>
+
+      <lang langid="en">
+        <user>
+          <para>You have high level of functional capabilities. However, marked fatigue results in initial stage of nervous tension and stress. Developing stress forms evident anxiety that visibly changes state of internal balance. This makes you change your behavioral activity. Your body is beginning to endure excessive burden.</para>
+          <para>Special measures for recovery and preventive treatments are not necessary, though it is exceedingly desirable to perform detailed analysis of your behavior and conditions for their subsequent correction.</para>
+        </user>
+      </lang>
+    </entry>
+
+    <entry key="2" state_color="yellow">
+      <lang langid="ru">
+        <prof>
+          <para>Цена адаптации очень низкая. Высокий уровень функциональных возможностей регуляторных механизмов сердечно-сосудистой системы. Нарастание явлений тревоги в развития стресса. Выше среднего реактивное напряжение и  состояние утомления. Редкий умеренно стабильный пульс.</para>
+        </prof>
+        <user>
+          <para>У Вас высокий уровень функциональных возможностей. Однако утомление вызвало нервное напряжение. Начинает появляться тревога, которая может заставить Вас изменить жизненные установки. Организм начинает испытывать излишнюю нагрузку.</para>
+          <para>Специальных мероприятий по оздоровлению и профилактике не требуется, но крайне желательно провести анализ своего поведения и состояния.</para>
+        </user>
+      </lang>
+      <lang langid="en">
+        <user>
+          <para>You have high level of functional capabilities. However, fatigue caused nervous tension. Anxiety that could cause you to change your priorities in life is beginning to appear. Your body is beginning to endure excessive burden.</para>
+          <para>Special measures for recovery and preventive treatments are not necessary, though it is exceedingly desirable to perform analysis of your behavior and conditions.</para>
+        </user>
+      </lang>
+    </entry>
+
+    <entry key="3" state_color="yellow">
+      <lang langid="ru">
+        <prof >
+          <para>Цена адаптации очень низкая. Высокий уровень функциональных возможностей регуляторных механизмов сердечно-сосудистой системы. Напряжение оптимальное, утомление отсутствует. Устойчивость к действию физических стрессоров. Редкий пульс с оптимальным напряжением регуляторных механизмов. Преобладание процессов покоя, поддержание гомеостаза, психической релаксации, снижения мышечного тонуса.</para>
+        </prof>
+        <user >
+          <para>У Вас высокий уровень функциональных возможностей. Признаки утомления отсутствуют. Вы хорошо переносите физическую и спортивную нагрузку.</para>
+          <para>В таком состоянии специальных дополнительных мероприятий по оздоровлению и профилактике не требуется.</para>
+        </user>
+      </lang>
+      <lang langid="en">
+        <user>
+          <para>You have high level of functional capabilities. There are no signs of fatigue. You have good endurance of physical and sporting work.</para>
+          <para>Special measures for recovery and preventive treatments are not necessary in such condition.</para>
+        </user>
+      </lang>
+    </entry>
+
+    <entry key="4" state_color="yellow">
+      <lang langid="ru">
+        <prof>
+          <para>Цена адаптации очень низкая. Высокий уровень функциональных возможностей регуляторных механизмов сердечно-сосудистой системы. Напряжение ниже среднего, выраженные явления  устойчивости к действию физических стрессоров. Мобилизация ваго-инсулярного аппарата. Выраженная активация трофотропной регуляции. Редкий умеренно нестабильный пульс. Невысокий уровень напряжения функционирования регуляторных систем. Сниженный уровень артериального давления. Состояние покоя. Выраженные анаболитические процессы.</para>
+        </prof>
+        <user>
+          <para>У Вас высокий уровень функциональных возможностей. Признаки утомления отсутствуют. Отмечается очень высокая переносимость физических и спортивных нагрузок. Однако наблюдаются первые признаки истощения в работе сердечно-сосудистой системы. Возможно состояние перетренировки.</para>
+          <para>Специальных дополнительных мероприятий по оздоровлению и профилактике не требуется, однако следует увеличить время для отдыха и снизить уровень нагрузок.</para>
+        </user>
+      </lang>
+      <lang langid="en">
+        <user>
+          <para>You have high level of functional capabilities. There are no signs of fatigue. You have very high endurance of physical and sporting work. However, first signs of exhaustion in work of cardiovascular system are observed. Possible state of overtraining</para>
+          <para>Special measures for recovery and preventive treatments are not necessary. However, you should increase recreation time and reduce your burden.</para>
+        </user>
+      </lang>
+    </entry>
+
+    <entry key="5" state_color="red">
+      <lang langid="ru">
+        <prof>
+          <para>Цена адаптации очень низкая. Высокий уровень функциональных возможностей регуляторных механизмов сердечно-сосудистой системы. Низкий уровень напряжения функционирования регуляторных систем. Выраженное преобладание парасимпатического отдела вегетативной нервной системы. Редкий нестабильный пульс. Выраженная активация трофотропной системы, вагоинсулярного аппарата. Преобладание анаболических процессов. Выраженное мышечное расслабление, которое связано либо сонливостью, либо с утомлением. Угроза вагоинсулярного криза.</para>
+        </prof>
+        <user>
+          <para>У Вас высокий уровень функциональных возможностей, однако, обнаруживаются признаки заметного истощения. Переносимость физической и спортивной нагрузки снижается, возможно развитие состояния перетренированности.</para>
+          <para>В таком состоянии следует прекратить все физические нагрузки. Желателен перерыв в работе, отдых в профилактории, отпуск со сменой деятельности. Требуется прием витаминов, специальных пищевых добавок с повышенным содержанием жизненно необходимых минеральных веществ, а также препаратов, улучшающих энергетический статус организма. В случае продолжения прежнего образа жизни и сохранения существующего уровня нагрузок возможен срыв, проявляющийся в форме обмороков, внезапной резкой боли в животе или расстройства желудка.</para>
+        </user>
+      </lang>
+      <lang langid="en">
+        <user>
+          <para>You have high level of functional capabilities. However, signs of evident exhaustion are observed. Your endurance for physical and sporting load is decreasing. Possible development of overtraining condition.</para>
+          <para>You should stop all physical activities. Break of work, recreation in a convalescent center, or a vacation with activity change is desirable. You should support your body with special power and vitamin supplements and with medicines containing vital minerals.</para>
+          <para>In case you keep on your previous way of life with the same level of physical activities, disruption is possible in the form of fainting, abdominal pains or disordered stomach.</para>
+        </user>
+      </lang>
+    </entry>
+  </row>
+</vcr_two_dim>

@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<pskonline-app>
+    <!--
+           Anything inside the <my-app> component content-area will be automatically
+           replaced with the "template" (associated with the <my-app> component) once
+           the application is bootstrapped. The upside of this is that it just happens
+           automatically. The downside of this is that the content instantaneously
+           disappears once the application has been bootstrapped.
+       -->
+
+
+    <div id="pre-bootstrap">
+      <div class="messaging">
+        <p>
+          ПРЕДСМЕННЫЙ КОНТРОЛЬ - ОНЛАЙН &copy; <a href="http://www.psk-online.ru">WWW.PSK-ONLINE.RU</a>
+        </p>
+        <p>&nbsp;</p>
+        <div>
+          <p><i class='fa fa-3x fa-circle-o-notch fa-spin'></i></p>
+        </div>
+        <p>&nbsp;</p>
+        <h1>ЗАГРУЗКА...</h1>
+      </div>
+    </div>
+</pskonline-app>
+<script src="~/dist/vendor.js" asp-append-version="true"></script>
+@section scripts {
+    <script src="~/dist/main-client.js" asp-append-version="true"></script>
+}

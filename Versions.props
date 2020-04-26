@@ -1,0 +1,31 @@
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+
+    <!-- Update these values according to SemVer -->
+    <VersionMajor>0</VersionMajor>
+    <VersionMinor>13</VersionMinor>
+    <VersionPatch>0</VersionPatch>
+
+    <!-- Change this to set the phase of the project. Use values like "alpha", "beta", "rc1", "rtm", etc. -->
+    <PrereleaseSuffix>alpha</PrereleaseSuffix>
+
+    <!-- Base assembly & file version -->
+    <AssemblyVersion>$(VersionMajor).$(VersionMinor).$(VersionPatch)</AssemblyVersion>
+    <AssemblyFileVersion>$(VersionMajor).$(VersionMinor).$(VersionPatch)</AssemblyFileVersion>
+
+    <!-- Building in CI -->
+    <AssemblyVersion Condition="'$(BuildCounter)' != ''">$(AssemblyVersion).$(BuildCounter)</AssemblyVersion>
+    <AssemblyFileVersion Condition="'$(BuildCounter)' != ''">$(AssemblyFileVersion).$(BuildCounter)</AssemblyFileVersion>
+
+    <!-- Building on dev machine -->
+    <AssemblyVersion Condition="'$(BuildCounter)' == ''">$(AssemblyVersion).0</AssemblyVersion>
+    <AssemblyFileVersion Condition="'$(BuildCounter)' == ''">$(AssemblyFileVersion).0</AssemblyFileVersion>
+
+    <FileVersion>$(AssemblyFileVersion)</FileVersion>
+    <AssemblyInformationalVersion Condition="'$(AssemblyInformationalVersion)' == ''">$(AssemblyFileVersion)-$(PrereleaseSuffix)</AssemblyInformationalVersion>
+
+    <ProductVersion>$(VersionMajor).$(VersionMinor).$(VersionPatch)</ProductVersion>
+    <InformationalVersion>$(ProductVersion)</InformationalVersion>
+
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,109 @@
+<div class="container">
+
+  <div [@fadeInOut]>
+    <div class="row">
+      <div class="col-sm-4">
+        <h4>{{'orgstructure.mgmt.BranchesAndDepartments' | translate}}</h4>
+        <div style="border-style: dotted; border-width: thin; height: 50vh">
+          <tree-root #orgStructureTree
+            [nodes]="nodes"
+            [options]="options"
+            (focus)="onTreeFocus($event)">
+          </tree-root>
+        </div>
+      </div>
+
+      <div id="datatableTemplates">
+        <!-- templates for datatable are here because otherwise they will not 
+          get attached to the members of components due to *ngIf directive -->
+        <ng-template #indexTemplate let-value="value">
+          <strong>{{value}}</strong>
+        </ng-template>
+
+        <ng-template #employeeFullNameTemplate let-row="row" let-value="value">
+          <span>
+            {{value}}
+          </span>
+        </ng-template>
+
+        <ng-template #actionsTemplate let-row="row" let-value="value" let-i="index">
+          <div *ngIf="canManageEmployees">
+            <a class="btn btn-link btn-xs" href="javascript:;" (click)="editEmployee(row)">
+              <i class="fa fa-pencil-square-o" aria-hidden="true"></i> {{'employees.mgmt.Edit' | translate}}
+            </a>
+            |
+            <a class="btn btn-link btn-xs" href="javascript:;" (click)="deleteEmployee(row)">
+              <i class="fa fa-trash-o" aria-hidden="true"></i> {{'employees.mgmt.Delete' | translate}}
+            </a>
+          </div>
+        </ng-template>
+
+      </div>
+
+      <div class="col-sm-8">
+
+        <div class="row">
+          
+          <div class="col">
+            <div class="row" *ngIf="!(currentBranchOffice && currentDepartment)">
+              <i>{{'orgstructure.mgmt.ChooseDepartment' | translate}}</i>
+            </div>
+
+            <div class="row" *ngIf="currentBranchOffice && currentDepartment">
+              <div class="col-sm-8">
+                <div class="form-group search-box">
+                  <search-box (searchChange)="onSearchChanged($event)"
+                              placeholder="{{'employees.mgmt.Search' | translate}}">
+
+                  </search-box>
+                </div>
+              </div>
+
+              <div class="col-sm-4" *ngIf="canManageEmployees" style="float:right;text-align:right;">
+                <a href="javascript:;" (click)="onNewEmployee(row)">
+                  <i class="fa fa-plus-circle"></i> {{'employees.mgmt.NewEmployee' | translate}}
+                </a>
+              </div>
+            </div>
+
+            <div class="row" *ngIf="currentBranchOffice && currentDepartment">
+
+              <ngx-datatable class="material colored-header sm table table-striped table-hover"
+                             [loadingIndicator]="loadingIndicator"
+                             [rows]="employeeListRows"
+                             [rowHeight]="35"
+                             [headerHeight]="35"
+                             [footerHeight]="35"
+                             [columns]="employeeListColumns"
+                             [scrollbarV]="true"
+                             [columnMode]="'force'"
+                             [messages]="{emptyMessage: 'ngxDatatable.empty' | translate, totalMessage: 'ngxDatatable.total' | translate, selectedMessage: false}">
+              </ngx-datatable>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" bsModal #employeeEditorModal="bs-modal" (onHidden)="onEmployeeEditorModalHidden()" [config]="{backdrop: 'static'}" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title pull-left">
+            <i class="fa fa-user-circle-o"></i>
+            {{editingEmployeeName ? ('employees.mgmt.EditEmployee' | translate:{name:editingEmployeeName} ) : ('employees.mgmt.NewEmployee' | translate)}}
+          </h4>
+          <button type="button" class="close pull-right" title="Close" (click)="employeeEditorModal.hide()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <employee-info #employeeEditor></employee-info>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

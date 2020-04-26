@@ -1,0 +1,144 @@
+﻿<div class="vertical-center-flex">
+  <div class="forgot-pwd-container center-block" [ngSwitch]="mode">
+
+    <div *ngSwitchCase="'reset_password'" class="panel panel-primary boxshadow">
+      <div class="panel-heading">
+        <span class="glyphicon glyphicon-lock"></span> ЗАДАЙТЕ НОВЫЙ ПАРОЛЬ
+      </div>
+      <div class="panel-body">
+
+        <div class="col-md-8 col-md-offset-2" style="padding: 0 0 10pt 0;">
+          <p>Придумайте новый надежный пароль для своей учетной записи:</p>
+          <ul>
+            <li>не менее 8 символов</li>
+            <li>не менее 1 заглавной и строчной латинской буквы</li>
+            <li>не менее 1 цифры</li>
+            <li>не менее 1 спецсимвола</li>
+          </ul>
+          <p>Чтобы убедиться, что пароль введен правильно, просим вас ввести новый пароль 2 раза.</p>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+          <form *ngIf="formResetToggle"
+                autocomplete="new-password"
+                class="form-horizontal forgot-pwd" name="resetPasswordForm" #f="ngForm" novalidate
+                (ngSubmit)="f.form.valid ? doResetPassword() :
+                          (!pwd1.valid && showEmailAlert())">
+            <!-- enter new password -->
+            <div class="form-group has-feedback">
+              <div class="col-md-10" [ngClass]="{'has-success': f.submitted && pwd1.valid, 'has-error' : f.submitted && !pwd1.valid}">
+                <input type="password" id="pwdReset-pwd1" name="pwd1"
+                       placeholder="{{'pwdReset.enterNewPassword' | translate}}" class="form-control"
+                       [(ngModel)]="newPassword1" #pwd1="ngModel"
+                       required minlength="8" validateEqual="pwd2" reverse="true" />
+                <span *ngIf="f.submitted" class="glyphicon form-control-feedback"
+                      [ngClass]="{'glyphicon-ok ': pwd1.valid, 'glyphicon-remove' : !pwd1.valid}"
+                      aria-hidden="true"></span>
+                <span class="errorMessage" *ngIf="pwd1.touched && !pwd1.valid">
+                  {{'pwdReset.passwordTooShort' | translate}}
+                </span>
+              </div>
+            </div>
+            <!-- repeat new password -->
+            <div class="form-group has-feedback">
+              <div class="col-md-10" [ngClass]="{'has-success': f.submitted && pwd2.valid, 'has-error' : f.submitted && !pwd2.valid}">
+                <input type="password" id="pwdReset-pwd2" name="pwd2"
+                       placeholder="{{'pwdReset.repeatNewPassword' | translate}}" class="form-control"
+                       [(ngModel)]="newPassword2" #pwd2="ngModel"
+                       validateEqual="pwd1" />
+                <span *ngIf="f.submitted" class="glyphicon form-control-feedback"
+                      [ngClass]="{'glyphicon-ok ': pwd2.valid, 'glyphicon-remove' : !pwd2.valid}"
+                      aria-hidden="true"></span>
+                <span class="errorMessage" *ngIf="pwd2.touched && !pwd2.valid">
+                  {{'pwdReset.passwordsDontMatch' | translate}}
+                </span>
+              </div>
+            </div>
+
+            <div class="form-group" style="padding-top:10pt;">
+              <div class="col-md-offset-2 col-md-10">
+                <button type="submit" class="btn btn-primary"
+                        [disabled]="isLoading || !f.form.valid">
+                  <i *ngIf="isLoading" class='fa fa-circle-o-notch fa-spin'></i>
+                  {{(isLoading ? 'pwdReset.settingPassword' : 'pwdReset.doSetPassword') | translate}}
+                </button>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="col-md-offset-2 col-md-10">
+                <a [routerLink]="['/login']">Вход в систему</a><br />
+              </div>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div *ngSwitchCase="'link_not_valid'" class="panel panel-primary boxshadow">
+      <div class="panel-heading">
+        <span class="glyphicon glyphicon-lock"></span> ОШИБКА!
+      </div>
+      <div class="panel-body">
+
+        <div class="col-md-8 col-md-offset-2" style="padding: 0 0 10pt 0;">
+          <p>Скорее всего, вы использовали неправильную или поврежденную ссылку для сброса своего пароля.</p>
+          <p>
+            Попробуйте еще раз <a [routerLink]="['/forgot-password']">запросить сброс пароля</a>.
+            Если проблема сохраняется, обратитесь в <a href="mailto:psk-online@mail.ru">группу технической поддержки</a>.
+          </p>
+        </div>
+
+        <div class="col-md-10 col-md-offset-2">
+          <a [routerLink]="['/login']">Вход в систему</a><br />
+        </div>
+      </div>
+    </div>
+
+    <div *ngSwitchCase="'success'" class="panel panel-primary boxshadow">
+      <div class="panel-heading">
+        <span class="glyphicon glyphicon-lock"></span> НОВЫЙ ПАРОЛЬ УСТАНОВЛЕН
+      </div>
+      <div class="panel-body">
+
+        <div class="col-md-8 col-md-offset-2" style="padding: 0 0 10pt 0;">
+          <p>
+            Новый пароль установлен успешно. Теперь вы можете войти в систему, используя новый пароль.
+          </p>
+        </div>
+
+        <div class="col-md-8 col-md-offset-2" style="padding: 0 0 10pt 0;">
+          <a [routerLink]="['/login']">Вход в систему</a><br />
+        </div>
+      </div>
+    </div>
+
+
+    <div *ngSwitchCase="'error'" class="panel panel-primary boxshadow">
+      <div class="panel-heading">
+        <span class="glyphicon glyphicon-lock"></span> ОШИБКА УСТАНОВКИ НОВОГО ПАРОЛЯ
+      </div>
+      <div class="panel-body">
+
+        <div class="col-md-8 col-md-offset-2" style="padding: 0 0 10pt 0;">
+          <p>
+            При попытке задать новый пароль произошла ошибка.
+          </p>
+          <p>{{errorDetail}}</p>
+          <p>
+            <br/>Попробуйте <a [routerLink]="['/forgot-password', userName]">запросить новую ссылку для сброса пароля</a>.
+            Если проблема сохраняется, обратитесь в
+            <a href="mailto:psk-online@mail.ru">группу технической поддержки</a>.
+          </p>
+
+        </div>
+
+        <div class="col-md-8 col-md-offset-2" style="padding: 0 0 10pt 0;">
+          <a [routerLink]="['/login']">Вход в систему</a><br />
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>

@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <ApplicationIcon />
+    <OutputType>Library</OutputType>
+    <StartupObject />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="log4net" Version="2.0.8" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.8.0" />
+    <PackageReference Include="NUnit" Version="3.10.1" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.10.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\src\Components\PskOnline.Components.Log\PskOnline.Components.Log.csproj" />
+    <ProjectReference Include="..\..\..\src\Components\PskOnline.Components.Util\PskOnline.Components.Util.csproj" />
+    <ProjectReference Include="..\..\..\src\Components\PskOnline.Math\PskOnline.Math.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="unit_test_data\UTest_rb_16_data.dat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="unit_test_data\UTest_rb_16_data_02.dat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="unit_test_data\UTest_rb_18_data.dat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

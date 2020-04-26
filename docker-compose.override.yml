@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  pskonline.server.service:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=TeamcityLinux
+    ports:
+      - "80"

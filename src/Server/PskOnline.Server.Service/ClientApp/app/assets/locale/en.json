@@ -1,0 +1,339 @@
+﻿{
+  "app": {
+    "Welcome": "Welcome",
+    "Notifications": "Notifications",
+    "New": "New"
+  },
+  "mainMenu": {
+    "TenantDashboard": "Tenant Dashboard",
+    "Configuration": "Configuration",
+    "Settings": "My profile",
+    "About": "About",
+    "Logout": "Logout"
+  },
+  "pageHeader": {
+    "Dashboard": "Dashboard",
+    "Tenants": "Tenants",
+    "Configuration": "Configuration",
+    "OrgStructure": "Organizational Structure",
+    "EmployeesManagement": "Employees",
+    "Positions": "Positions",
+    "NotFound": "Not-Found",
+    "About": "About",
+    "Settings": "Settings"
+  },
+  "login": {
+    "login": "Login",
+    "loginFailed": "Unable to login",
+    "errorDescription": "An error occurred while logging in. Please try again later.\nError: ",
+    "attemptingLogin": "Attempting login...",
+    "welcomeUserName": "Welcome, {userName}!",
+    "welcomeBackUserName": "Welcome back {{userName}}!",
+    "sessionRestored": "Login session restored after expiration.",
+    "sessionRestoredForUserName": "Login session for {{userName}} restored after expiration!",
+    "repeatLastOperation": "If you were in the middle of something (creating, modifying or deleting items), please repeat the operation.",
+    "enterEmailOrUsername": "Username or email",
+    "enterPassword": "Password",
+    "usernameOrEmailRequired": "Enter username or email",
+    "passwordRequired": "Enter password",
+    "rememberMe": "Remember me on this computer",
+    "logMeIn": "Login",
+    "loggingIn": "Logging in...",
+    "loginCaption": "Login",
+    "passwordCaption": "Password",
+    "loggedOut": "Session ended",
+    "sessionExpired": "Session Expired",
+    "sessionExpiredLoginAgain": "Your Session has expired. Please log in again",
+    "sessionExpiredLoginAgainRenewSession": "Your Session has expired. Please log in again to renew your session"
+  },
+  "forgotPassword": {
+    "requestingResetLink": "Executing request...",
+    "requestingReset": "Requesting password reset from the server...",
+    "requestResetLink": "Request password reset"
+  },
+  "ngxDatatable": {
+    "empty": "No data to display",
+    "total": "items total"
+  },
+  "home": {
+    "NoWidgets1": "You have no widgets displayed. Goto",
+    "NoWidgets2": "to configure available widgets",
+    "StatisticsTitle": "Some Important Stuff"
+  },
+  "notFound": {
+    "404": "404",
+    "pageNotFound": "The page you are looking for does not exist",
+    "backToHome": "Back to home"
+  },
+  "alerts": {
+    "loading": "Loading...",
+    "saving": "Saving changes...",
+    "pleaseWait": "Please wait...",
+    "cancelled": "Действие отменено",
+    "cancelledByUserNoChangesMade": "Данные на сервере не были изменены.",
+    "deletionWarning": "Вы действительно хотите удалить {{entity}} \"{{name}}\"?"
+  },
+  "settings": {
+    "tab": {
+      "Profile": "Profile",
+      "Preferences": "Preferences"
+    },
+    "header": {
+      "UserProfile": "User Profile",
+      "UserPreferences": "User Preferences"
+    }
+  },
+  "configuration": {
+    "tab": {
+      "Tenants": "Tenants",
+      "Employees": "Employees",
+      "OrgStructure": "Orgstructure",
+      "Positions": "Positions",
+      "Users": "Users",
+      "Roles": "Roles"
+    },
+    "header": {
+      "EmployeeManagement": "Manage Employees",
+      "OrgStructureManagement": "Manage Organizational Structure",
+      "TenantManagement": "Manage Tenants",
+      "PositionManagement": "Manage Positions",
+      "UsersManagements": "Manage Users",
+      "RolesManagement": "Manage Roles"
+    }
+  },
+  "preferences": {
+    "ReloadPreferences": "Reload Preferences:",
+    "ReloadPreferencesHint": "Load default preferences (local changes are discarded)",
+    "Language": "Language:",
+    "English": "English",
+    "French": "French",
+    "German": "German",
+    "Portuguese": "Portuguese",
+    "Arabic": "Arabic",
+    "Korean": "Korean",
+    "Russian": "Русский",
+    "LanguageHint": "Select the preferred language for your account",
+    "HomePage": "Home Page:",
+    "Dashboard": "Dashboard",
+    "Tenants": "Tenants",
+    "Products": "Products",
+    "Orders": "Orders",
+    "About": "About",
+    "Settings": "Settings",
+    "HomePageHint": "Select the default page to navigate to on login",
+    "Theme": "Theme:",
+    "DefaultColor": "<span class='default-theme-option'>Default</span>",
+    "RedColor": "<span class='red-theme-option'>Red</span>",
+    "OrangeColor": "<span class='orange-theme-option'>Orange</span>",
+    "GreenColor": "<span class='green-theme-option'>Green</span>",
+    "GrayColor": "<span class='gray-theme-option'>Gray</span>",
+    "BlackColor": "<span class='black-theme-option'>Black</span>",
+    "ThemeHint": "Select the default color theme for your account",
+    "ResetDefault": "Reset default",
+    "SetDefault": "Set as default"
+  },
+  "employees": {
+    "management": {
+      "EditEmployee": "Eemployee",
+      "NewEmployee": "New employee",
+      "Edit": "Modify",
+      "Delete": "Delete",
+      "Name": "Name",
+      "Search": "Search employees"
+    },
+    "editor": {
+      "Name": "Name"
+    }
+  },
+  "branchOffices": {
+    "editor": {
+      "name": "Name of branch office",
+      "timeZone": "Time zone (UTC offset, minutes)"
+    }
+  },
+  "orgstructure": {
+    "mgmt": {
+      "Branch": "Branch office",
+      "BranchesAndDepartments": "Branch offices and departments",
+      "Delete": "Delete",
+      "Department": "Department",
+      "Edit": "Modify",
+      "EditPosition": "Modify position \"{{name}}\"",
+      "Name": "[EN] Position name",
+      "NewBranch": "New branch office",
+      "ChooseBranchOffice": "Choose branch office",
+      "ChooseDepartment": "Choose department"
+    },
+    "editor": {
+      "Name": "[EN] Position name"
+    }
+  },
+  "positions": {
+    "management": {
+      "Search": "Search positions...",
+      "NewPosition": "New position",
+      "Edit": "Modify",
+      "Delete": "Delete",
+      "EditPosition": "Modify position \"{{name}}\"",
+      "Name": "Position name"
+    },
+    "editor": {
+      "Name": "Position name"
+    }
+  },
+
+  "users": {
+    "management": {
+      "Search": "Search for user...",
+      "NewUser": "New User",
+      "Edit": "Edit",
+      "Delete": "Delete",
+      "EditUser": "Edit User \"{{name}}\"",
+      "Title": "Title",
+      "UserName": "User Name",
+      "FullName": "Full Name",
+      "Email": "Email",
+      "Roles": "Roles",
+      "PhoneNumber": "Phone Number"
+    },
+    "editor": {
+      "JobTitle": "Job Title: ",
+      "UserName": "User Name:",
+      "UserNameRequired": "User name is required (minimum of 2 and maximum of 200 characters)",
+      "Password": "Password:",
+      "PasswordHint": "Your password is required when changing user name",
+      "CurrentPasswordRequired": "Current password is required",
+      "Email": "Email:",
+      "EmailRequired": "Email address is required (maximum of 200 characters)",
+      "InvalidEmail": "Specified email is not valid",
+      "ChangePassword": "Change Password",
+      "CurrentPassword": "Current Password:",
+      "NewPassword": "New Password:",
+      "NewPasswordRequired": "New password is required (minimum of 6 characters)",
+      "ConfirmPassword": "Confirm Password:",
+      "ConfirmationPasswordRequired": "Confirmation password is required",
+      "PasswordMismatch": "New password and confirmation password do not match",
+      "Roles": "Roles:",
+      "FullName": " Full Name:",
+      "RoleRequired": " Role is required",
+      "PhoneNumber": "Phone #:",
+      "Enabled": "Enabled",
+      "Unblock": "Unblock",
+      "Close": "Close",
+      "Edit": "Edit",
+      "Cancel": "Cancel",
+      "Save": "Save",
+      "Saving": "Saving..."
+    }
+  },
+  "tenants": {
+    "mgmt": {
+      "Name": "Tenant name",
+      "Slug": "Subdomain",
+      "ExpDate": "Subscription expiration date",
+      "MaxUsers": "Max users",
+      "MaxEmployees": "Max employees",
+      "MaxMbytes": "Max Storage, MB",
+      "PrimaryContactEmail": "Email",
+      "PrimaryContactFullName": "Contact (full name)",
+      "PrimaryContactMobilePhone": "Mobile phone",
+      "PrimaryContactOfficePhone": "Office phone",
+      "Edit": "Edit",
+      "EditTenant": "Edit tenant details",
+      "Delete": "Delete",
+      "NewTenant": "New Tenant",
+      "Search": "Search"
+    },
+    "editor": {
+      "NameRequired": "Name is required",
+      "SlugRequired": "Subdomain for URL is required",
+      "PrimaryContactNameRequired": "Primary contact name is required",
+      "PrimaryContactEmailRequired": "Primary contact email is required",
+      "Cancel": "Cancel",
+      "Save": "Save"
+    },
+    "creator": {
+      "tenantAdminGroup": "New user (tenant admin) details",
+      "tenantInfoGroup": "New tenant information",
+      "AdminUserName": "Admin username",
+      "AdminUserNameRequired": "Username of new tenant admin is required",
+      "AdminEmail": "Admin email",
+      "AdminEmailRequired": "Admin email is required",
+      "AdminEmailInvalid": "The admin email is not valid",
+      "AdminPhone": "Admin mobile phone",
+      "AdminPhoneRequired": "Admin mobile phone is required",
+      "AdminPassword": "Admin password",
+      "AdminPasswordRequired": "Admin password is required (upper/lowercase + digits + special characters)",
+      "AdminLastName": "Admin last name",
+      "AdminLastNameRequired": "Admin last name is required",
+      "AdminFirstName": "Admin first name",
+      "AdminFirstNameRequired": "Admin first name is required",
+      "AdminPatronymic": "Admin patronymic",
+      "AdminPatronymicRequired": "Admin patronymic is required"
+    }
+  },
+
+  "roles": {
+    "management": {
+      "Search": "Search for role...",
+      "NewRole": "New Role",
+      "Edit": "Edit",
+      "Details": "Details",
+      "Delete": "Delete",
+      "RoleDetails": "Role Details \"{{name}}\"",
+      "EditRole": "Edit Role \"{{name}}\"",
+      "Name": "Name",
+      "Description": "Description",
+      "Users": "Users"
+    },
+    "editor": {
+      "Name": "Name:",
+      "Description": "Description:",
+      "RoleNameRequired": "Role name is required (minimum of 2 and maximum of 200 characters)",
+      "SelectAll": "Select all",
+      "SelectNone": "Select none",
+      "Close": "Close",
+      "Cancel": "Cancel",
+      "Save": "Save",
+      "Saving": "Saving..."
+    }
+  },
+  "defaultEntity": {
+    "view": "View",
+    "delete": "Delete",
+    "edit": "Modify",
+    "editor": {
+      "CopyToClipboard": "Copy to clipboard",
+      "Edit": "Modify",
+      "Close": "Close",
+      "Cancel": "Cancel",
+      "Save": "Save",
+      "Saving": "Saving..."
+    }
+  },
+  "notifications": {
+    "Delete": "Delete notification",
+    "Pin": "Pin notification",
+    "Date": "Date",
+    "Notification": "Notification"
+  },
+  "todoDemo": {
+    "management": {
+      "Search": "Search for task...",
+      "HideCompleted": "Hide Completed",
+      "AddTask": "Add Task",
+      "Delete": "Delete task",
+      "Important": "Mark as important",
+      "Task": "Task",
+      "Description": "Description"
+    },
+    "editor": {
+      "NewTask": "New Task",
+      "Name": "Name",
+      "TaskNameRequired": "Task name is required",
+      "Description": "Description",
+      "Important": "Mark as important",
+      "AddTask": "Add Task"
+    }
+  }
+}

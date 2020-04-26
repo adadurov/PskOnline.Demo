@@ -1,0 +1,60 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="7.0.1" />
+    <PackageReference Include="log4net" Version="2.0.8" />
+    <PackageReference Include="MathNet.Numerics" Version="4.7.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Components\PskOnline.Math\PskOnline.Math.csproj" />
+    <ProjectReference Include="..\..\PskOnline.Methods.Processing\PskOnline.Methods.Processing.csproj" />
+    <ProjectReference Include="..\PskOnline.Methods.Hrv.ObjectModel\PskOnline.Methods.Hrv.ObjectModel.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Logic\Personal\two_dim_conclusions_personal.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>two_dim_conclusions_personal.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Logic\Pro\two_dim_conclusions_pro.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>two_dim_conclusions_pro.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Logic\strings.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>strings.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Logic\Personal\two_dim_conclusions_personal.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>two_dim_conclusions_personal.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Logic\Pro\two_dim_conclusions_pro.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>two_dim_conclusions_pro.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Logic\strings.en.resx">
+      <Generator></Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Logic\strings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>strings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="exit 0&#xD;&#xA;set inpath=$(ProjectDir)\Logic\conclusions&#xD;&#xA;set outpath=$(ProjectDir)\Logic&#xD;&#xA;set translate=%inpath%\msxsl.exe %inpath%\two_dim_conclusions.xml %inpath%\gen_resx.xsl -xe &#xD;&#xA;&#xD;&#xA;del %outpath%\two_dim_conclusions.resx /q&#xD;&#xA;%translate% -o %outpath%\two_dim_conclusions.resx cur_lang=ru cur_level=pro&#xD;&#xA;&#xD;&#xA;del %outpath%\two_dim_conclusions.en.resx /q&#xD;&#xA;%translate% -o %outpath%\two_dim_conclusions.en.resx cur_lang=en cur_level=pro&#xD;&#xA;&#xD;&#xA;del %outpath%\two_dim_conclusions.en.resx /q&#xD;&#xA;%translate% -o %outpath%\two_dim_conclusions.resx cur_lang=ru cur_level=user&#xD;&#xA;&#xD;&#xA;del %outpath%\two_dim_conclusions.en.resx /q&#xD;&#xA;%translate% -o %outpath%\two_dim_conclusions.en.resx cur_lang=en cur_level=user" />
+  </Target>
+
+</Project>

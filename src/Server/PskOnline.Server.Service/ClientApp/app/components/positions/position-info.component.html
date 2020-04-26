@@ -1,0 +1,46 @@
+﻿<div>
+  <form *ngIf="formResetToggle" [attr.autocomplete]="isGeneralEditor ? NaN : null"
+        class="form-horizontal" name="positionInfoForm" #f="ngForm" novalidate
+        (ngSubmit)="f.form.valid ? save() :
+          (!positionName.valid && showErrorAlert('Position name is required', 'Please enter a position name (minimum of 2 and maximum of 200 characters)'));
+      ">
+
+    <div class="form-group has-feedback">
+      <label [class.col-md-3]="isViewOnly" [class.col-md-2]="!isViewOnly" class="control-label" for="positionName-{{uniqueId}}">{{'positions.editor.Name' | translate}}</label>
+      <div *ngIf="!isEditMode" [class.col-md-9]="isViewOnly" [class.col-md-10]="!isViewOnly">
+        <p class="form-control-static">{{position.name}}</p>
+      </div>
+      <div *ngIf="isEditMode" [class.col-md-9]="isViewOnly" [class.col-md-10]="!isViewOnly" [ngClass]="{'has-success': f.submitted && positionName.valid, 'has-error' : f.submitted && !positionName.valid}">
+        <input type="text" attr.id="positionName-{{uniqueId}}" name="positionName" [attr.autocomplete]="isGeneralEditor ? new-password : null" placeholder="Enter position name"
+               class="form-control" [(ngModel)]="positionEdit.name" #positionName="ngModel" required minlength="2" maxlength="200" />
+        <span *ngIf="showValidationErrors && f.submitted" class="glyphicon form-control-feedback" [ngClass]="{'glyphicon-ok ': positionName.valid, 'glyphicon-remove' : !positionName.valid}"></span>
+        <span *ngIf="showValidationErrors && f.submitted && !positionName.valid" class="errorMessage">
+          {{'positions.editor.UserNameRequired' | translate}}
+        </span>
+      </div>
+    </div>
+    <div *ngIf="!isViewOnly" class="row">
+      <div class="col-md-12">
+        <hr [class.last-separator-hr]="!isEditMode" [class.edit-last-separator-hr]="isEditMode" />
+      </div>
+    </div>
+
+    <div class="col-sm-7">
+      <div class="pull-right">
+        <button *ngIf="!isEditMode && isGeneralEditor" type="button" (click)="close()" class="btn btn-default">
+          <i class='fa fa-close'></i> {{'defaultEntity.editor.Close' | translate}}</button>
+        <button *ngIf="!isEditMode && !isGeneralEditor" type="button" (click)="edit()" class="btn btn-default">
+          <i class='fa fa-edit'></i> {{'defaultEntity.editor.Edit' | translate}}
+        </button>
+        <button *ngIf="isEditMode" type="button" (click)="cancel()" class="btn btn-danger" [disabled]="isSaving">
+          <i class='fa fa-times'></i> {{'defaultEntity.editor.Cancel' | translate}}
+        </button>
+        <button *ngIf="isEditMode" type="submit" class="btn btn-primary" [disabled]="isSaving">
+          <i *ngIf="!isSaving" class='fa fa-save'></i>
+          <i *ngIf="isSaving" class='fa fa-circle-o-notch fa-spin'></i> {{isSaving ? ('defaultEntity.editor.Saving' | translate) : ('defaultEntity.editor.Save' | translate)}}
+        </button>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </form>
+</div>

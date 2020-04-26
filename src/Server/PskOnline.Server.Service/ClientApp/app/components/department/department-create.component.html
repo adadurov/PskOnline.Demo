@@ -1,0 +1,69 @@
+﻿<div>
+  <form *ngIf="formResetToggle" [attr.autocomplete]="isGeneralEditor ? NaN : null"
+        class="form-horizontal" name="departmentInfoForm" #f="ngForm" novalidate
+        (ngSubmit)="f.form.valid ? save() :
+
+          (!name.valid && showErrorAlert('Department name is required', 'Please enter a name (minimum of 1 and maximum of 200 characters)'));
+          ">
+
+    <div class="row">
+      <div class="col-md-12">
+        <hr class="edit-separator-hr" />
+      </div>
+    </div>
+
+    <div class="form-group has-feedback">
+      <label class="col-md-4 control-label"
+             for="branchOfficeName-{{uniqueId}}">{{'departments.editor.branchOfficeName' | translate}}</label>
+      <div class="col-md-8">
+        <p class="form-control-static">{{branchOfficeName}}</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <hr class="edit-separator-hr" />
+      </div>
+    </div>
+
+    <div class="form-group has-feedback">
+      <label class="col-md-4 control-label"
+             for="name-{{uniqueId}}">{{'departments.mgmt.name' | translate}}</label>
+      <div class="col-md-8"
+           [ngClass]="{'has-success': f.submitted && name.valid, 'has-error' : f.submitted && !name.valid}">
+        <input autofocus type="text" attr.id="name-{{uniqueId}}" name="name" [attr.autocomplete]="isGeneralEditor ? new-password : null"
+               placeholder="{{'departments.editor.enterDepartmentName' | translate}}"
+               class="form-control" [(ngModel)]="departmentEdit.name" #name="ngModel"
+               required minlength="2" maxlength="200" />
+        <span *ngIf="showValidationErrors && f.submitted" class="glyphicon form-control-feedback"
+              [ngClass]="{'glyphicon-ok ': name.valid, 'glyphicon-remove' : !name.valid}"></span>
+        <span *ngIf="showValidationErrors && f.submitted && !name.valid" class="errorMessage">
+          {{'departments.editor.nameRequired' | translate}}
+        </span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <hr class="edit-separator-hr" />
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-sm-7">
+        <div class="pull-right">
+          <button type="button" (click)="cancel()" class="btn btn-danger" [disabled]="isSaving">
+            <i class='fa fa-times'></i>
+            {{'defaultEntity.editor.Cancel' | translate}}
+          </button>
+          <button type="submit" class="btn btn-primary" [disabled]="isSaving">
+            <i *ngIf="!isSaving" class='fa fa-save'></i>
+            <i *ngIf="isSaving" class='fa fa-circle-o-notch fa-spin'></i>
+            {{isSaving ? ('defaultEntity.editor.Saving' | translate) : ('defaultEntity.editor.Save' | translate)}}
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </form>
+</div>

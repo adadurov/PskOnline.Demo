@@ -1,0 +1,226 @@
+﻿<div>
+  <form *ngIf="formResetToggle" [attr.autocomplete]="isGeneralEditor ? NaN : null"
+        class="form-horizontal" name="tenantInfoForm" #f="ngForm" novalidate
+        (ngSubmit)="f.form.valid ? save() :
+
+          (!name.valid && showErrorAlert('Tenant name is required', 'Please enter a tenant name (minimum of 2 and maximum of 200 characters)'));
+          ">
+
+    <div class="row">
+      <div class="col-md-12">
+        <hr [class.separator-hr]="!isEditMode" [class.edit-separator-hr]="isEditMode" />
+      </div>
+    </div>
+
+    <div class="form-group has-feedback">
+      <label class="col-md-3 control-label"
+             for="name-{{uniqueId}}">{{'tenants.mgmt.Name' | translate}}</label>
+      <div *ngIf="!isEditMode" class="col-md-9">
+        <p class="form-control-static">{{tenant.name}}</p>
+      </div>
+      <div *ngIf="isEditMode" class="col-md-9"
+           [ngClass]="{'has-success': f.submitted && name.valid, 'has-error' : f.submitted && !name.valid}">
+        <input type="text" attr.id="name-{{uniqueId}}" name="name" [attr.autocomplete]="isGeneralEditor ? new-password : null"
+               placeholder="Enter tenant name"
+               class="form-control" [(ngModel)]="tenantEdit.name" #name="ngModel"
+               required minlength="2" maxlength="200" />
+        <span *ngIf="showValidationErrors && f.submitted" class="glyphicon form-control-feedback"
+              [ngClass]="{'glyphicon-ok ': name.valid, 'glyphicon-remove' : !name.valid}"></span>
+        <span *ngIf="showValidationErrors && f.submitted && !name.valid" class="errorMessage">
+          {{'tenants.editor.NameRequired' | translate}}
+        </span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <hr [class.separator-hr]="!isEditMode" [class.edit-separator-hr]="isEditMode" />
+      </div>
+    </div>
+
+    <div class="form-group has-feedback">
+      <label class="col-md-3 control-label"
+             for="slug-{{uniqueId}}">{{'tenants.mgmt.Slug' | translate}}</label>
+      <div *ngIf="!isEditMode" class="col-md-9">
+        <p class="form-control-static">{{tenant.slug}}</p>
+      </div>
+      <div *ngIf="isEditMode" class="col-md-9"
+           [ngClass]="{'has-success': f.submitted && slug.valid, 'has-error' : f.submitted && !slug.valid}">
+        <input type="text" attr.id="slug-{{uniqueId}}" name="slug" [attr.autocomplete]="isGeneralEditor ? new-password : null"
+               placeholder="Enter tenant slug"
+               class="form-control" [(ngModel)]="tenantEdit.slug" #slug="ngModel"
+               required minlength="2" maxlength="200" />
+        <span *ngIf="showValidationErrors && f.submitted" class="glyphicon form-control-feedback"
+              [ngClass]="{'glyphicon-ok ': slug.valid, 'glyphicon-remove' : !slug.valid}"></span>
+        <span *ngIf="showValidationErrors && f.submitted && !slug.valid" class="errorMessage">
+          {{'tenants.editor.SlugRequired' | translate}}
+        </span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <hr [class.separator-hr]="!isEditMode" [class.edit-separator-hr]="isEditMode" />
+      </div>
+    </div>
+
+    <div class="form-group has-feedback">
+      <label class="col-md-3 control-label"
+             for="primaryContactName-{{uniqueId}}">{{'tenants.mgmt.PrimaryContactFullName' | translate}}</label>
+      <div *ngIf="!isEditMode" class="col-md-9">
+        <p class="form-control-static" *ngIf="tenant.primaryContact!==undefined">{{tenant.primaryContact.fullName}}</p>
+      </div>
+      <div *ngIf="isEditMode" class="col-md-9"
+           [ngClass]="{'has-success': f.submitted && primaryContactName.valid, 'has-error' : f.submitted && !primaryContactName.valid}">
+        <input type="text" attr.id="primaryContactName-{{uniqueId}}" name="primaryContactName"
+               placeholder="Enter primary contact name" class="form-control"
+               [(ngModel)]="tenantEdit.primaryContact.fullName" #primaryContactName="ngModel"
+               required maxlength="200" />
+        <span *ngIf="showValidationErrors && f.submitted" class="glyphicon form-control-feedback"
+              [ngClass]="{'glyphicon-ok ': primaryContactName.valid, 'glyphicon-remove' : !primaryContactName.valid}"></span>
+        <span *ngIf="showValidationErrors && f.submitted && primaryContactName.errors?.required" class="errorMessage">
+          {{'tenants.editor.PrimaryContactNameRequired' | translate}}
+        </span>
+        <span *ngIf="showValidationErrors && f.submitted && primaryContactName.errors?.pattern" class="errorMessage">
+          {{'tenants.editor.InvalidContactName' | translate}}
+        </span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <hr [class.separator-hr]="!isEditMode" [class.edit-separator-hr]="isEditMode" />
+      </div>
+    </div>
+
+    <div class="form-group has-feedback">
+      <label class="col-md-3 control-label"
+             for="primaryContactEmail-{{uniqueId}}">{{'tenants.mgmt.PrimaryContactEmail' | translate}}</label>
+      <div *ngIf="!isEditMode" class="col-md-9">
+        <p class="form-control-static" *ngIf="tenant.primaryContact!==undefined">{{tenant.primaryContact.email}}</p>
+      </div>
+      <div *ngIf="isEditMode" class="col-md-9"
+           [ngClass]="{'has-success': f.submitted && primaryContactEmail.valid, 'has-error' : f.submitted && !primaryContactEmail.valid}">
+        <input type="text" attr.id="primaryContactEmail-{{uniqueId}}" name="primaryContactEmail"
+               placeholder="Enter primary contact email" class="form-control"
+               [(ngModel)]="tenantEdit.primaryContact.email" #primaryContactEmail="ngModel"
+               required maxlength="200" pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" />
+        <span *ngIf="showValidationErrors && f.submitted" class="glyphicon form-control-feedback"
+              [ngClass]="{'glyphicon-ok ': primaryContactEmail.valid, 'glyphicon-remove' : !primaryContactEmail.valid}"></span>
+        <span *ngIf="showValidationErrors && f.submitted && primaryContactEmail.errors?.required" class="errorMessage">
+          {{'tenants.editor.PrimaryContactEmailRequired' | translate}}
+        </span>
+        <span *ngIf="showValidationErrors && f.submitted && primaryContactEmail.errors?.pattern" class="errorMessage">
+          {{'tenants.editor.InvalidContactEmail' | translate}}
+        </span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <hr [class.separator-hr]="!isEditMode" [class.edit-separator-hr]="isEditMode" />
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-md-3 control-label"
+             for="PrimaryContactPhoneNumber-{{uniqueId}}">{{'tenants.mgmt.PrimaryContactMobilePhone' | translate}}</label>
+      <div *ngIf="!isEditMode" class="col-md-9">
+        <p class="form-control-static" *ngIf="tenant.primaryContact!==undefined">{{tenant.primaryContact.mobilePhoneNumber}}</p>
+      </div>
+      <div *ngIf="isEditMode" class="col-md-9">
+        <input type="text" attr.id="PrimaryContactPhoneNumber-{{uniqueId}}" name="primaryContactPhoneNumber"
+               placeholder="+7 123 456-78-90" class="form-control"
+               [(ngModel)]="tenantEdit.primaryContact.mobilePhoneNumber" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <hr [class.separator-hr]="!isEditMode" [class.edit-separator-hr]="isEditMode" />
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-md-3 control-label"
+             for="ServiceExpireDate-{{uniqueId}}">{{'tenants.mgmt.ExpDate' | translate}}</label>
+      <div *ngIf="!isEditMode" class="col-md-9">
+        <p class="form-control-static" *ngIf="tenant.serviceDetails!==undefined">
+          {{tenant.serviceDetails.serviceExpireDate | date}}
+        </p>
+      </div>
+      <div *ngIf="isEditMode" class="col-md-9">
+        <input type="date" attr.id="ServiceExpireDate-{{uniqueId}}" name="ServiceExpireDate"
+               placeholder="" class="form-control"
+               [ngModel]="tenantEdit.serviceDetails.serviceExpireDate | date:'yyyy-MM-dd'"
+               (ngModelChange)="tenantEdit.serviceDetails.serviceExpireDate = $event" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <hr [class.separator-hr]="!isEditMode" [class.edit-separator-hr]="isEditMode" />
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-md-3 control-label"
+             for="maxUsers-{{uniqueId}}">{{'tenants.mgmt.MaxUsers' | translate}}</label>
+      <div *ngIf="!isEditMode" class="col-md-9">
+        <p class="form-control-static" *ngIf="tenant.serviceDetails!==undefined">{{tenant.serviceDetails.serviceMaxUsers}}</p>
+      </div>
+      <div *ngIf="isEditMode" class="col-md-9">
+        <input type="text" attr.id="maxUsers-{{uniqueId}}" name="maxUsers"
+               placeholder="Maximum users" class="form-control"
+               pattern="^[0-9]+$"
+               [(ngModel)]="tenantEdit.serviceDetails.serviceMaxUsers" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <hr [class.separator-hr]="!isEditMode" [class.edit-separator-hr]="isEditMode" />
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-md-3 control-label"
+             for="maxEmployees-{{uniqueId}}">{{'tenants.mgmt.MaxEmployees' | translate}}</label>
+      <div *ngIf="!isEditMode" class="col-md-9">
+        <p class="form-control-static" *ngIf="tenant.serviceDetails!==undefined">{{tenant.serviceDetails.serviceMaxEmployees}}</p>
+      </div>
+      <div *ngIf="isEditMode" class="col-md-9">
+        <input type="text" attr.id="maxEmployees-{{uniqueId}}" name="maxEmployees"
+               placeholder="Maximum employees" class="form-control"
+               pattern="^[0-9]+$"
+               [(ngModel)]="tenantEdit.serviceDetails.serviceMaxEmployees" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <hr [class.separator-hr]="!isEditMode" [class.edit-separator-hr]="isEditMode" />
+      </div>
+    </div>
+
+    <div *ngIf="!isViewOnly" class="row">
+      <div class="col-md-12">
+        <hr [class.last-separator-hr]="!isEditMode" [class.edit-last-separator-hr]="isEditMode" />
+      </div>
+    </div>
+
+    <div *ngIf="!isViewOnly" class="form-group">
+      <div class="col-sm-7">
+        <div class="pull-right">
+          <button *ngIf="!isEditMode && isGeneralEditor" type="button" (click)="close()" class="btn btn-default"><i class='fa fa-close'></i> {{'tenants.editor.Close' | translate}}</button>
+          <button *ngIf="!isEditMode && !isGeneralEditor" type="button" (click)="edit()" class="btn btn-default"><i class='fa fa-edit'></i> {{'tenants.editor.Edit' | translate}}</button>
+          <button *ngIf="isEditMode" type="button" (click)="cancel()" class="btn btn-danger" [disabled]="isSaving"><i class='fa fa-times'></i> {{'tenants.editor.Cancel' | translate}}</button>
+          <button *ngIf="isEditMode" type="submit" class="btn btn-primary" [disabled]="isSaving">
+            <i *ngIf="!isSaving" class='fa fa-save'></i><i *ngIf="isSaving" class='fa fa-circle-o-notch fa-spin'></i> {{isSaving ? ('tenants.editor.Saving' | translate) : ('tenants.editor.Save' | translate)}}
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </form>
+</div>

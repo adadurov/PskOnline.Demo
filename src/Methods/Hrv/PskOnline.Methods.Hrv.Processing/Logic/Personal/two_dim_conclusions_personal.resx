@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Conclusion_user_1_1" xml:space="preserve">
+    <value>Ваше функциональное состояние, к сожалению, крайне неудовлетворительно. У Вас низкий уровень функциональный возможностей сердечно-сосудистой системы. Высокие уровни физического утомления и напряжения, до максимальных при развитии стресса, частый стабильный пульс. Максимальное напряжение сердечно-сосудистой системы при ее низкой работоспособности и соответственно крайне низком уровне физической работоспособности. Прохождение физиологических процессов при повышенных затратах организма. Заметное ускорение обменных и энергетических процессов. Высокая раздражительность. Повышение неоправданной психической и поведенческой активности, мобилизации организма. Внешняя и внутренняя нагрузка на организм резко превышает его функциональные возможности. Возможен срыв. Угроза резкого превышения нормы адреналина, развитие состояния панической атаки.
+Требуется срочное прекращение деятельности и длительный отдых или отпуск. Если Вы не можете выйти из сложившейся жизненной ситуации, требуется поддержка организма специальными энергетическими, витаминными добавками и средствами, содержащими жизненно необходимые минеральные вещества. Крайне желательна консультация психотерапевта и терапевта, а также всестороннее углубленное клиническое обследование в условиях стационара.</value>
+    <comment>
+          !!! DO NOT EDIT THIS FILE !!!
+It is regenerated automagically (from two_dim_conclusions.xml) each time before the project is built! Your changes will be overwritten!
+        </comment>
+  </data>
+  <data name="Conclusion_user_1_2" xml:space="preserve">
+    <value>Ваше функциональное состояние, к сожалению, неудовлетворительное. У Вас низкий уровень функциональный возможностей сердечно-сосудистой системы. Выше среднего уровни физического утомления и напряжения, до заметного — при развитии стресса. Заметное напряжение сердечно-сосудистой системы при ее низкой работоспособности и соответственно крайне низком уровне физической работоспособности. Прохождение физиологических процессов при повышенных затратах организма. Усиление обменных и энергетических процессов. Высокая раздражительность. Повышение неоправданной психической и поведенческой активности, мобилизации организма. Внешняя и внутренняя нагрузка на организм существенно превышает его функциональные возможности. Возможен срыв.
+Требуется срочное прекращение деятельности и длительный отдых или отпуск. Если Вы не можете выйти из сложившейся жизненной ситуации, требуется поддержка организма специальными энергетическими, витаминными добавками и средствами, содержащими жизненно необходимые минеральные вещества. Крайне желательна консультация психотерапевта и терапевта, а также всестороннее углубленное клиническое обследование в условиях поликлиники.</value>
+    <comment>
+          !!! DO NOT EDIT THIS FILE !!!
+It is regenerated automagically (from two_dim_conclusions.xml) each time before the project is built! Your changes will be overwritten!
+        </comment>
+  </data>
+  <data name="Conclusion_user_1_3" xml:space="preserve">
+    <value>Ваше функциональное состояние к сожалению неудовлетворительное. У Вас низкий уровень функциональный возможностей сердечно-сосудистой системы. Средний уровень напряжения, усиливающийся при развитии стресса, средний уровень физического утомления, крайне низкий уровень физической работоспособности. Заметная неустойчивость к действию спортивных нагрузок. Прохождение физиологических процессов при повышении затрат организма. Усиление обменных и энергетических процессов. Высокая поведенческая активность. Повышение неоправданной психической активности, мобилизации организма Внешняя и внутренняя нагрузка на организм существенно превышает его функциональные возможности.
+Требуется срочное прекращение деятельности и отдых. Требуется консультация психотерапевта и терапевта. Всестороннее углубленное клиническое обследование в условиях поликлиники.</value>
+    <comment>
+          !!! DO NOT EDIT THIS FILE !!!
+It is regenerated automagically (from two_dim_conclusions.xml) each time before the project is built! Your changes will be overwritten!
+        </comment>
+  </data>
+  <data name="Conclusion_user_1_4" xml:space="preserve">
+    <value>Ваше функциональное состояние к сожалению неудовлетворительное. У Вас низкий уровень функциональный возможностей сердечно-сосудистой системы, напряжение и физическое утомление ниже среднего уровня. Появляются заметные признаки истощения при развитии стресса, крайне низкая физическая работоспособность. Заметное замедление и ослабление обменных и энергетических процессов. Прохождение физиологических процессов при повышенных затратах организма. Крайне низкий уровень поведенческой активности, снижение психической и поведенческой активности, мобилизации организма. Внешняя и внутренняя нагрузка на организм существенно превышает его функциональные возможности.
+Требуется срочное прекращение деятельности и длительный отдых или отпуск. Если Вы не можете выйти из сложившейся жизненной ситуации, требуется поддержка организма специальными энергетическими, витаминными добавками и средствами, содержащими жизненно необходимые минеральные вещества. Крайне желательна консультация психотерапевта и терапевта, а также всестороннее углубленное клиническое обследование в условиях поликлиники.</value>
+    <comment>
+          !!! DO NOT EDIT THIS FILE !!!
+It is regenerated automagically (from two_dim_conclusions.xml) each time before the project is built! Your changes will be overwritten!
+        </comment>
+  </data>
+  <data name="Conclusion_user_1_5" xml:space="preserve">
+    <value>Ваше функциональное состояние к сожалению неудовлетворительное. У Вас низкий уровень функциональный возможностей сердечно-сосудистой системы, Высокое физическое утомления и напряжение — до максимального истощения при развитии стресса, резкое снижение физической работоспособности. Резкое замедление и ослабление обменных и энергетических процессов с их одновременной активацией. Прохождение физиологических процессов при повышении затрат организма. Крайне низкий уровень поведенческой активности, резкое снижение психической и поведенческой активности, мобилизации организма на фоне сильного эмоционального, психического возбуждения. («Дисрегуляторный синдром»)
+Требуется срочное прекращение деятельности и длительный отдых или отпуск. Если Вы не можете выйти из сложившейся жизненной ситуации, требуется поддержка организма специальными энергетическими, витаминными добавками и средствами, содержащими жизненно необходимые минеральные вещества. Крайне желательна консультация психотерапевта и терапевта, а также всестороннее углубленное клиническое обследование в условиях стационара.</value>
+    <comment>
+          !!! DO NOT EDIT THIS FILE !!!
+It is regenerated automagically (from two_dim_conclusions.xml) each time before the project is built! Your changes will be overwritten!
+        </comment>
+  </data>
+  <data name="Conclusion_user_2_1" xml:space="preserve">
+    <value>Ваше функциональное состояние, к сожалению, неудовлетворительное, уровень функциональных возможностей сердечно-сосудистой системы ниже среднего. У Вас заметное нервное напряжение и физическое утомление. Наблюдается явное сопротивление развитию стресса. Учащенный пульс. Энергетические и обменные процессы в Вашем организме ускорены. Вы находитесь в состоянии мобилизации, повышенной психической и поведенческой активности, но физическая работоспособность снижена.
+Требуется консультация психотерапевта и терапевта, а также всестороннее углубленное клиническое обследование в условиях поликлиники.</value>
+    <comment>
+          !!! DO NOT EDIT THIS FILE !!!
+It is regenerated automagically (from two_dim_conclusions.xml) each time before the project is built! Your changes will be overwritten!
+        </comment>
+  </data>
+  <data name="Conclusion_user_2_2" xml:space="preserve">
+    <value>Ваше функциональное состояние, к сожалению, неудовлетворительное. Уровни напряжения и утомления сердечно-сосудистой системы выше среднего, высокий уровень нервного напряжения. Организм сопротивляется развитию стресса. Энергетические и обменные процессы ускорены. Вы находитесь в состоянии мобилизации, повышенной психической и поведенческой активности. Физическая работоспособность снижена.
+Требуется консультация психотерапевта и терапевта, а также всестороннее углубленное клиническое обследование в условиях поликлиники.</value>
+    <comment>
+          !!! DO NOT EDIT THIS FILE !!!
+It is regenerated automagically (from two_dim_conclusions.xml) each time before the project is built! Your changes will be overwritten!
+        </comment>
+  </data>
+  <data name="Conclusion_user_2_3" xml:space="preserve">
+    <value>Ваше функциональное состояние к сожалению неудовлетворительное. Хотя напряжение сердечно-сосудистой системы оптимально, утомление отсутствует, а нервное напряжение незначительно, но переносимость физической и спортивной нагрузок снижена. У вас резко снижен уровень физической работоспособности.
+Для тренировки организма можно повысить уровень своей физической нагрузки.</value>
+    <comment>
+          !!! DO NOT EDIT THIS FILE !!!
+It is regenerated automagically (from two_dim_conclusions.xml) each time before the project is built! Your changes will be overwritten!
+        </comment>
+  </data>
+  <data name="Conclusion_user_2_4" xml:space="preserve">
+    <value>Ваше функциональное состояние, к сожалению, неудовлетворительное. Уровень функциональных возможностей сердечно-сосудистой системы ниже среднего, наблюдаются явления истощения вследствие развития стресса. Нагрузка на организм существенно выше его функциональных возможностей.
+Требуется прекращение деятельности и длительный отдых или отпуск, а также уменьшение уровня своих нагрузок. Если Вы не можете выйти из сложившейся жизненной ситуации, требуется поддержка организма специальными энергетическими, витаминными добавками и средствами, содержащими жизненно необходимые минеральные вещества. Крайне желательна консультация психотерапевта и терапевта, а также амбулаторное обследование состояния организма.</value>
+    <comment>
+          !!! DO NOT EDIT THIS FILE !!!
+It is regenerated automagically (from two_dim_conclusions.xml) each time before the project is built! Your changes will be overwritten!
+        </comment>
+  </data>
+  <data name="Conclusion_user_2_5" xml:space="preserve">
+    <value>Ваше функциональное состояние к сожалению неудовлетворительное. Напряжение сердечно-сосудистой системы низкое, проявляются заметные явления истощения вследствие развития стресса. Нагрузка на организм резко превышает его функциональные возможности.
+Требуется срочное прекращение деятельности и длительный отдых или отпуск. Если Вы не можете выйти из сложившейся жизненной ситуации, требуется поддержка организма специальными энергетическими, витаминными добавками и средствами, содержащими жизненно необходимые минеральные вещества. Крайне желательна консультация психотерапевта и терапевта, а также всестороннее углубленное клиническое обследование в условиях поликлиники.</value>
+    <comment>
+          !!! DO NOT EDIT THIS FILE !!!
+It is regenerated automagically (from two_dim_conclusions.xml) each time before the project is built! Your changes will be overwritten!
+        </comment>
+  </data>
+  <data name="Conclusion_user_3_1" xml:space="preserve">
+    <value>Ваше функциональное состояние в целом удовлетворительное, у Ваc средний уровень функциональных возможностей. Сильное утомление вызвало заметное нервное напряжение и стресс, наблюдается сопротивление развитию стресса. Нагрузка на организм пока соответствует его функциональным возможностям. У Вас оптимальная активность и реакция в условиях меняющейся ситуации. Энергетические и обменные процессы в Вашем организме резко ускорены. Вы находитесь в состоянии мобилизации, повышенной психической и поведенческой активности, готовы к борьбе, внимание обостренно, способность преодолевать жизненные трудности высокая.
+Тем не менее, длительное нахождение в таком состоянии нежелательно, т.к. оно может перейти в состояние хронического стресса. Если Вы не можете выйти из сложившейся жизненной ситуации, требуется поддержка организма специальными энергетическими, витаминными добавками и средствами, содержащими жизненно необходимые минеральные вещества. Крайне желательна консультация психотерапевта и терапевта, амбулаторное обследование состояния организма (измерение артериального давления, клиническая электрокардиография, общий и биохимический анализ крови, анализы мочи и т.д.).</value>
+    <comment>
+          !!! DO NOT EDIT THIS FILE !!!
+It is regenerated automagically (from two_dim_conclusions.xml) each time before the project is built! Your changes will be overwritten!
+        </comment>
+  </data>
+  <data name="Conclusion_user_3_2" xml:space="preserve">
+    <value>Ваше функциональное состояние в целом удовлетворительное и соответствует среднему уровню функциональных возможностей сердечно-сосудистой системы. У Вас выше среднего уровня утомление, которое вызвало легкие явления нервного напряжения. Нагрузка на организм соответствует его функциональным возможностям. У Вас оптимальная активность и реакция в условиях меняющейся ситуации. Энергетические и обменные процессы в Вашем организме слегка ускорены. Вы находитесь в состоянии мобилизации, повышенной психической и поведенческой активности. Способность преодолеть жизненные трудности высокая. Стресс практически незаметен.
+В таком состоянии специальных дополнительных мероприятий по оздоровлению и профилактике не требуется.</value>
+    <comment>
+          !!! DO NOT EDIT THIS FILE !!!
+It is regenerated automagically (from two_dim_conclusions.xml) each time before the project is built! Your changes will be overwritten!
+        </comment>
+  </data>
+  <data name="Conclusion_user_3_3" xml:space="preserve">
+    <value>Ваше функциональное состояние оптимально для сохранения своего здоровья. У Вас полностью отсутствует состояние нервного напряжения и стресс. Идеальная работоспособность сердечно-сосудистой системы.
+В таком состоянии специальных дополнительных мероприятий по оздоровлению и профилактике не требуется.</value>
+    <comment>
+          !!! DO NOT EDIT THIS FILE !!!
+It is regenerated automagically (from two_dim_conclusions.xml) each time before the project is built! Your changes will be overwritten!
+        </comment>
+  </data>
+  <data name="Conclusion_user_3_4" xml:space="preserve">
+    <value>Ваше функциональное состояние в целом удовлетворительное и соответствует среднему уровню функциональных возможностей. Незначительное утомление вызвало легкие явления истощения в функционировании сердечно-сосудистой системы. Нагрузка на организм в целом соответствует его функциональным возможностям, однако Ваша активность слегка снижена. Энергетические и обменные процессы в Вашем организме немного замедлены, наблюдается состояние легкой заторможенности. Способность преодолевать жизненные трудности снижена.
+В таком состоянии специальных дополнительных мероприятий по оздоровлению и профилактике не требуется. Желательно увеличение времени отдыха и уменьшение уровня своих нагрузок.</value>
+    <comment>
+          !!! DO NOT EDIT THIS FILE !!!
+It is regenerated automagically (from two_dim_conclusions.xml) each time before the project is built! Your changes will be overwritten!
+        </comment>
+  </data>
+  <data name="Conclusion_user_3_5" xml:space="preserve">
+    <value>Ваше функциональное состояние в целом удовлетворительное и соответствует среднему уровню функциональных возможностей сердечно-сосудистой системы. Однако, в ее работе наблюдается заметные проявления истощения. Формируется состояние, когда нагрузка на организм превышает его функциональные возможности. У Вас существенно снижена активность, энергетические и обменные процессы в организме замедлены. Наблюдается состояние заметной заторможенности. Способность преодолевать жизненные трудности снижена.
+Желательно увеличение времени отдыха и уменьшение уровня своих нагрузок. Если Вы не можете выйти из сложившейся жизненной ситуации, требуется поддержка организма специальными энергетическими, витаминными добавками и средствами, содержащими жизненно необходимые минеральные вещества. Крайне желательна консультация психотерапевта и терапевта, а также амбулаторное обследование состояния организма (измерение артериального давления, клиническая электрокардиография, общий и биохимический анализ крови, анализы мочи и т.д.).</value>
+    <comment>
+          !!! DO NOT EDIT THIS FILE !!!
+It is regenerated automagically (from two_dim_conclusions.xml) each time before the project is built! Your changes will be overwritten!
+        </comment>
+  </data>
+  <data name="Conclusion_user_4_1" xml:space="preserve">
+    <value>Ваши функциональные возможности выше среднего уровня, однако, заметное утомление вызвало первые проявления нервного напряжения. Начинает появляться тревога, которая может заставить Вас изменить сложившиеся жизненные установки. Организм начинает испытывать излишнюю нагрузку.
+Специальных мероприятий по оздоровлению и профилактике не требуется, но крайне желательно провести анализ своего поведения и состояния для их последующей коррекции.</value>
+    <comment>
+          !!! DO NOT EDIT THIS FILE !!!
+It is regenerated automagically (from two_dim_conclusions.xml) each time before the project is built! Your changes will be overwritten!
+        </comment>
+  </data>
+  <data name="Conclusion_user_4_2" xml:space="preserve">
+    <value>Ваши функциональные возможности выше среднего уровня. Однако появившееся утомление формирует легкое нервное напряжение. Начинает появляться тревога, которая может заставить Вас изменить сложившиеся жизненные установки. Организм начинает испытывать излишнюю нагрузку.
+Специальных мероприятий по оздоровлению и профилактике не требуется, но крайне желательно проведение анализа своего поведения и состояния для его последующей коррекции.</value>
+    <comment>
+          !!! DO NOT EDIT THIS FILE !!!
+It is regenerated automagically (from two_dim_conclusions.xml) each time before the project is built! Your changes will be overwritten!
+        </comment>
+  </data>
+  <data name="Conclusion_user_4_3" xml:space="preserve">
+    <value>Ваши функциональные возможности выше среднего уровня. Утомление отсутствует. У Вас достаточная переносимость физической и спортивной нагрузки.
+В таком состоянии специальных дополнительных мероприятий по оздоровлению и профилактике не требуется. Для тренировки организма можно повысить уровень своей физической нагрузки.</value>
+    <comment>
+          !!! DO NOT EDIT THIS FILE !!!
+It is regenerated automagically (from two_dim_conclusions.xml) each time before the project is built! Your changes will be overwritten!
+        </comment>
+  </data>
+  <data name="Conclusion_user_4_4" xml:space="preserve">
+    <value>Ваши функциональные возможности выше среднего уровня. Явления утомления отсутствуют. У Вас высокая переносимость физической и спортивной нагрузки.
+В таком состоянии специальных дополнительных мероприятий по оздоровлению и профилактике не требуется.</value>
+    <comment>
+          !!! DO NOT EDIT THIS FILE !!!
+It is regenerated automagically (from two_dim_conclusions.xml) each time before the project is built! Your changes will be overwritten!
+        </comment>
+  </data>
+  <data name="Conclusion_user_4_5" xml:space="preserve">
+    <value>Ваши функциональные возможности выше среднего уровня. У Вас невысокая нагрузка на организм и достаточная переносимость физической и спортивной нагрузки.
+В таком состоянии специальных дополнительных мероприятий по оздоровлению и профилактике не требуется.</value>
+    <comment>
+          !!! DO NOT EDIT THIS FILE !!!
+It is regenerated automagically (from two_dim_conclusions.xml) each time before the project is built! Your changes will be overwritten!
+        </comment>
+  </data>
+  <data name="Conclusion_user_5_1" xml:space="preserve">
+    <value>У Вас высокий уровень функциональных возможностей. Однако заметное утомление вызвало начальную стадию нервного напряжения и стресса. Развивающийся стресс формирует явную тревогу, которая заметно изменяет состояние внутреннего равновесия. Это заставляет Вас менять поведенческую активность. Организм испытывает излишнюю нагрузку.
+Специальных мероприятий по оздоровлению и профилактике не требуется, но крайне желательно провести тщательный анализ своего поведения и состояния для его коррекции.</value>
+    <comment>
+          !!! DO NOT EDIT THIS FILE !!!
+It is regenerated automagically (from two_dim_conclusions.xml) each time before the project is built! Your changes will be overwritten!
+        </comment>
+  </data>
+  <data name="Conclusion_user_5_2" xml:space="preserve">
+    <value>У Вас высокий уровень функциональных возможностей. Однако утомление вызвало нервное напряжение. Начинает появляться тревога, которая может заставить Вас изменить жизненные установки. Организм начинает испытывать излишнюю нагрузку.
+Специальных мероприятий по оздоровлению и профилактике не требуется, но крайне желательно провести анализ своего поведения и состояния.</value>
+    <comment>
+          !!! DO NOT EDIT THIS FILE !!!
+It is regenerated automagically (from two_dim_conclusions.xml) each time before the project is built! Your changes will be overwritten!
+        </comment>
+  </data>
+  <data name="Conclusion_user_5_3" xml:space="preserve">
+    <value>У Вас высокий уровень функциональных возможностей. Признаки утомления отсутствуют. Вы хорошо переносите физическую и спортивную нагрузку.
+В таком состоянии специальных дополнительных мероприятий по оздоровлению и профилактике не требуется.</value>
+    <comment>
+          !!! DO NOT EDIT THIS FILE !!!
+It is regenerated automagically (from two_dim_conclusions.xml) each time before the project is built! Your changes will be overwritten!
+        </comment>
+  </data>
+  <data name="Conclusion_user_5_4" xml:space="preserve">
+    <value>У Вас высокий уровень функциональных возможностей. Признаки утомления отсутствуют. Отмечается очень высокая переносимость физических и спортивных нагрузок. Однако наблюдаются первые признаки истощения в работе сердечно-сосудистой системы. Возможно состояние перетренировки.
+Специальных дополнительных мероприятий по оздоровлению и профилактике не требуется, однако следует увеличить время для отдыха и снизить уровень нагрузок.</value>
+    <comment>
+          !!! DO NOT EDIT THIS FILE !!!
+It is regenerated automagically (from two_dim_conclusions.xml) each time before the project is built! Your changes will be overwritten!
+        </comment>
+  </data>
+  <data name="Conclusion_user_5_5" xml:space="preserve">
+    <value>У Вас высокий уровень функциональных возможностей, однако, обнаруживаются признаки заметного истощения. Переносимость физической и спортивной нагрузки снижается, возможно развитие состояния перетренированности.
+В таком состоянии следует прекратить все физические нагрузки. Желателен перерыв в работе, отдых в профилактории, отпуск со сменой деятельности. Требуется прием витаминов, специальных пищевых добавок с повышенным содержанием жизненно необходимых минеральных веществ, а также препаратов, улучшающих энергетический статус организма. В случае продолжения прежнего образа жизни и сохранения существующего уровня нагрузок возможен срыв, проявляющийся в форме обмороков, внезапной резкой боли в животе или расстройства желудка.</value>
+    <comment>
+          !!! DO NOT EDIT THIS FILE !!!
+It is regenerated automagically (from two_dim_conclusions.xml) each time before the project is built! Your changes will be overwritten!
+        </comment>
+  </data>
+</root>

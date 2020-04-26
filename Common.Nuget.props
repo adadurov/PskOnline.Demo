@@ -1,0 +1,45 @@
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+
+    <FullNugetVersion Condition="'$(VersionSuffix)' != ''">$(VersionMajor).$(VersionMinor).$(VersionPatch)-$(VersionSuffix)</FullNugetVersion>
+    <FullNugetVersion Condition="'$(VersionSuffix)' == ''">$(VersionMajor).$(VersionMinor).$(VersionPatch)</FullNugetVersion>
+    
+    <PackageVersion>$(FullNugetVersion)</PackageVersion>
+    
+    
+    <Authors>Alexey Adadurov</Authors>
+    <Description>Defines types for PskOnline method data for SVMR method.</Description>
+
+    <PackageLicenseUrl>https://github.com/adadurov/PskOnline/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+
+    <RepositoryType>git</RepositoryType>
+    <PackageProjectUrl>https://github.com/adadurov/PskOnline</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/adadurov/PskOnline.git</RepositoryUrl>
+
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+
+    <DebugType>full</DebugType>
+
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0-beta-63127-02" PrivateAssets="All"/>
+  </ItemGroup>
+
+  <!-- clean existing .nupkg files (cleans up any junk when the package version changes)-->
+  <!-- Windows way -->
+  <Target Name="CleanUpNupkgBeforeBuildWindows" BeforeTargets="BeforeBuild" Condition="Exists('$(TargetDir)') AND '$(OS)' == 'Windows_NT' ">
+    <Exec Command="echo Removing NuGet packages..."/>
+    <Exec Command="del /F /Q $(TargetDir)..\*.nupkg" />
+  </Target>
+
+  <!-- Linux way (for building in Docker) -->
+  <Target Name="CleanUpNupkgBeforeBuildLinux" BeforeTargets="BeforeBuild" Condition="Exists('$(TargetDir)') AND '$(OS)' != 'Windows_NT' ">
+    <Exec Command="echo Removing NuGet packages..."/>
+    <Exec Command="rm -f $(TargetDir)../*.nupkg" />
+  </Target>
+
+</Project>

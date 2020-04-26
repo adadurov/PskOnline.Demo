@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <AssemblyName>PskOnline.Service.Test</AssemblyName>
+    <ApplicationIcon />
+    <OutputType>Library</OutputType>
+    <StartupObject />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="7.0.1" />
+    <PackageReference Include="FluentAssertions" Version="5.4.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.8.0" />
+    <PackageReference Include="Moq" Version="4.8.3" />
+    <PackageReference Include="NSubstitute" Version="3.1.0" />
+    <PackageReference Include="NUnit" Version="3.10.1" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.10.0" />
+    <PackageReference Include="Shouldly" Version="3.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\src\Client\PskOnline.Client.Api\PskOnline.Client.Api.csproj" />
+    <ProjectReference Include="..\..\..\src\Components\PskOnline.Components.Log\PskOnline.Components.Log.csproj" />
+    <ProjectReference Include="..\..\..\src\Server\Authority\PskOnline.Server.Authority\PskOnline.Server.Authority.csproj" />
+    <ProjectReference Include="..\..\..\src\Server\PskOnline.Server.ObjectModel\PskOnline.Server.ObjectModel.csproj" />
+    <ProjectReference Include="..\..\..\src\Server\PskOnline.Server.Service\PskOnline.Server.Service.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\test_data\Svmr\2009-05-12_18.39_svmr.psk.json" Link="unit_test_data\2009-05-12_18.39_svmr.psk.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\..\test_data\Svmr\2009-11-06_13.30_svmr.psk.json" Link="unit_test_data\2009-11-06_13.30_svmr.psk.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\..\test_data\Svmr\2017-07-24_23.28_svmr_all_reactions_premature.psk.json" Link="unit_test_data\2017-07-24_23.28_svmr_all_reactions_premature.psk.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\..\test_data\Svmr\2017-07-24_23.37_svmr_all_stimuli_skipped.psk.json" Link="unit_test_data\2017-07-24_23.37_svmr_all_stimuli_skipped.psk.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.8.0" />
+    <PackageReference Include="NUnit" Version="3.10.1" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.10.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\src\Components\PskOnline.Components.Log\PskOnline.Components.Log.csproj" />
+    <ProjectReference Include="..\..\..\src\Components\PskOnline.Components.Util\PskOnline.Components.Util.csproj" />
+    <ProjectReference Include="..\..\..\src\Methods\Svmr\PskOnline.Methods.Svmr.ObjectModel\PskOnline.Methods.Svmr.ObjectModel.csproj" />
+    <ProjectReference Include="..\..\..\src\Methods\Svmr\PskOnline.Methods.Svmr.Processing\PskOnline.Methods.Svmr.Processing.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="unit_test_data\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="UPFT130_IPN1_Estimate.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

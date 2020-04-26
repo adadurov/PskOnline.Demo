@@ -1,0 +1,13 @@
+﻿namespace PskOnline.Server.Authority.API.Dto
+{
+  public class PermissionDto
+  {
+    public string Name { get; set; }
+
+    public string Value { get; set; }
+
+    public string GroupName { get; set; }
+
+    public string Description { get; set; }
+  }
+}
