@@ -30,7 +30,7 @@
     "angular2-template-loader": "0.6.2",
     "aspnet-webpack": "2.0.1",
     "awesome-typescript-loader": "3.4.1",
-    "bootstrap": "3.3.7",
+    "bootstrap": "3.4.1",
     "bootstrap-datepicker": "1.7.1",
     "bootstrap-select": "1.12.4",
     "bootstrap-toggle": "2.2.2",
